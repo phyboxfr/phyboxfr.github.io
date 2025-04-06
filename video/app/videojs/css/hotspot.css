@@ -1,0 +1,43 @@
+
+  /* Css rules for Panorama HotSpot */
+
+  
+ .vjs-marker-container {
+     visibility: hidden;}          /* Markers are hidden before panorama start otherwise see markers at origin position (top-left) */
+ 
+ .vjs-marker-container-visible {   /* Markers are set to visible only when loadeddata */
+     visibility: visible;} 
+ 
+ 
+  .vjs-marker {
+     background-color:transparent;
+     white-space: normal;  
+     font-size: 3em;     
+     font-family: "VideoJS";
+  }  
+
+  .vjs-marker-prev:before {content: "\f120";}
+  .vjs-marker-play:before {content: "\f101";}
+  .vjs-marker-play.pause:before {content: "\f103";}  /* toogle play to pause icon */
+  .vjs-marker-next:before {content: "\f11f";} 
+
+  .vjs-marker-prev:link, .vjs-marker-play:link, .vjs-marker-next:link {
+     color:yellow;
+     opacity: 0.4;
+     text-decoration: none;
+     text-shadow: 0.05em 0.025em 0.1em rgba(0, 0, 0, 1);
+  }
+  
+  .vjs-marker-prev:hover, .vjs-marker-play:hover, .vjs-marker-next:hover {
+     opacity: 1;
+  }
+  
+   .vjs-marker-prev:active, .vjs-marker-play:active, .vjs-marker-next:active  {
+     color: red;
+  }
+
+   .vjs-marker-focus.vjs-marker-focus  {
+     color: red;
+     opacity: 1;
+     text-shadow: 0.05em 0.025em 0.1em rgba(0, 0, 0, 1);
+  }

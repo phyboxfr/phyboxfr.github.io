@@ -1,0 +1,60 @@
+
+/* Css rules for Html Page */
+
+  body {
+    background: transparent;  /* #18bc9c */
+    color: #ffffff;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;}
+
+  header {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;}
+
+  header .container {
+    padding-top: 50px;
+    padding-bottom: 10px;}
+
+  header img {
+    margin: 0 auto 0px;
+    width: 20%;
+    height: auto;}
+
+  header .phybox-titre .nom {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;}
+
+  @media screen and (min-width: 64em) {
+    .VR-Content {
+      position: relative;
+       /* height: 50; */        /* à remettre si on veut donner une taille fixe, sinon % browser height */
+          width: 90%;           /* taille du container, donc de la vidéo */
+      max-width: 90%;
+      margin: 0 auto;
+      margin-top: 3%;           /* séparation ligne blanche et container vidéo */
+      margin-bottom: 5%;}}      /* rajoute du vide sous le container, sinon la page s'arrête sur le bas de la vidéo */
+
+ /* La taille de la vidéo est donné par la taille du div VR-Container */ 
+ /* on lui donne une taille avec du paddding (top ou bottom) ou du height directement */ 
+ /* l'avantage du padding c'est qu'on peut mettre un % sur l'élément parent, pas avec height */ 
+ 
+  .VR-Container{
+    padding-top:50%;  /* Takes 50% of parent's height (VR-Content), if this parent has no height, take height of body (browser) height */
+    /* height:500px; */
+    }  
+
+ /* Taille de la vidéo dans son container */  
+ /* mais c'est VR-Container qui fixe la hauteur au final, selon sa propre taille, déterminé par le padding-top:50% */
+  #VR-Player{                  
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;}  

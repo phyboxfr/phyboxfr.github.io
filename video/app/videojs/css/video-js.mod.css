@@ -1,0 +1,38 @@
+
+ body.vjs-full-window {
+        position: static;
+      }
+
+ .vjs-default-skin  {
+     /*  display: block; 
+         font-size: 1.5em; 
+         line-height: 2; 
+         position: relative;
+         top: 0;
+         float:right;
+         left: 10px;
+         height: 100%;
+         text-align: center;
+         cursor: pointer;  */
+         }
+             
+  /* Change Control bar display */     
+  
+  .vjs-control-bar { font-size: 100%;}
+
+  /* Big Start Button */
+
+  .video-js .vjs-big-play-button.vjs-big-play-button {
+     height: 1.7em;
+     width: 3em;
+     -webkit-border-radius: 0.5em;
+     -moz-border-radius: 0.5em;
+     border-radius: 0.5em;
+     -webkit-transition: all 0.6s;
+     -moz-transition: all 0.6s;
+     -o-transition: all 0.6s;
+     transition: all 0.6s;}
+     
+  .video-js .vjs-big-play-button.vjs-big-play-button:hover {
+     background-color: rgba(200, 0, 0, 1); }  
+  

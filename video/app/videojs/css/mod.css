@@ -1,0 +1,70 @@
+
+  /* Css rules for Panorama plugin modified */
+
+  /* Panorama */
+
+ .vjs-panorama .vjs-VR-control:before {
+      font-size: 1.8em;      /* Size of Carboard Icon */ 
+      font-family: "VideoJS-Panorama";
+      content: "\e900";}
+    .vjs-panorama .vjs-VR-control.enable:before {
+      content: "\e901"; }
+
+  /* HD */
+
+ .HD-Ico:before {
+     font-family: Calibri;
+     font-weight: bold;
+     font-style: normal;
+     font-size: 1.8em;    
+  }  
+  
+ .HD-Ico:hover {
+     background-color: transparent;
+     text-shadow: 5px 5px 0px #ff0000;     
+     opacity: 1;
+          color:cyan;
+     content: "SD";
+  }
+            
+ .HD-Ico-SD:before {  
+     font-family: Calibri;
+     font-weight: bold;
+     font-style: normal;
+     font-size: 1.8em;
+     color:cyan;
+     content: 'SD';
+  }
+
+ .HD-Ico-HD:before {
+     color:yellow;    
+     content: "HD";
+  }  
+
+
+  /* content: "\f11f"} content: "?" 
+    .HD-icon:before{
+     content: "HD"; }  */
+     
+  /* Next */
+
+ .Next-Ico:before {
+      font-size: 1.9em;
+  }  
+
+  /* mobileVibrationValue */    
+  
+         /* Descendance (MenuButton -> ItemMenu):  .vjs-menu-button -> .vjs-menu -> .vjs-menu-content -> .vjs-menu-item */
+ 
+ .vjs-menu-button .vjs-menu-vib {    /* Override .vjs-menu-button class with .vjs-menu-vib class (if apply only to .vjs-menu-button, it will affect all menu button, like volume button). */
+     width: 5.5em;                   /* controlbar buttons are 4em width, menu is 3em width, so let 0.5em to be centered */   
+     left:  -0.75em;                 /* (largeur bouton - largeur memu)/2 soit: (5.5em - 4em)/2 = -0.75 */
+     text-align: center;
+  }
+ 
+ .vjs-menu .vjs-menu-item-vib {
+     font-family: "Calibri";
+     text-transform: uppercase;
+     font-size: 1.2em;
+     font-weight: 700;
+  }
