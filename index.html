@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Phybox</title>
+    <link rel="icon" type="image/x-icon" href="phybox.png">
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+  <body class="index"> 
+
+    <div id="Main">
+       <div id="Menu"> <iframe src="/html/fr/menu.html" onload="loadMenu(this)"> </iframe> </div>
+       <div id="Html"> <iframe src="/html/fr/home.html" onload="loadHtml(this)"> </iframe> </div>
+    </div>
+    <div id="Wave">
+       <div class="wave"></div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+    </div>
+
+    <script>
+
+      var MenuIndex=1, HtmlMenuIndex=0, HtmlUrl = '', isToggle=false;
+      
+      //Load Main Menu
+      function loadMenu(e){
+          e.contentWindow.active(MenuIndex);
+      }
+
+      //Load page after lang toggle
+      function loadHtml(e){
+          return; //no more used, set in toggle(e)
+          if(HtmlUrl=='') return;
+          let html  = e.contentWindow;
+          let isSub = html.hasOwnProperty('set');
+          if(!isSub) { toggleReset(); return; }  //if not sub.html -> reset toggle var
+          let src = '/html/' + lang() + '/' + HtmlUrl;
+          html.set(src);
+          toggleReset();
+      }
+
+      //Toggle lang
+      function toggle(e){
+
+            isToggle = true; MenuIndex = 1; HtmlMenuIndex = 0; HtmlUrl = '';
+
+          //Save opened Fold (a,b)
+            let ul = e.parentElement.parentElement;
+            let nFold = ul.className.replace(/menu|fold/gi,'').trim();
+         
+          //Index of Active Main Menu
+            let menu  = getMenu();
+            MenuIndex = menu.get();
+
+          //Save Html Path & Active
+            let html  = getHtml();
+            let isSub = html.hasOwnProperty('set');
+            if(isSub) {
+              //Index of Active Html Menu
+                HtmlMenuIndex = html.getActive();
+              //Path of Html page
+                HtmlUrl = html.getPath(); 
+            } else isToggle = false;  //not sub.html:  isToggle not used in iframe onload
+
+            let lg = lang() == 'fr' ? 'en' : 'fr';
+
+            set( 'menu', e.href, lg, nFold);
+            set( 'html', getHtmlName(),  lg);
+
+      }
+      function toggleReset(){ isToggle = false; MenuIndex = 1; HtmlMenuIndex = 0; HtmlUrl = ''; }
+ 
+      //Set Menu||Html url for lang
+      function set(id='html', url='',lg='',nFold=''){ 
+         let argFold = (nFold == '') ? nFold : (url.includes('?') ? '&' : '?') + 'fold=' + nFold;
+             lg = lg == '' ? lang() : lg;
+             url = url.split('/').pop();
+         let src = '/html/' + lg + '/' + url;
+             Id  = id.charAt(0).toUpperCase() + id.slice(1);
+             document.querySelector('#' + Id + ' iframe').src = src + argFold;
+             return false;
+      }
+      
+      //Get Html filename:  sub.html
+      function getHtmlName(){ 
+          let url = document.querySelector('#Html iframe').src; 
+              return url.split('/').pop();
+      }
+      function getMenu(){ 
+          return document.querySelector('#Menu iframe').contentWindow;
+      }
+      function getHtml(){ 
+          return document.querySelector('#Html iframe').contentWindow;
+      }
+      function lang(){ return getMenu().document.documentElement.lang; }
+
+    </script>
+  </body>
+</html>
