@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .break { margin: 40px 0; }
+    .nobottom { margin-bottom: 0; }
+    .note.arrow { top: 73%; right: 2%; }
+    .note.arrow:before { color: #ff4df2; } 
+    .note.label.digit { top: 73%; right: -95%; width: 90%; color: #ffed5a !important; font-weight: bold; }
+    .note.label.login { top: 76%; left: 19px; width: 90%; color: #ef4bfd; font-size: 16px !important; font-weight:bold; text-shadow: none; }
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; }
+     span { font-size: 35px; }
+     table.key td { vertical-align: top; white-space: nowrap; }
+  </style>
+
+  <body class="h" onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Classes</p>
+       <BR>
+
+       <p class="text">Password generation is done in the 1st column of the control panel. They are saved in the file <span class="yellow">classes.txt</span> which is located in the folder :</p>
+
+       <p class="text center code"> [phybox] &nbsp;->&nbsp; [classes] &nbsp;->&nbsp; classes.txt </p>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/opt-cfg-pw.en.jpg" class="center" style="width:600px;">
+          <div class="note label digit" style="top:11.5%;right:-50%;">➀</div> 
+          <div class="note label digit" style="top:27.5%;right:-50%;">➁</div>
+          <div class="note label digit" style="top:35.5%;right:-50%;">➂</div>
+          <div class="note label digit" style="top:65.5%;right:-50%;">➃</div>
+          <div class="note label digit" style="top:73.5%;right:-50%;">➄</div>
+          <div class="note label digit" style="top:81.5%;right:-50%;">➅</div>
+          <div class="note label digit" style="top:89.5%;right:-50%;">➆</div>
+       </div>
+
+       <BR>
+       <div class="indent">
+          <p class="text break"><span>➀</span>  &nbsp; Change the Administrator and Guest Password. The Guest password allows the teacher to give a temporary access to a pupil who encounters some identification problem at the moment.</p>
+
+          <p class="text break"><span>➁</span>  &nbsp; Import the list of classes from a file (ods, xlsx). See the example in the following file, always placing the columns in this order: Level, Class, Last Name, First Name.</p>
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [classes] &nbsp;->&nbsp; classes.ods </p>
+
+          <p class="text"><span>➂</span>  &nbsp; <u>Method 1 :</u> &nbsp; Generate Passwords using 4 Possibilities</p>
+
+          <table class="key">   
+             <tr><td>  Clear       :</td><td>  Clears passwords. </td></tr>
+             <tr><td>  Choice      :</td><td>  donne le même mot de passe à tout le monde (pour un usage rapide). </td></tr>
+             <tr><td>  Random      :</td><td>  random alphanumeric sequence (length: number of characters). </td></tr>
+             <tr><td>  Dictionary  :</td><td>  taken from a list of simple words to remember, which is in the file : 
+                 <p class="text center code nobottom"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [login] &nbsp;->&nbsp; [dictionary] </p>
+             </td></tr>
+          </table>
+
+          <p class="text indent-first">After generating the passwords, you can export the list in pdf format with ➆ to print them and distribute them to each student.</p>
+
+          <BR>
+          <p class="text"><span>➃</span>  &nbsp; <u>Method 2 :</u> &nbsp; Generate Passwords on First Login 
+
+          <BR>
+          <p class="text indent-first">In this easier to manage mode, there is no need to print and distribute passwords.  When students log in to their account for the first time, their password is directly displayed to them.</p>
+
+          <p class="text indent-first">However, in order to prevent a student from having fun connecting to several accounts to obtain a friend's password during the first session, a tablet can only connect to one account (their own). ), from the 2nd try all connections will be blocked for 1 hour.</p>
+
+          <p class="text indent-first">Two choices are possible to generate the password :</p>
+
+          <table class="key">   
+             <tr><td>  Dictionary  :</td><td>  chosen from a list of predefined words.</td></tr>
+             <tr><td>  Random     :</td><td>  random alphanumeric sequence (length: number of characters). </td></tr>
+          </table>
+          <BR>
+
+          <p class="text indent-first">At the time of the first connection, tell the students to leave the password box empty, then follow the instructions to obtain their password and (above all) write it down in their notebook, otherwise you will be good to start all over again ::</p>
+
+          <div style="display:flex;justify-content:center;align-items:center;width:100%;margin:auto;">
+             <div style="position:relative;width:fit-content;">
+                <img src="/image/box/login-1.png" class="center" style="width:200px;height:100%;margin:0 10px;">
+                <div class="note label login">Do not put anything</div>       
+             </div>
+             <img src="/image/box/login-2.en.png" class="center" style="width:400px;height:100%;margin:0 10px;">
+          </div>
+
+          <BR>
+          <p class="text break"><span>➄ </span> &nbsp; Adds a new student who has just arrived at the school. Its password will be generated according to the choices in ➂.</p>
+
+          <p class="text break"><span>➅</span>  &nbsp; Change or recover the password of a student who has forgotten it. The new password is generated according to the choices in ➂.</p>
+
+          <p class="text break"><span>➆</span>  &nbsp; Print the list of passwords to distribute to students, if you have chosen to generate them yourself.</p>
+
+       </div>
+
+       <BR>
+       <p class="text video"><u>Import the Classes List :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/admin/import.mp4" controls preload="none" poster="/video/admin/import.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="import"></iframe>
+
+       <BR><BR><BR>
+       <p class="text video"><u>Generate Passwords :</u></p>
+       
+       <!--
+       <div class="video">    
+          <video src="/video/admin/password.mp4" controls preload="none" poster="/video/admin/password.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="password"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

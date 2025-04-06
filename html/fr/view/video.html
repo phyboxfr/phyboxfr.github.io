@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 50px !important; height: 50px !important; filter: drop-shadow(1px 2px 1px #555) brightness(1.1) hue-rotate(-20deg) !important }
+     #Article p.flex  { align-items: end; padding-left:0; }
+     #Article p.list:before { content: ""; }
+     .butWrap { align-self: start; }
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Vidéo</p>
+       <BR>
+
+       <p class="list flex"><span class="butWrap"><span><img src="/icon/status-video.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> Les vidéos s'ouvrent dans un lecteur développé pour la PhYBoX. Il a été conçu de façon minimaliste, en affichant uniquement le contenu nécessaire afin d'éviter les distractions :</span></p>
+
+       <BR>
+       <img src="/image/box/view-video-legend.jpg"  class="center shadow" style="width: 80%;">
+       <BR>
+
+       <p class="text">Dans le coin supérieur droit se trouve une petite barre d'outils pour lui ajouter quelques fonctionnalités :</p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/folder.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Retourne dans l'explorateur au dossier d'où sont issues les vidéos.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/list.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span>Ouvre ou ferme la liste de lecture.</p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/fullscreen.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span>Met la vidéo en plein écran.</span></p>
+
+       <BR>
+       <p class="text"><u>Utilisation :</u></p>
+
+       <p class="text">Toujours dans l'esprit de la BoX, les applications sont conçues pour maximiser la surface d'affichage du document regardé et rendre ainsi le travail sur Tablette plus confortable.</p>
+
+       <p class="text">Pour simplifier la lecture des vidéos, l'appui simple sur l'écran a ainsi été configuré de la façon suivante :</p>
+
+          <p class="list flex">Quand on ouvre une vidéo, sa lecture se lance automatiquement (en plein écran), mais la Liste de Lecture à droite reste volontairement ouverte, afin qu'au départ les autres vidéos présentes dans le même dossier et qui pourraient également aider l'élève, restent visibles.</p>
+
+          <p class="list flex">Au premier appui sur l'écran, la Liste de Lecture se ferme pour agrandir la vidéo qui reste en lecture.</p>
+
+           <p class="list flex">Au second appui, la vidéo est mise en Pause et la Liste de Lecture se rouvre pour permettre à l'élève d'en sélectionner une autre. Et ainsi de suite.</p>
+
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Les vidéos n'apparaissent dans le lecteur qu'après avoir été indexées dans la base de données. Reportez-vous à la section <span class="yellow">Admin -> Indexation</span> pour davantage de détails.</p>
+
+       <BR>
+       <p class="text"><u>Personnalisation :</u></p>
+
+       <p class="text">L'image de fond peut être remplacée par une autre qui pourrait être plus adaptée à votre discipline en allant dans le dossier :</p>
+
+       <p class="text center code"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [ext] &nbsp;->&nbsp; [video] &nbsp;->&nbsp; video.jpg</p>
+
+       <BR><BR><BR>
+       <p class="text video"><u>Le Lecteur Vidéo :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/view/video.mp4" controls preload="none" poster="/video/view/video.jpg"></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="video"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

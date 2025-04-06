@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     p.text.space { padding-top: 20px; }
+     img.icon.big { margin-top: -8px; width: 40px !important; height: 40px !important; }
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Activity</p>
+       <BR>
+
+       <p class="text">The BoX has several independent Readers to view different types of digital media (image, video, audio) and edit texts in <span class="yellow">odt and docx</span> format. But to display other types of documents (pdf, html, workbook, slideshow), it has 2 specific readers :</p>
+
+       <p class="text space"><img src="/icon/status-pdf.svg" class="button icon back white big"> <u>The Activity Sheet :</u></p>
+
+       <p class="text">One of the guiding principles of this BoX is to organize the work of students by providing them with an Activity sheet in PDF format. This presents the instructions, accompanied by links (text or image) which refer directly to the accompanying documents filed in the folder <span class="yellow">[doc]</span>.</p>
+
+       <p class="text">You will find detailed explanations on how to make these kinds of documents and links in the form of shortcuts in the section of this site <span class="yellow">Documents -> Pdf</span>, as well as examples of usage in the BoX folder :
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [6ème] &nbsp;->&nbsp;  Example of links.pdf</p>
+
+       <p class="text">This Activity sheet must remain open throughout the sequence to guide the students during their work, a Reader is solely dedicated to it :</p>
+
+       <img src="/image/box/view-document.2.png" class="center" style="width: 70%;">
+ 
+       <BR>
+       <p class="text space"><img src="/icon/status-frame.svg" class="button icon back white big"> <u>The Document's Viewer :</u></p>
+
+       <p class="text">All other types of documents will open in this second Reader, as the students choose. However, as accompanying documents can also be in PDF format, it was necessary to find a way to distinguish them from the Activity sheet, which must remain open at all times.</p>
+
+       <p class="text">Thus, a <u>pdf</u> document whose name begins with a <u>capital letter</u> will be considered by the BoX as an Activity sheet and opened in the previous Reader. All the others will go into this second reader, more suitable for displaying various accompanying documents (pdf, html, workbook, slideshow) :</p>
+
+       <table style="line-height:35px;">   
+          <tr><td>  <u>A</u>ctivity on the water cycle.pdf &nbsp; (the instructions)</td><td>➟</td><td>opens in &nbsp; <img src="/icon/status-pdf.svg" class="button icon back white"> </td></tr>
+          <tr><td>  <u>T</u>he water cycle.pdf &nbsp; (an accompanying document)</td><td>➟</td><td>opens in &nbsp; <img src="/icon/status-frame.svg" class="button icon back white"> </td></tr>
+       </table>
+
+       <BR><BR><BR>
+       <p class="text video"><u>The 2 document Viewers :</u></p>
+
+       <!--       
+       <div class="video">    
+          <video src="/video/view/doc.mp4" controls preload="none" poster="/video/view/doc.jpg"></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="doc"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; } 
+    .note.arrow { top: 18%; right: 10%; }
+    .note.arrow:before { color: #ff4df2; } 
+    .note.label { top: 26%; right: -55%; width: 55%; color: #ffed5a !important; }
+     td.nw { vertical-align:top; white-space: nowrap; }
+    .board {
+       position: absolute;
+       top: 49%;
+       width: 70%;
+       margin: 0 13%;
+       color: #eeaf00 !important;
+       font-size: 30px;
+       text-align: center;
+       text-shadow: 0 0 #000;
+    }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Collaborative &nbsp; &nbsp; Board</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://etherpad.org/" target="_blank">Etherpad</a>
+          </p>
+          <img src="/image/app/etherpad.png"  class="right" style="width:100px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">This Board offers a space for interactive exchanges with a chat to help each other. Rather than calling on each other throughout the class, pupils can ask each other questions, share their ideas, share documents, to move forward together in learning.</p>
+
+       <BR>
+       <p class="text">The Start Console, which opens when the BoX is launched, gives direct access to the content of the Board messages :</p>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/console.png" class="center" style="width:90%;">
+          <div class="board">I'm writing a message for the Collaborative Board</div>
+       </div>
+
+       <BR><BR>
+
+       <table style="line-height:35px;">
+          <tr><td class="nw">  Envoie :</td><td>  Replace the message displayed with that of the Console.</td></tr>
+          <tr><td class="nw">  Ajoute :</td><td>  Add the Console message after the other messages.</td></tr>
+          <tr><td class="nw">  Enlève :</td><td>  Delete the last message from the Board.</td></tr>
+          <tr><td class="nw">  Efface :</td><td>  Clear the entire Board (except Chat).</td></tr>
+       </table>
+       <BR>
+
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">The Chat cannot be deleted, but in the event of inappropriate messages, you can reset the Board to delete all its contents (messages and Chat) by clicking on the <span class="yellow">Pad</span> button on the Console that will stop the Tableau Server, then just restart it. On the other hand, if you restart the Box, without turning off the Board Server, it will keep all its content.</p>
+
+       <BR>
+       <p class="text"><u>Options :</u></p>
+
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/opt-cfg-board.en.png" class="center" style="width:70%;">
+       </div>
+       
+       <BR>
+       <div class="indent">
+
+          <p class="text"><span>➀</span> &nbsp; If the Board does not open when included in the BoX window, open it in a new tab and validate https mode (as when opening the BoX).</p>
+
+          <p class="text"><span>➁</span>  &nbsp; Authorize the use of Chat on the Board.</p>
+
+       </div>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

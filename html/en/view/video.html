@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 50px !important; height: 50px !important; filter: drop-shadow(1px 2px 1px #555) brightness(1.1) hue-rotate(-20deg) !important }
+     #Article p.flex  { align-items: end; padding-left:0; }
+     #Article p.list:before { content: ""; }
+     .butWrap { align-self: start; }
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Video</p>
+       <BR>
+
+       <p class="list flex"><span class="butWrap"><span><img src="/icon/status-video.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> The videos open in a player developed for PhYBoX. It was designed minimalistically, displaying only the necessary content to avoid distractions :</span></p>
+
+       <BR>
+       <img src="/image/box/view-video-legend.en.jpg"  class="center shadow" style="width: 80%;">
+       <BR>
+
+       <p class="text">In the upper right corner is a small toolbar to add some functionality to it :</p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/folder.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Go back in the explorer to the folder where the videos came from.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/list.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span>Open or close the playlist.</p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/fullscreen.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span>Put the video in full screen.</span></p>
+
+       <BR>
+       <p class="text"><u>Use :</u></p>
+
+       <p class="text">Still in the spirit of BoX, the applications are designed to maximize the display surface of the document viewed and thus make working on a tablet more comfortable.</p>
+
+       <p class="text">To simplify video playback, simple pressing on the screen has been configured as follows :</p>
+
+          <p class="list flex">When you open a video, it starts playing automatically (in full screen), but the Reading List on the right voluntarily remains open, so that other videos present in the same folder and which could also help the student, initially, remain visible.</p>
+
+          <p class="list flex">At the first press on the screen, the Playlist closes to enlarge the video which remains playing.</p>
+
+           <p class="list flex">On the second press, the video is Paused and the Playlist reopens to allow the student to select another one. And so on.</p>
+
+       <p class="text"><u>Note :</u></p>
+
+       <p class="text">Videos only appear in the player after being indexed in the database. Refer to <span class="yellow">Admin -> Indexing</span> for more details.</p>
+
+       <BR>
+       <p class="text"><u>Personalization :</u></p>
+
+       <p class="text">The background image can be replaced by another that might be more suited to your discipline by going to the folder :</p>
+
+       <p class="text center code"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [ext] &nbsp;->&nbsp; [video] &nbsp;->&nbsp; video.jpg</p>
+
+       <BR><BR><BR>
+       <p class="text video"><u>The Video Player :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/view/video.mp4" controls preload="none" poster="/video/view/video.jpg"></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="video"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

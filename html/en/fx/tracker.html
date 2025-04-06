@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    figure.center { display: grid; }
+    figcaption    { padding-top: 20px !important; }
+    div.img.center { display:flex; justify-content:normal; align-items:end; }
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .nopad { padding-left: 100px !important; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Tracker</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PHYBoX integrates the application :
+             <a class="space" href="https://github.com/lucademian/JsTrack" target="_blank" style="padding:0 25px;">JsTrack</a>
+          </p>
+          <img src="/image/app/tracker.jpg"  class="right shadow" style="width:200px; right:0px; top: -120px;">
+       </div>
+
+       <p class="text">Adapted for use on a touch screen, this application allows you to break down the movement of an object in a video, in order to identify its trajectory.</p>
+   
+       <p class="text">With the tablet or smartphone, students can film a moving object or use a video already made to import it into the application. We can then place a marker on the center of the object, which we can follow image by image, in order to characterize its trajectory.</p>
+
+       <BR>
+       <p class="text"><u>Main Features :</u>
+          <a href="/pdf/JsTrack.pdf" target="_blank" class="nopad">Manual</a>
+       </p>
+
+       <p class="list">Automatic recording of video and trajectory in browser memory. You can resume your work in another session, finding what has already been done.</p>
+
+       <p class="list">Video format conversion : JsTrack only accepts videos in mp4, but if it was shot in another format like 3gp, it offers to convert it to mp4.</p>
+
+       <p class="list">Saving the image of the trajectory in the student's file and in the clipboard, so that it can be imported into the BoX text editor for analysis.</p>
+
+       <p class="list">Export object positions over time into an Excel workbook.</p>
+
+       <BR>
+       <p class="text"><u>Editing from Explorer :</u></p>
+
+       <p class="text">In the BoX explorer, you can open videos already made directly in JsTrack by clicking on the <span class="yellow">edite</span> button located at the end of the line. This button is only displayed if the name of the folder containing the videos begins with the symbol <span class="yellow">@</span> :</p>
+
+          <div class="img center">
+             <figure class="center">
+                <img src="/image/box/tracker-folder.png"  class="" style="width:125px;margin:auto;">
+                <figcaption>If the folder name starts with a <span class="yellow">@</span>..</figcaption>
+             </figure>
+             <figure class="center">
+                <img src="/image/box/tracker-action.png"  class="" style="height:40px;margin:auto;">
+                <figcaption>The video is displayed with an <span class="yellow">edit</span> button</figcaption>
+             </figure>
+          </div>
+
+       <BR>
+       <p class="text"><u>Note :</u></p>
+
+       <p class="text">If the students make the videos themselves, the camera recording mode must first be set to <span class="yellow">mp4</span> format in the <u>lowest resolution </u> (no more than <span class="yellow">1280x720</span>) and limit the duration of videos to <u>a few seconds</u>, in order to minimize the resources needed to process the video in the application, otherwise it may take more time to load the video, depending on the power and amount of memory of the tablet.</p>
+
+       <BR><BR>
+       <p class="text video"><u>Features and usage :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="../video/fx/tracker.mp4" controls  preload="none" poster="/video/fx/tracker.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="tracker"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Units</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PhYBoX integrates the application :
+             <a href="" style="padding:0 25px;">Unités</a>
+          </p>
+          <img src="/image/app/unit.png"  class="right shadow" style="width:110px; right:0px; top: -120px;">
+       </div>
+       
+       <p class="text">Application for converting units of measurement for Sciences.</p>
+       
+       <p class="text">You can modify the list of physical quantities and units proposed to adapt them to your sequence and your language, by editing the <span class="yellow">unit.cfg</span> file with notepad : </p>
+      
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [app] &nbsp;->&nbsp; [science] &nbsp;->&nbsp; [unit] &nbsp;->&nbsp; unit.cfg</p>
+
+       <p class="text"><u>Short Link :</u></p>
+
+       <p class="text">In a PDF document, you can put a link that opens this application directly in a given unit set. To do this, add to the link the chosen physical quantity (u) and the 2 units of measurement to convert (a and b), in the following form :</p>
+
+       <p class="text center code"> app:science/unit/?u=speed&a=m/s&b=km/h </p>
+
+       <p class="text">This example opens the application on the conversion of the Speed ​​between the m/s and the km/h.</p>
+
+       <p class="text">These names correspond to those contained in the file <span class="yellow">unit.cfg</span>, so they can be adapted in all languages, by replacing them with their equivalent in that language.</p>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .note.arrow { top: 52%; left: -9%; }
+    .note.arrow:before { color: #ffed5a; } 
+    .note.label { top: 65%; left: -80%; width: 70%; color: #ffed5a; }
+    .qr {
+       width: 40vh;
+       height: 140px;
+       object-fit: cover;
+       object-position: 100% 0px;
+    }
+  </style>
+
+  <body class="h" onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Security</p>
+       <BR>
+
+       <p class="text">When starting the Browser, you will see the following message appear on Chrome, or an equivalent message on other browsers :</p>
+
+          <BR>
+          <img src="/image/chrome/https-1.en.png" class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">No need to worry, this is the expected behavior of the Browser.</p>
+
+       <p class="text">Indeed, the PhYBoX site operates in secure https mode (normally indicated by a small padlock in the address bar).  However, for this to be possible on a local site which is not known to the Browser, an exception must be generated which authorizes this site to be consulted in https mode (rather than http).</p>
+
+       <p class="text">The Browser therefore informs the user by asking for their authorization, in order to verify that they wish to consult this site with full knowledge of the facts.</p>
+
+       <p class="text">As the BoX runs in a local network (it is not on the internet), this situation does not present any security problem and you can therefore validate the exception by clicking on « <span class="yellow">Advanced Settings</span> » then « <span class="yellow">Continue to the site</span> » :</p>
+
+          <BR>
+          <img src="/image/chrome/https-2.en.png" class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">This message will return periodically since the authorization granted by the user will be renewed regularly by the Browser.</p>
+
+       <BR>
+       <p class="text"><u>Note :</u></p>
+
+       <p class="text">From the start of using PhYBoX with your students, it is therefore important to explain to them what they should do when they see this message.</p>
+          
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

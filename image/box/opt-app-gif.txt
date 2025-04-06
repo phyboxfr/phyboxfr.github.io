@@ -1,0 +1,5 @@
+https://ezgif.com/maker
+
+delay: 100 1/100s
+Toggle a range of frames: 1 to 1
+use global colormap: X

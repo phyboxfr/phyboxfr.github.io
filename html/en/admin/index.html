@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .notop { margin-top: 0; }
+    .note.arrow { top: 6%; right: -11%; }
+    .note.arrow:before { color: yellow; } 
+    .note.label { top: 18%; right: -47%; width: 40%; color: #ffce48 !important; }
+  </style>
+
+  <body class="h" onload="init()">
+ 
+    <div id="Article">
+
+       <p class="title">Indexing</p>
+       <BR>
+
+       <p class="text">In order to make access to documents more efficient, they are indexed in the server database. Various information is recorded such as the name of the files, their location on the disk, their type etc.</p>
+
+       <p class="text">The search engine and short links thus use indexing to quickly find a file using keywords. Indexing of documents is therefore necessary before they are made available in the BoX and students can see them.</p>
+
+       <BR>
+       <p class="text notop"><u>How to Index Student Documents ? :</u></p>
+
+       <p class="text">By default, the indexing update is launched automatically when the BoX is started in order to integrate any new documents that you may have added.</p>
+
+       <p class="text">However, if you have many documents, indexing may take longer.  In this case, you can disable automatic updating in the control panel, to prevent it from slowing down the operation of the BoX :</p>
+
+       <img src="/image/box/opt-cfg-index.en.png" class="center" style="width:50%;">
+
+       <BR>
+       <p class="text">And when you no longer use BoX with your students, you can launch the update by clicking on the Update button <span class="yellow">Update</span> on the console :</p>
+          
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/console.png" class="center" style="width:90%;">
+          <div class="note arrow left"></div>
+          <div class="note label"> &nbsp;&nbsp; Click Update or Reset</div>
+       </div>
+
+       <BR><BR>
+       <table style="line-height:35px;">   
+          <tr><td>  Update  :</td><td>  launches the indexing update  </td></tr>
+          <tr><td>  Reset   :</td><td>  deletes then starts indexing again   </td></tr>
+       </table>
+       
+       <p class="text"><u>Note :</u></p>
+
+       <p class="text">When images and videos are indexed, a thumbnail is captured. Thumbnails serve as illustrations in the video player playlist and explorer. Videos are therefore only visible in the video player if they have first been indexed. They are recorded in the file :</p>
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [index] &nbsp;->&nbsp; [thumb] </p>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .notop { margin-top: 0; }
+    .note.arrow { top: 6%; right: -11%; }
+    .note.arrow:before { color: yellow; } 
+    .note.label { top: 18%; right: -47%; width: 40%; color: #ffce48 !important; }
+  </style>
+
+  <body class="h" onload="init()">
+ 
+    <div id="Article">
+
+       <p class="title">Indexation</p>
+       <BR>
+
+       <p class="text">Afin de rendre l'accès aux documents plus efficace, ils sont indexés dans la base de données du serveur. Diverses informations sont enregistrés tel que le nom des fichiers, leur emplacement sur le disque, leur type etc.</p>
+
+       <p class="text">Le moteur de recherche et les liens courts utilisent ainsi l'indexation pour retrouver rapidement un fichier à l'aide de mots clés. L'indexation des documents est donc nécessaire avant qu'ils ne soient disponibles dans la BoX et que les élèves puissent les voir.</p>
+
+       <BR>
+       <p class="text notop"><u>Comment Indexer les Documents Élèves ? :</u></p>
+
+       <p class="text">Par défaut, la mise à jour de l'indexation est lancée automatiquement au démarrage de la BoX afin d'y intégrer d'éventuels nouveaux documents que vous auriez ajoutés.</p>
+
+       <p class="text">Cependant, si vous avez beaucoup de documents, l'indexation peut prendre davantage de temps. Dans ce cas, vous pouvez désactiver la mise à jour automatique dans le panneau de configuration, afin d'éviter qu'elle ne ralentisse le fonctionnement de la BoX :</p>
+
+       <img src="/image/box/opt-cfg-index.png" class="center" style="width:50%;">
+
+       <BR>
+       <p class="text">Et quand vous n'utilisez plus la BoX avec vos élèves, vous pouvez lancer la mise à jour en cliquant sur le bouton <span class="yellow">Update</span> de la console :</p>
+          
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/console.png" class="center" style="width:90%;">
+          <div class="note arrow left"></div>
+          <div class="note label">Cliquez sur Update ou Reset</div>
+       </div>
+
+       <BR><BR>
+       <table style="line-height:35px;">   
+          <tr><td>  Update  :</td><td>  lance la mise à jour de l'indexation  </td></tr>
+          <tr><td>  Reset   :</td><td>  efface puis recommence l'indexation   </td></tr>
+       </table>
+       
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Au moment de l'indexation des images et des vidéos, une miniature est capturée. Les miniatures servent d'illustration dans la liste de lecture du lecteur vidéo et dans l'explorateur. Les vidéos ne sont donc visibles dans le lecteur vidéo que si elles ont d'abord été indexées. Elles sont enregistrées dans le dossier :</p>
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [index] &nbsp;->&nbsp; [thumb] </p>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

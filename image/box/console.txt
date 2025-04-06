@@ -1,0 +1,4 @@
+capture d'écran de la console
+puis supprime fond avec
+https://www.photoroom.com/tools/background-remover
+download puis découper la zone transparente avec xnview en 370x313

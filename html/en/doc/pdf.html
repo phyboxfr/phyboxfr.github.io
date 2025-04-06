@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .list span.label { margin-top: 20px; } 
+    p.text.indent { text-align: justify; padding-left: 60px; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+
+       <p class="title">Pdf</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://mozilla.github.io/pdf.js/" target="_blank">Pdf.js</a>
+          </p> 
+          <img class="logo" src="/image/app/pdfjs.svg" class="right shadow" style="width:100px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">Developed by the <a href="https://foundation.mozilla.org/fr/" target="_blank"> Fondation Mozilla</a>, this application is used in the Firefox browser to open pdf documents.</p>
+
+       <p class="text">In the BoX, these files are used to offer a digital and dynamic version of the student activity sheet, which is one of the central elements of the system.  It thus serves as a referral point for access to accompanying documents.</p>
+
+       <p class="text">To do this, several features have been added to adapt it to the PhYBoX environment :</p>  
+
+       <p class="list"><span class="label"><u>Reading :</u></span></p>
+
+       <p class="text indent">By clicking on a line, the text is spoken using voice synthesis to help students with reading difficulties.</p>
+
+       <p class="text indent">For this to be possible, the pdf file must contain structural markers. When saving your file in PDF format from your word processor, check in the PDF format options that the markers (labels) box is checked.</p>
+
+       <p class="text indent">In Libre Office : « <span class="yellow">Export text marks</span> » and in Microsoft Office : « <span class="yellow">Document structure labels for accessibility</span> » :</p>
+
+       <img src="/image/doc/pdf-libreoffice.jpg" class="center" style="width:60%;">
+
+       <p class="list"><span class="label"><u>Link :</u></span></p>
+
+       <p class="text indent">It is possible to add direct links to documents made available to students in the <span class="yellow">[doc]</span> folder.</p>
+
+       <p class="text indent">This is the simplest way to allow students to access documents, rather than going through the folder tree in Explorer.</p>
+
+       <p class="text indent">Thus, in the digital version of the activity sheet in PDF, we add next to the question asked a link in the form of a text or an image. All the student has to do is click on this link to discover the documents that will help them answer the question.</p>
+          
+       <p class="text indent">A specific syntax allows you to choose whether the document should open in the image, video, audio player, explorer, etc. For example, in your word processor, instead of writing a link in the form of a classic address to a website, we put :</p>
+
+       <span class="code"> http://www.site.com &nbsp &#10230; &nbsp dir:chemin/vers/le/dossier</span>
+
+          <BR>
+          <table style="border-spacing:25px 0;font-size:26px;">   
+             <tr><td> document :  </td><td> doc  </td></tr>
+             <tr><td> dossier  :  </td><td> dir  </td></tr>
+             <tr><td> image    :  </td><td> img  </td></tr>
+             <tr><td> vidéo    :  </td><td> vid  </td></tr>
+             <tr><td> audio    :  </td><td> aud  </td></tr>
+             <tr><td> site     :  </td><td> web  </td></tr>
+          </table>          
+
+       <p class="text indent">On the other hand, to simplify writing the path to the folder which can be tedious, we can use shortened writing by keeping only part of each element of the path (as long as it is unique) :</p>
+
+       <span class="code"> [doc] / 6ème / French / Chapter 2 / Conjugation &nbsp &#10230; &nbsp dir:6/f/2/c </span>
+
+       <p class="text indent"> The path can be that of a folder or a file. If it is a folder, all the files in the folder are displayed in the player and if it is a file, the player starts on it :</p>
+
+       <span class="code"> vid:6/f/2/c/video.mp4 </span>
+
+       <p class="text indent">When we click on this link, this media will launch in the video player.</p>
+
+       <p class="text indent">You will find an example pdf file with links of this type in the [doc] folder :</p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [6ème] &nbsp;->&nbsp; Example of links.pdf</p>
+
+       <BR><BR>
+       <p class="text video"><u>The PDF documents :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/doc/pdf.mp4" controls preload="none" poster="/video/doc/pdf.jpg"></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="pdf"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

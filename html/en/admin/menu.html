@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Menu</title>
+    <link type="text/css"  rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h">
+
+    <div id="Menu" class="h">
+
+      <ul class="menu">
+        <li><a href="home.html"     onclick="set(this);return false;" id="Home"></a></li>
+        <li><a href="system.html"   onclick="set(this);return false;">System</a></li>
+        <li><a href="start.html"    onclick="set(this);return false;">Start</a></li>
+        <li><a href="https.html"    onclick="set(this);return false;">Security</a></li>
+        <li><a href="device.html"   onclick="set(this);return false;">Device</a></li>
+        <li><a href="option.html"   onclick="set(this);return false;">Option</a></li>
+        <li><a href="login.html"    onclick="set(this);return false;">Classes</a></li>
+        <li><a href="index.html"    onclick="set(this);return false;">Indexing</a></li> 
+        <li><a href="proxy.html"    onclick="set(this);return false;">Internet</a></li>
+        <li><a href="pix.html"      onclick="set(this);return false;">Gallery</a></li>
+      </ul>
+    </div>
+
+    <script>
+       function set(e){ 
+          parent.set(e.href);
+          active(e);
+          return false;
+       }
+       function get(){
+          let active = document.querySelector('ul li.active');
+          return active ? [ ...active.parentElement.children].indexOf(active) : 0;
+       } 
+       function active(e){ 
+          let active = document.querySelector('li.active');
+          if(active) active.classList.remove('active');
+          if( typeof e == 'number' ) e = document.querySelector('ul').children[e].firstElementChild;
+          e.parentElement.classList.add('active');
+       }
+    </script>
+
+  </body>
+</html>

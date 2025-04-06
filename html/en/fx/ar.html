@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Accueil</title>   
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)">
+  
+    <div id="Article">
+
+       <p class="title">AR</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://ar-js-org.github.io/AR.js-Docs/#why-arjs" target="_blank">AR.js</a>
+          </p>
+          <img src="/image/app/Arjs.png"  class="right glow" style="width:150px; margin-top: -40px;">
+       </div>
+
+       <p class="text">This application allows you to add Augmented Reality to your documents by inserting markers that work like QRCodes and that the application can recognize. You will find an example in Chemistry in the file :</p>
+
+       <p class="code"> [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [exemples] &nbsp;->&nbsp; [AR]</p>
+
+       <p class="text">Once you have written a document in your word processor with a few markers, save it with the other student documents in .pdf format and in a folder named <span class="yellow">[AR]</span>. </p>
+
+       <p class="text">So, when the user clicks on this file, PhYBoX opens the augmented reality player and turns on the webcam.  By presenting the printed version of the document in front of the webcam, the markers will be replaced by the 3D models you have chosen..</p>
+
+       <p class="text">In the folder <span class="yellow"> [phybox] -> [asset] -> [app] -> [AR] </span> vyou will find the images of each marker to insert into your word processor.  Each marker is numbered and it is this number which is used to identify it to replace it with the 3D model which bears the same number. </p>
+
+       <p class="text">Your 3D models must be placed in the pdf document folder, in a subfolder of the same name as your document:
+ :</p>
+
+       <p class="code"> [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [4ème] &nbsp;->&nbsp; [AR] &nbsp;->&nbsp; [nom du fichier pdf] &nbsp;->&nbsp; 3.glb </p>
+
+       <p class="text">So, when you click on a pdf file that contains AR markers, PhYBoX will replace each marker with the 3D model of the same number and which is located in the folder of the same name as the pdf document. This is the method that was chosen to associate each marker with the correct model, in order to avoid the teacher having to write code.</p>
+
+       <p class="text">3D models must be in .glb format, but free sites are easily found to convert one of the many 3D model formats (.stl, .3ds, .blender etc.) to glb. GLB is a format for the web which has the advantage of including the model textures in a single file.</p>
+
+       <div class="linklogo">
+          <p class="text">A free 3D model site among others :
+             <a class="space" href="https://archive3d.net/" target="_blank">Archive3D</a>
+          </p>
+       </div>
+
+       <p class="text" style="padding-bottom:0"><u>Example :</u> &nbsp;&nbsp; Print the image of these 8 markers and present it in front of your webcam.</p>
+       <BR>
+
+       <button class="print center" onclick="print()">&#128438;</button>
+       <img src="/app/arjs/marker/markers-8.jpg" class="center shadow" style="width:60%;">
+
+    </div>
+    <BR><BR>
+
+    <div id="Html" class=""> <iframe class="center" src="/app/arjs/arjs.html"> </iframe> </div>
+
+    <script type="text/javascript">
+       function print() {
+          var url = "/app/arjs/marker/markers-8.jpg";
+          var win = window.open('');
+              win.document.write('<img src="' + url + '" onload="window.print(); window.close()" />');
+              win.focus();
+       }
+    </script>
+   
+  </body>
+</html>

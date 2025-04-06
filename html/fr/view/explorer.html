@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 40px !important; height: 40px !important; padding-right: 15px !important; }
+     #Article p.list.flex.left { align-items: end; padding-left:0 !important; }
+     #Article p.list.nobullet:before { content: ""; }
+     .butWrap { align-self: start; }
+     .crop.right { clip-path: inset(0 20% 0 0); }
+    .top { padding-top: 0 !important; } 
+    table td:first-child { vertical-align: top; white-space:nowrap; }
+    table td { padding-bottom: 30px; }
+    figure.center { display: grid; }
+    figcaption    { padding-top: 20px !important; }
+    div.img.center { display:flex; justify-content:normal; align-items:end; }
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; }
+    .note.label.digit.red { color: red!important; font-weight: bold; }
+    .note.label.digit { 
+       width: fit-content; 
+       color: #ffed5a !important; 
+       font-size: 20px!important; 
+       font-weight: normal; 
+       text-shadow: none!important;
+     }
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Explorateur</p>
+       <BR>
+
+       <p class="list nobullet flex left"><span class="butWrap"><span><img src="/icon/status-explorer.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> &nbsp; L'Explorateur est le Lecteur principal de la PhYBoX, elle s'ouvre donc sur lui au départ. Il permet aux élèves d'accèder aux documents proposés, en utilisant ses  3 composantes : le Moteur de Recherche, l'Arborescence des dossiers et le panneau de la Liste des documents présents dans le dossier sélectionné.</span></p>
+
+       <BR>
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/menu.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Ouvre ou ferme le panneau de l'arborescence des dossiers.</span></p>
+
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/fullscreen.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Affiche l'Explorateur en plein écran.</span></p>
+
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/user.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Dossier contenant les productions de la classe et des élèves.</span></p>
+
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/star.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span>Dossier présentant les documents mis en Favoris par l'élève.</p>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/view-explorer.png" class="center" style="width: 650px;">
+          <div class="note label digit" style="top:1px;right:70px;">➀</div>
+          <div class="note label digit" style="top:35px;left:323px;">➁</div>
+          <div class="note label digit" style="top:41px;left:165px;">➂</div> 
+          <div class="note label digit" style="top:77px;left:165px;">➃</div>
+          <div class="note label digit red" style="top:217px;right:55px;">➃</div>
+          <div class="note label digit" style="bottom:217px;left:165px;">➄</div>
+       </div>
+
+       <BR>
+       <div class="indent">
+
+          <p class="text"><span>➀</span> &nbsp; Le Moteur de Recherche ne tient pas compte des accents et des majuscules pour en simplifier l'usage et accepte plusieurs mots clés simultanément, afin de préciser sa demande. Les résultats renvoyés sont limités à ceux du niveau de l'élève. Par exemple, un élève de CE1 ne peut pas voir les documents destinés aux élèves de CM2. Dans le sélecteur situé à gauche, on peut choisir le type de document souhaité (texte, image, vidéo etc.).</p>
+
+          <p class="text"><span>➁</span> &nbsp; Montre le chemin du dossier dans lequel l'Explorateur se trouve en ce moment. Cela permet en cliquant sur l'un des éléments précédents de remonter rapidement dans l'arborescence.</p>
+
+          <p class="text break"><span>➂</span> &nbsp; Dans ce dossier, les élèves peuvent accèder aux productions qu'ils ont réalisées avec les différentes applications. Le dossier contient des éléments communs à la classe qu'ils peuvent partager et un dossier à leur nom auquel chaque élève à seul accès. Sur le disque, il se trouve dans le dossier :</p>
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [classes] &nbsp;->&nbsp; [niveau] &nbsp;->&nbsp; [nom de la classe] &nbsp;->&nbsp; [nom de l'élève]</p>
+
+          <p class="text break"><span>➃</span> &nbsp; Dossier contenant les éléments que les élèves ont mis en Favoris pour y accèder plus rapidement. N'importe quel dossier ou document peut être placé dans les Favoris, en cliquant simplement au bout de sa ligne. Une étoile apparait alors pour l'indiquer et il suffit de cliquer à nouveau dessus pour le supprimer.</p>
+
+          <p class="text break"><span>➄</span> &nbsp; La barre de séparation violette peut être déplacée, afin de donner plus ou moins d'espace au panneau d'Arboresence des dossiers suivant les besoins.</p>
+
+       </div>
+
+       <BR>
+       <p class="text"><u>Remarques :</u></p>
+
+       <p class="list">Lecture Seule :</p>
+
+          <p class="list nobullet">Tous les documents placés par l'enseignant dans le dossier <span class="yellow">[doc]</span> sont en lecture seule et ne peuvent donc être modifiés par les élèves. C'est la raison pour laquelle les productions des élèves vont elles dans le dossier <span class="yellow">[classes]</span>, dans lequel ils peuvent librement les modifier.</p>
+
+       <p class="list">Dossier caché :</p> 
+   
+          <p class="list nobullet">Si vous nommez un dossier <span class="yellow">[coffre]</span>, il ne sera pas affiché dans l'explorateur de la BoX. Vous pouvez donc y stocker des fichiers provisoirement afin qu'ils ne soient pas visibles des élèves (un quiz par exemple) et les en ressortir quand nécessaire.</p>
+
+          <div class="img center">
+             <figure class="center">
+                <img src="/image/box/view.explorer.coffre.1.png"  class="" style="height:200px;margin:auto;">
+                <figcaption>Le dossier <span class="yellow">[coffre]</span> dans l'explorateur de Windows..</figcaption>
+             </figure>
+             <figure class="center">
+                <img src="/image/box/view.explorer.coffre.2.png"  class="" style="height:200px;margin:auto;">
+                <figcaption>n'est pas visible dans l'explorateur de la Box</figcaption>
+             </figure>
+          </div>
+          <BR>
+
+       <BR>
+       <p class="text"><u>Les Actions :</u></p>
+
+       <p class="text">Certains types de fichiers peuvent avoir des boutons supplémentaires en bout de ligne afin de réaliser des actions spécifiques : </p>
+
+          <img src="/image/box/view-action-odt.png"  class="center crop right" style="width: 60%;">
+          <img src="/image/box/view-action-quiz.png" class="center crop right" style="width: 60%;">
+
+       <BR><BR>
+       <table style="line-height:35px;">   
+          <tr><td>  Texte :  </td><td>  L'appui sur le bouton <u>Édite</u> permet de faire une copie  dans le dossier de l'élève du fichier (odt, docx) qui sert de modèle de rédaction (e.g. une fiche de Travaux Pratiques afin de guider sa démarche), puis l'ouvre dans l'Éditeur pour qu'il puisse la compléter. L'élève ne modifie donc que sa version du document dans son  dossier et pas le document de l'enseignant, qui reste en lecture seule.</td></tr>
+
+          <tr><td>  Image :  </td><td>  <u>Copie</u> l'image dans le presse-papier (pour la coller dans l'éditeur de texte).</td></tr>
+
+          <tr><td>  Vidéo :  </td><td>  Usage spécifique pour les Sciences, le bouton <u>Édite</u> ouvre la vidéo d'un objet en mouvement dans l'application Tracker, afin de mettre en évidence sa trajectoire (le bouton apparait si la vidéo a été mise dans un dossier dont le nom commence par le symbole <span class="yellow">@</span>).</td></tr>
+
+          <tr><td>  Quiz :  </td><td>  <u>Édite</u> le quiz pour le modifier, <u>Joue</u> pour lancer le serveur qui permet aux élèves de jouer ensemble (sinon chacun joue individuellement), <u>Stat</u> affiche les statistiques de chaque élève qui a déjà joué individuellement.</td></tr>
+
+       </table>
+
+       <BR><BR>
+       <p class="text video"><u>L'explorateur :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/view/explorer.mp4" controls preload="none" poster="/video/view/explorer.jpg"></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="explorer"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

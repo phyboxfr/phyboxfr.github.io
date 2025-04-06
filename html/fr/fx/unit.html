@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Unités</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a href="" style="padding:0 25px;">Unités</a>
+          </p>
+          <img src="/image/app/unit.png"  class="right shadow" style="width:110px; right:0px; top: -120px;">
+       </div>
+       
+       <p class="text">Application de conversion d'unités de mesure pour les Sciences.</p>
+       
+       <p class="text">Vous pouvez modifier la liste des grandeurs physiques et des unités proposées pour les adapter à votre séquence et à votre langue, en éditant le fichier <span class="yellow">unit.cfg</span> avec le bloc-note : </p>
+      
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [app] &nbsp;->&nbsp; [science] &nbsp;->&nbsp; [unit] &nbsp;->&nbsp; unit.cfg</p>
+
+       <p class="text"><u>Lien court :</u></p>
+
+       <p class="text">Dans un document Pdf, vous pouvez mettre un lien qui ouvre cette aplication directement dans un jeu d'unités donné. Il faut pour cela, ajouter au lien la grandeur physique choisie (u) et les 2 unités de mesure à convertir (a et b), sous la forme suivante :</p>
+
+       <p class="text center code"> app:science/unit/?u=vitesse&a=m/s&b=km/h </p>
+
+       <p class="text">Cet exemple, ouvre l'application sur la conversion de la Vitesse entre les m/s et les km/h.</p>
+
+       <p class="text">Ces noms correspondant à ceux contenus dans le fichier <span class="yellow">unit.cfg</span>, ils peuvent donc être adaptés dans toute les langues, en les remplaçant par leur équivalent dans cette langue.</p>
+
+    </div>
+
+  </body>
+</html>

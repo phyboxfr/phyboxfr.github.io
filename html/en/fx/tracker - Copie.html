@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">TRACKER</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PHYBoX intègre l'application :
+             <a class="space" href="https://github.com/lucademian/JsTrack" target="_blank" style="padding:0 25px;">JsTrack</a>
+          </p>
+          <img src="/image/app/tracker.jpg"  class="right shadow" style="width:200px; right:0px; top: -120px;">
+       </div>
+
+       <p class="text">Développée par Luca DEMIAN et adaptée pour l'usage sur écran tactile, cette application permet de décomposer le mouvement d'un objet dans une vidéo, afin d'identifier et caractériser sa trajectoire.</p>
+   
+       <p class="text">Avec la tablette ou le smartphone, les élèves peuvent ainsi filmer un objet en mouvement (ou l'enseignant peut proposer une vidéo déjà faite) que l'on met dans JTrack. On peut alors placer un marqueur sur le centre de l'objet, que l'on peut suivre image par image, pour voir apparaitre sa trajectoire.</p>
+
+       <div class="flex">
+          <p class="text">
+             Tester JsTrack en ligne :
+             <a class="space" href="https://jst.lucademian.com/" target="_blank">JsTrack Live</a>
+             <BR><BR>
+             Cette version ne fonctionne que sur pc et il faut appuyer sur la touche shift pour placer un marqueur.
+             <BR><BR>
+             Exemple de vidéos pour essayer JsTrack (sur la vidéo, faire un clic droit, puis « Enregistrer la vidéo sous » pour la sauvegarder sur votre pc, avant de la charger dans JsTrack). 
+             <BR><BR>
+             JsTrack dispose de plusieurs fonctionnalités qui simplifient la tâche :
+             &nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="/pdf/JsTrack.pdf" target="_blank" class="nopad">Manuel de JsTrack</a>
+             <BR><BR><BR>
+          </p>
+          <video src="/video/app/fall.mp4" controls width="150px" style="padding-left: 40px;transform: translateY(-30px);"></video>
+       </div>
+
+       <p class="list">Enregistrement automatique de la vidéo et de la trajectoire dans la mémoire du navigateur. On peut reprendre son travail sur une autre séance, en retrouvant ce qui a déjà été fait.</p>
+
+       <p class="list">Conversion du format de la vidéo : JsTrack n'accepte que les vidéos en mp4, mais si elle a été tournée dans un autre format comme le 3gp, elle propose de la convertir en mp4.</p>
+
+       <p class="list">Enregistrer une capture d'écran avec le dessin de la trajectoire. Ce qui permet de l'intégrer dans un document pour en compléter l'analyse. Dans l'éditeur de texte de la PHYBox, il suffit de coller l'image pour la récupérer depuis JsTrack.</p>
+
+       <p class="list">Exporter un fichier Excel des positions de l'objet au cours du temps.</p>
+
+       <BR><BR>
+
+       <!--
+       <div class="video">    
+          <video src="../video/fx/tracker.mp4" controls  preload="none" poster="/video/fx/tracker.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="tracker"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 40px !important; height: 40px !important; }
+     #Article p.list.flex.left { align-items: end; padding-left:0 !important; }
+     #Article p.list.flex.left:before { content: ""; }
+     .butWrap { align-self: start; }
+     div.crop { display:flex; justify-content: center; gap: 50px; }
+     img.crop { width: 200px; height: 295px; object-fit: cover; }
+     img.crop.top { object-position: 0 0; }
+    .crop.bottom { object-position: 0 85%; }
+    .top { padding-top: 0 !important; } 
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Identification</p>
+       <BR>
+
+       <p class="list flex left"><span class="butWrap"><span><img src="/icon/status-login.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> Le panneau d'identification de l'utilisateur, avec l'accès à 2 Lecteurs spécifiques visibles uniquement de l'Administrateur :</span></p>
+
+       <BR>
+       <div class="crop">
+          <img src="/image/box/view-login.admin.png" class="crop top">
+          <img src="/image/box/view-login.png" class="crop top">
+          <img src="/image/box/view-login.admin.png" class="crop bottom">
+       </div>
+
+       <BR>
+       <p class="list flex"><span class="butWrap"><img src="/icon/status-qr.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Affiche un QR Code avec les paramètres de connexion au réseau Wifi.</span></p>
+
+       <p class="list flex"><span class="butWrap"><img src="/icon/status-cfg.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Ouvre le Panneau de Configuration.</span></p>
+
+       <p class="list flex"><span class="butWrap"><img src="/icon/status-login.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Ouvre le Lecteur des Connexions.</span></p>
+
+       <BR>
+       <p class="text top"><u>Remarque :</u></p>
+
+       <p class="text">Après la déconnexion, le nom du dernier utilisateur reste noté sur ce panneau, même après le redémarrage  de la Tablette, afin de pouvoir l'identifier rapidement si besoin était.</p>
+
+       <BR>
+       <p class="text"><u>Personnalisation :</u></p>
+
+       <p class="list">L'image de fond et les avatars peuvent être remplacés en allant dans le dossier :</p>
+
+       <p class="text center code"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [login] &nbsp;->&nbsp; [res] &nbsp;->&nbsp; [image]</p>
+
+       <p class="list">Plus technique, le Surnom affiché au-dessus du nom de l'utilisateur, ici <span class="yellow">Élève</span>, peut être changé dans le fichier de langue (catégorie <span class="yellow">slide.label</span>) :</p>
+
+       <p class="text center code"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [local] &nbsp;->&nbsp; [lang] &nbsp;->&nbsp; fr.json</p>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

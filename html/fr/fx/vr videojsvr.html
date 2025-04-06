@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+
+       <p class="title">VR</p>
+       <BR>
+
+       <p class="text">La PhYBoX intègre des applications pour visualiser des images et des vidéos en <u>Réalité Virtuelle</u>. Ces technologies permettent une meilleure immersion dans les documents, ce qui les rend plus attractifs :</u>.</p>
+
+       <BR>
+       <!-- PHOTOSPHERE -->
+
+       <p class="list" style="margin-bottom:0;"><u>PANORAMA à 360° :</u></p>
+
+       <div class="linklogo" style="margin-bottom:-20px;">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://photo-sphere-viewer.js.org/" target="_blank">Photo Sphere Viewer</a>
+          </p>
+          <img src="/image/app/photosphere-loader.gif"  class="right shadow" style="width:110px; right:70px; top: -130px;">
+       </div>
+       <BR>
+
+       <div id="photosphere-viewer" style="width: 60vw; height: 60vh; margin: auto;"></div>
+
+   <!-- 
+       <link rel="stylesheet" href="/app/photosphere/photo-sphere-viewer.css">
+       <script src="/app/photosphere/three.min.js"></script>
+       <script src="/app/photosphere/browser.js"></script>
+       <script src="/app/photosphere/photo-sphere-viewer.js"></script>
+        
+       <script>
+          const url = '/image/app/';
+          const viewer = new PhotoSphereViewer.Viewer({
+             container: 'photosphere-viewer',
+             panorama: url + 'photosphere-exemple.jpg',
+             caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+             loadingImg: url + 'photosphere-loader.gif',
+             autorotateDelay: 1000,
+             autorotateSpeed: '0.5rpm',
+             autorotateIdle:   true,   
+             touchmoveTwoFingers: true,
+          });
+       </script>
+   -->
+
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+
+       <script type="importmap">
+         {
+            "imports": {
+               "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+               "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js",
+               "@photo-sphere-viewer/autorotate-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/autorotate-plugin/index.module.js"
+            }
+         }
+       </script>
+
+       <!-- External Load --> 
+
+       <script type="module">
+          import { Viewer } from '@photo-sphere-viewer/core';
+          import { AutorotatePlugin } from '@photo-sphere-viewer/autorotate-plugin';
+
+          const url = 'https://photo-sphere-viewer-data.netlify.app/assets/';
+          const viewer = new Viewer({
+             container: 'photosphere-viewer',
+             panorama: url + 'sphere.jpg',
+             caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+             loadingImg: url + 'loader.gif',
+             touchmoveTwoFingers: true,
+             mousewheelCtrlKey: true,
+             plugins: [
+               [ AutorotatePlugin, {
+                  autostartDelay: 1000,
+                  autorotateSpeed: '0.5rpm',
+                  autostartOnIdle:   true,   
+               }],
+             ],
+         });
+       </script>
+
+       <BR>
+
+       <p class="text"><u>Utilisation :</u> Pour qu'une image prise en 360° soit présentée dans ce lecteur panoramique, il suffit simplement de la placer n'importe où dans les documents élèves comme n'importe quelle autre image, mais dans un dossier nommé <span class="yellow">[VR]</span>. Vous en trouverez un exemple dans le dossier <span class="yellow">[exemples]</span> : </p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [exemples] &nbsp;->&nbsp; [VR]</p>
+
+       <BR>
+       <!-- VIDEOJS VR -->
+
+       <p class="list" style="margin-bottom:0;"><u>VIDÉO VR 360° :</u></p>
+
+       <div class="linklogo" style="margin-bottom:-40px;">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://yanwsh.github.io/videojs-panorama/" target="_blank">Videojs-Panorama</a>
+          </p>
+          <img src="/image/app/videojs.png"  class="right shadow" style="width:110px; right:70px; top: -130px;">
+       </div>
+       <BR>
+
+       <link href="../node_modules/video.js/dist/video-js.css" rel="stylesheet">
+       <link href="../dist/videojs-vr.css" rel="stylesheet">
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">Si vous disposez d'un casque VR, vous pouvez connecter votre téléphone portable à la PhYBoX afin de  regarder la vidéo en activant le mode VR <img src="/icon/vr.svg" class="icon invert" style="width:30px;padding:3px;vertical-align:middle;"> pour une immersion complète.</p>
+          <img src="/image/site/vr.png"  class="right shadow" style="width:110px; right:70px; top: -130px;">
+       </div>
+
+       <p class="text">Sur l'écran s'affiche 3 commandes de lecture en tête haute, que l'on peut valider en restant le regard positionné dessus pendant 3 secondes. Cela permet de naviguer parmi les vidéos sans avoir à enlever le casque.</p>
+
+       <p class="text"><u>Utilisation :</u> Comme pour les images, les vidéos en VR sont envoyées dans le lecteur VR plutôt qure dans le lecteur vidéo classique, simplement en les déposant dans un dossier nommé [VR]. Vous n'avez donc rien à faire, la PhYBoX s'occupe de tout. Vous en trouverez un exemple dans le dossier [exemples] : </p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [exemples] &nbsp;->&nbsp; [VR]</p>
+       <BR>
+
+       <p class="text"><u>Aspect technique :</u> &nbsp;&nbsp;&nbsp; Complément facultatif, pour ceux qui souhaiteraient aller plus loin dans l'usage de la VR en classe.</p>
+
+       <p class="text">Par défaut, ce lecteur lit les vidéos VR en 2D encodées dans la projection la plus courante dite <u>équirectangulaire</u> (c'est celle qui est utilisée pour les planisphères en géographie).</p>
+
+       <p class="text">Cependant, le lecteur VR  de la PhYBoX lit aussi d'autres formats de VR (180° et 360°) en 2D et en 3D équirectangulaire. Pour cela, il suffit d'ajouter dans son nom un identifiant reconnu par le lecteur :</p>
+
+             <table>   
+                <tr><td>  2D                     </td><td>  nom            </td></tr>
+                <tr><td>  3D 360° Haut/Bas       </td><td>  nom + 3D360    </td></tr>
+                <tr><td>  3D 360° Gauche/Droite  </td><td>  nom + 3D360LR  </td></tr>
+                <tr><td>  3D 180° Gauche/Droite  </td><td>  nom + 3D180    </td></tr>
+             </table>
+
+       <p class="code"> video.mp4 &nbsp; ->  &nbsp; video3D360LR.mp4</p>
+
+       <p class="text"><u>Remarque sur la Projection EAC :</u></p>
+
+       <p class="text">Certaines vidéos VR sur Youtube n'utilisent pas la projection équirectangulaire, mais une projection créée par Google nommée Equi-Angular Cubemap (EAC). Ceci, afin de corriger le défaut majeur de la projection équirectangulaire qui donne davantage de résolution aux extrémités qu'au centre de l'image, où se trouve pourtant souvent l'essentiel de l'action. </p>
+
+       <p class="text">Cette projection permet de mieux répartir la résolution de l'image (donc la netteté) sur l'ensemble des zones. Cela se traduit par l'ajout d'une 2ème bande vidéo qui est centrée sur le milieu de l'image afin de lui redonner plus de définition.</p>
+
+       <p class="text">Lorsque l'on regarde ce type de vidéo dans le lecteur de Youtube qui sait gérer cette projection, on ne la voit pas puisqu'elle est intégrée dans la vue présentée par le lecteur. Par contre, si vous la téléchargez pour la regarder sur votre ordinateur avec un lecteur comme VLC, la vidéo apparait coupée en deux bandes horizontales différentes (voir 4 pour de la 3D). Le lecteur de la PhYBox ne prend pas en charge l'EAC.</p>
+
+       <div class="linklogo">
+          <p class="text">Un logiciel gratuit qui lit tous les formats de VR (y compris l'EAC) :
+             <a class="space" href="https://potplayer.daum.net/" target="_blank">PotPlayer</a>
+          </p>
+       </div>
+       
+    <p class="text"></p>
+    </div>
+
+  </body>
+</html>

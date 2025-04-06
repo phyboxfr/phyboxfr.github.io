@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    #flash { width: 50%; margin: -70px 0; padding: 0 25%; padding-bottom: 90px; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Flash</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://ruffle.rs/" target="_blank">Ruffle</a>
+          </p>
+          <img src="/image/app/ruffle.svg" class="right" style="width:170px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">Ruffle est un émulateur Html pour lire les animations Flash que les navigateurs ne prennent plus en charge depuis plusieurs années. Il existe pourtant de nombreuses animations Flash pour les Sciences qui ne pouvaient donc plus être utilisées. Grâce à cette application, elles sont de nouveau accesibles dans le navigateur. L'application est en cours de développement et n'est pas encore compatible avec toutes les animations, mais la plupart passent maintenant sans problème.</p>
+    </div>
+
+       <!- Ruffle Flash Player ->
+       <div id="flash"></div>
+
+       <!- Ruffle script ->
+       <script src='/app/ruffle/ruffle.js'></script>
+       <script>
+          window.RufflePlayer = window.RufflePlayer || {};
+          window.addEventListener('load', (e) => {
+             const ruffle = window.RufflePlayer.newest();
+             const player = ruffle.createPlayer();
+             const flash = document.getElementById("flash");
+             window.RufflePlayer.config = {autoplay: 'on', displayUnmuteOverlay: 'on'};
+             flash.appendChild(player);
+             player.load("/media/flash.swf");  // '' -> "" bug if name.swf contains ' 
+          });   
+       </script>
+
+  </body>
+</html>

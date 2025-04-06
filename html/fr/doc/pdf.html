@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .list span.label { margin-top: 20px; } 
+    p.text.indent { text-align: justify; padding-left: 60px; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+
+       <p class="title">Pdf</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://mozilla.github.io/pdf.js/" target="_blank">Pdf.js</a>
+          </p> 
+          <img class="logo" src="/image/app/pdfjs.svg" class="right shadow" style="width:100px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">Développée par la <a href="https://foundation.mozilla.org/fr/" target="_blank"> Fondation Mozilla</a>, cette application est utilisée dans le navigateur Firefox pour ouvrir les documents pdf.</p>
+
+       <p class="text">Dans la PhYBoX, ces fichiers sont utilisés pour proposer <u>une version numérique et dynamique de la fiche d'activité</u> des élèves, qui est un des éléments centraux du dispositif. Elle sert ainsi de poste d'aiguillage pour l'accès aux documents d'accompagnement.</p>
+
+       <p class="text">Plusieurs fonctionnalités sont ainsi ajoutées à l'ouverture des documents pdf, afin de les adapter à l'environnement de la BoX :</p>  
+
+       <p class="list"><span class="label"><u>Lecture :</u></span></p>
+
+       <p class="text indent">En cliquant sur une ligne, le texte est prononcé par <u>la synthèse vocale</u> pour aider les élèves ayant des difficultés de lecture.</p>
+
+       <p class="text indent">Pour que cela soit possible, il faut que le fichier pdf contienne des repères de structure. Au moment d'enregistrer votre fichier au format pdf depuis votre traitement de texte, vérifier dans les options du format pdf que la case des repères (étiquettes) est bien cochée.</p>
+
+       <p class="text indent">Dans Libre Office : « <span class="yellow">Exporter les repères de texte</span> » et dans Microsoft Office : « <span class="yellow">Étiquettes de structure de document pour l’accessibilité</span> » :</p>
+
+       <img src="/image/doc/pdf-libreoffice.jpg" class="center" style="width:60%;">
+
+       <p class="list"><span class="label"><u>Lien :</u></span></p>
+
+       <p class="text indent">Il est possible d'ajouter des liens directs vers des documents mis à la disposition des élèves dans le dossier <span class="yellow">[doc]</span>.</p>
+
+       <p class="text indent">C'est la façon la plus simple pour permettre aux élèves d'accéder aux documents, plutôt que de passer par l'arborescence des dossiers dans l'explorateur.</p>
+
+       <p class="text indent">Ainsi, dans la version numérique de la fiche d'activité en pdf, on ajoute à côté de la question posée un lien sous la forme d'un texte ou d'une image. L'élève n'a plus qu'à cliquer sur ce lien pour découvrir les documents qui vont l'aider à répondre à la question.</p>
+          
+       <p class="text indent">Une syntaxe spécifique permet de choisir si le document doit s'ouvrir dans le lecteur image, vidéo, audio, l'explorateur etc. Par exemple, dans votre traitement de texte, au lieu d'écrire un lien sous la forme d'une adresse classique vers un site internet, on met :</p>
+
+       <span class="code"> http://www.site.com &nbsp &#10230; &nbsp dir:chemin/vers/le/dossier</span>
+
+          <BR>
+          <table style="border-spacing:25px 0;font-size:26px;">   
+             <tr><td> document :  </td><td> doc  </td></tr>
+             <tr><td> dossier  :  </td><td> dir  </td></tr>
+             <tr><td> image    :  </td><td> img  </td></tr>
+             <tr><td> vidéo    :  </td><td> vid  </td></tr>
+             <tr><td> audio    :  </td><td> aud  </td></tr>
+             <tr><td> site     :  </td><td> web  </td></tr>
+          </table>          
+
+       <p class="text indent">D'autre part, pour simplifier l'écriture du chemin vers le dossier qui peut être fastidieuse, on peut utiliser une écriture raccourcie en ne gardant qu'une partie de chaque élément du chemin (du moment qu'il soit unique) :</p>
+
+       <span class="code"> [doc] / 6ème / Français / Chapitre 2 / Conjugaison &nbsp &#10230; &nbsp dir:6/f/2/c </span>
+
+       <p class="text indent"> Le chemin peut être celui d'un dossier ou d'un fichier. Si c'est un dossier, l'ensemble des fichiers du dossier sont affichés dans le lecteur et si c'est un fichier, le lecteur démarre sur celui-ci :</p>
+
+       <span class="code"> vid:6/f/2/c/vidéo.mp4 </span>
+
+       <p class="text indent">Lorsque l'on clique sur ce lien, ce média se lancera dans le lecteur vidéo.</p>
+
+       <p class="text indent">Vous trouverez un exemple de fichier pdf avec des liens de ce type dans le dossier [doc] :</p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [6ème] &nbsp;->&nbsp; Example of links.pdf</p>
+
+       <BR><BR>
+       <p class="text video"><u>Les documents PDF :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/doc/pdf.mp4" controls preload="none" poster="/video/doc/pdf.jpg"></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="pdf"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

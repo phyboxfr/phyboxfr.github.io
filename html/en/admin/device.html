@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .note.arrow { top: -12%; right: -23%; }
+    .note.arrow:before { color: #ffed5a; }
+    .note.label { top: 11%; right: -109%; width: 90%; color: #ffed5a; }
+    .qr {
+       width: 40vh;
+       height: 140px;
+       object-fit: cover;
+       object-position: 100% 0px;
+    }
+  </style>
+
+  <body onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Devices</p>
+       <BR>
+
+       <p class="text">After launching PhYBoX on the computer, you can now connect the Tablets.
+.</p>
+
+       <p class="text">You must first connect your devices to the Router's Wifi, then go to the browser and copy the address displayed by the PhYBoX console.</p>
+
+       <p class="text">To go faster, the PhYBoX can generate a QR Code, which allows you to both create the Wifi connection and launch the browser to go to the PhYBoX Address, if the Android version of the Tablet allows it :</p>
+
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/view-slide.png" class="center qr">
+          <div class="note label">Generate a QR Code for students</div>
+          <div class="note arrow left"></div>
+       </div>
+
+          <BR><BR>
+          <img src="/image/box/qr.png" class="center" style="width:60%">
+
+       <BR><BR>
+       <table style="line-height:35px;">   
+          <tr><td>  Wifi  :</td><td>  The Name of the Wifi Network  </td></tr>
+          <tr><td>  Key   :</td><td>  The Wifi Network Password     </td></tr>
+          <tr><td>  Link  :</td><td>  The PhYBoX Address            </td></tr>
+       </table>
+       <BR>
+
+       <p class="text">Subsequently, to avoid students having to type the address each time, you can put a shortcut on the desktop of each tablet. You will find this feature named “Add to Home Screen” in the browser menu.</p>
+
+       <p class="text">However, this assumes that the IP address of your computer remains fixed, so you must also make an address reservation in the application that allows you to manage your Router.  It is not possible to give a general guideline on this subject, since each Router model is different, so you will need to refer to its manual.</p>
+
+       <BR>
+       <p class="text"><u>Note :</u></p>
+
+        <p class="text">If you want students to also be able to connect with their smartphone (for example to use a VR headset), it is better to create a second independent access, as Routers often offer the possibility of launching a network for Guests.</p>
+
+       <p class="text">On the latter, you can choose a simple Password (123..) to communicate to the students and which you can easily change if necessary, without having to change the Network password for the Tablets.</p>
+
+       <BR>
+       <p class="text video"><u>Devices Connexion :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/admin/qrcode.mp4" controls preload="none" poster="/video/admin/qrcode.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="qrcode"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

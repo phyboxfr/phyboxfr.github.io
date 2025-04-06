@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Accueil</title>   
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)">
+  
+    <div id="Article">
+
+       <p class="title">AR</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://ar-js-org.github.io/AR.js-Docs/#why-arjs" target="_blank">AR.js</a>
+          </p>
+          <img src="/image/app/Arjs.png"  class="right glow" style="width:150px; margin-top: -40px;">
+       </div>
+
+       <p class="text">Cette application permet d'ajouter de la <u>Réalité Augmentée</u> dans vos documents en y insérant des marqueurs qui fonctionnent comme des QRCodes et que l'application sait reconnaitre. Vous en trouverez un exemple en Chimie dans le dossier :</p>
+
+       <p class="code"> [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [exemples] &nbsp;->&nbsp; [AR]</p>
+
+       <p class="text">Une fois que vous avez rédigé un document dans votre traitement de texte avec quelques marqueurs, enregistrez-le avec les autres documents élèves au format .pdf et dans un dossier nommé <span class="yellow">[AR]</span>. </p>
+
+       <p class="text">Ainsi, quand l'utilisateur clique sur ce fichier, la PhYBoX ouvre le lecteur de réalité augmentée et allume la webcam. En présentant la version imprimée du document devant la webcam, les marqueurs seront remplacés par les modèles 3D que vous avez choisi.</p>
+
+       <p class="text">Dans le dossier <span class="yellow"> [phybox] -> [asset] -> [app] -> [AR] </span> vous trouverez les images de chaque marqueur à insérer dans dans votre traitement de texte. Chaque marqueur est numéroté et c'est ce numéro qui sert à l'identifier pour le remplacer par le modèle 3D qui porte le même numéro. </p>
+
+       <p class="text">Vos modèldes 3D doivent être placés dans le dossier du document pdf, dans un sous-dossier du même nom que votre document :</p>
+
+       <p class="code"> [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [4ème] &nbsp;->&nbsp; [AR] &nbsp;->&nbsp; [nom du fichier pdf] &nbsp;->&nbsp; 3.glb </p>
+
+       <p class="text">Ainsi, lorsque vous cliquez sur un fichier pdf qui contient des marqueurs AR, la PhYBoX va remplacer chaque marqueur par le modèle 3D du même numéro et qui se trouve dans le dossier du même nom que le document pdf. C'est la méthode qui a été choisie pour associer chaque marqueur avec le bon modèle, afin d'éviter que l'enseignant ait à écrire du code.</p>
+
+       <p class="text">Les modèles 3D doivent être au format .glb, mais on trouve facilement des sites gratuits pour convertir un des nombreux formats de modèle 3D (.stl, .3ds, .blender etc.) vers le glb. Le glb est un format pour le web qui a l'avantage d'inclure dans un seul fichier les textures du modèle.</p>
+
+       <div class="linklogo">
+          <p class="text">Un site de modèles en 3D gratuits parmi d'autres :
+             <a class="space" href="https://archive3d.net/" target="_blank">Archive3D</a>
+          </p>
+       </div>
+
+       <p class="text" style="padding-bottom:0"><u>Exemple :</u> &nbsp;&nbsp; Imprimez l'image de ces 8 marqueurs et présentez-là devant votre webcam.</p>
+       <BR>
+
+       <button class="print center" onclick="print()">&#128438;</button>
+       <img src="/app/arjs/marker/markers-8.jpg" class="center shadow" style="width:60%;">
+
+    </div>
+    <BR><BR>
+
+    <div id="Html" class=""> <iframe class="center" src="/app/arjs/arjs.html"> </iframe> </div>
+
+    <script type="text/javascript">
+       function print() {
+          var url = "/app/arjs/marker/markers-8.jpg";
+          var win = window.open('');
+              win.document.write('<img src="' + url + '" onload="window.print(); window.close()" />');
+              win.focus();
+       }
+    </script>
+   
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    #Article > p.text:last-of-type { padding-bottom: 0!important; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">MOLÉCULES</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PHYBoX intègre l'application :
+             <a class="space" href="https://jmol.sourceforge.net/" target="_blank" style="padding:0 25px;">JsMol</a>
+          </p>
+          <img src="/image/app/jsmol.png"  class="right shadow" style="width:200px; right:0px; top: -120px;">
+       </div>
+
+       <p class="text">Cette application a été développée pour visualiser les molécules en 3D sous les différentes présentations usuelles (compacte, éclatée, bâton etc.). La géométrie des molécules déterminant une partie de leurs propriétés chimiques, il est important de pouvoir les faire découvrir de la façon la plus complète possible.</p>
+
+       <div style="position:relative;">
+          <p class="text">Jsmol pouvant en plus afficher les modèles moléculaires en stéréoscopie, on peut donc voir et manipuler des molècules en 3D avec une paire de lunettes anaglyphe (rouge, cyan) qui est peu onéreuse.</p>
+          <img src="/image/site/anaglyphe.png" class="absolute right shadow" style="width:200px;top: 40px;right: calc( var(--ArticleMargin) - 50px );transform: rotate(20deg);">
+       </div>
+
+    </div>
+
+       <!-- JSMOL -->
+
+       <div style="display:flex;justify-content:center;">
+          <button id="but3D"   class="jsmol" data-stereo="false" onclick="click3D(this)">3D</button>
+          <button id="butNext" class="jsmol" data-id="0"         onclick="clickNext(this)">&#10148;</button>  
+       </div>
+          <div id="JsMolDiv" style="display:flex;justify-content:center;"></div> 
+          <div id="JsMolTag" style="text-align:center;padding:15px;font-family:arial;font-weight:bold;"></div> 
+
+       <script src="/app/jsmol/JSmol.min.js"></script> 
+       <script type="text/javascript">   
+
+          //VARIABLES:
+
+          var path     = '/app/jsmol/';  //dossier des fichiers
+          var Pathjs   = path + 'j2s';        //dossier de jsmol
+          var pathMol  = path + 'molecule/';  //dossier des molécules en pdb
+          var scrW     = 3;                   //ajuste la largeur de la fenêtre de jmol 
+          var scrH     = 3;                   //ajuste la hauteur de la fenêtre de jmol
+          
+          var molecules = [ { name: 'eau', tag: 'Eau' }, { name: 'co2', tag: 'Dioxyde de Carbone' }, { name: 'butane', tag: 'Butane' }, { name: 'ethanol', tag: 'Éthanol' }, { name: 'paracetamol', tag: 'Paracétamol' }, { name: 'vitaminec', tag: 'Vitamine C' }, { name: 'adn', tag: 'Adn' } ]; 
+
+
+          //CONFIG:
+          var Info = {
+	         width: screen.width/scrW,
+	         height: screen.height/scrH,
+	         color: "black",
+	         use: "HTML5",
+	         j2sPath: Pathjs,
+                 script: 'load ' + getMolName(0) + ';spacefill 50%;zoom 100',   //Load first mol at start
+                 disableJ2SLoadMonitor: true,
+                 disableInitialConsole: true	
+            }
+
+          //LOAD:
+
+            delete Jmol._tracker;  // JSmol.js contains a tracker to  google analytics  
+
+            jmolwin = Jmol.getAppletHtml("myJmol",Info);  
+            $(document).ready(function() { $("#JsMolDiv").append(jmolwin); }); 
+            Jmol.script(myJmol,"set ZoomLarge true"); 
+            Jmol.script(myJmol,"frank off");  //Remove Jsmol watermark
+            setMolTag(0);
+
+          //UI:
+
+          function getMolName(id){
+             return pathMol + molecules[id].name + '.pdb';
+          } 
+          function setMolTag(id){
+             document.getElementById('JsMolTag').textContent = molecules[id].tag;
+          } 
+          function click3D(e){
+             let stereo= (e.dataset.stereo == 'true');
+                 e.dataset.stereo = !stereo;
+             let script = stereo ? 'stereo off' : 'stereo redcyan 7';
+                 Jmol.script(myJmol, script); 
+          }
+          function clickNext(e){
+             let id = parseInt(e.dataset.id);
+             let len = molecules.length;
+                 id = id >= len - 1 ? 0 : ++id;
+                 e.dataset.id = id;
+                 Jmol.script(myJmol,'load '+ getMolName(id) + ';spacefill 50%;zoom 100'); 
+                 setMolTag(id);                 
+          }
+
+       </script>
+
+  </body>
+</html>

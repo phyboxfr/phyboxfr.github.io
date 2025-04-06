@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.pnglow { filter: drop-shadow(white 0px 0px 5px); }
+    .note.arrow { top: 18%; right: 10%; }
+    .note.arrow:before { color: #ff4df2; } 
+    .note.label { top: 26%; right: -55%; width: 55%; color: #ffed5a !important; }
+    .board {
+       position: absolute;
+       top: 49%;
+       width: 70%;
+       margin: 0 13%;
+       color: #eeaf00 !important;
+       font-size: 30px;
+       text-align: center;
+       text-shadow: 0 0 #000;
+    }
+  </style>
+
+  <body onload="init(0)">
+
+    <div id="Article">
+
+       <p class="title">Galerie &nbsp; &nbsp; d'images</p>
+
+       <BR>
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre une Librairie d'Images « Libres de Droits & Gratuites à Télécharger » proposée par le site :
+             <a class="space" href="https://pixabay.com/" target="_blank">Pixabay</a>
+          </p>
+          <img src="/image/app/pixabay.png"  class="right" style="width:110px;margin-top:-70px;">
+       </div>
+
+       <p class="text">Cette Galerie d'images est disponible dans l'application <span class="yellow">Quiz</span> afin de trouver rapidement des images pour illustrer les questions posées aux élèves.</p>
+  
+       <p class="text">Pour pouvoir bénéficier de ce service gratuit, il faut s'enregistrer sur le site de Pixabay afin d'obtenir un identifiant unique appelé <span class="yellow">API Key</span>, qui autorise l'usage de leur moteur de recherche au sein d'une autre application. Il permet à ce site de faire des statistiques d'usage et de limiter d'éventuels abus dans l'utilisation de leur service :</p>
+          
+       <p class="text center">
+          <a class="" href="https://pixabay.com/api/docs/" target="_blank">Pixabay API</a>
+       </p>
+
+       <p class="text"> Une fois que vous serez enregistré, l'API Key apparaitra dans la section <span class="yellow">Search Images</span> :</p>
+
+       <img src="/image/doc/pixabay-api.png" class="center" style="width:60%;">
+
+       <p class="text">Il faut ensuite recopier cette API Key dans le panneau de configuration de la BoX pour qu'elle puisse l'utiliser :</p>
+
+       <img src="/image/box/opt-cfg-pix.png" class="center" style="width:50%;">
+
+       <BR>
+       <p class="text">Lorsque vous êtes en classe, pensez également à activer le Proxy qui se trouve en dessous et vérifiez que son adresse par défaut est bien celle du Proxy de votre établissement, sinon la BoX ne pourra pas communiquer avec ce service :</p>
+
+       <img src="/image/box/opt-cfg-proxy.png" class="center" style="width:50%;">
+       <BR>
+
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Les requêtes envoyées vers le site de <span class="yellow">Pixabay</span> sont effectuées en activant leur option <u>safesearch</u> afin de ne recevoir que des images qui soient adaptées à tous les âges.</p>
+
+       <BR><BR>
+       <p class="text video"><u>La Galerie d'Images :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/admin/pix.mp4" controls preload="none" poster="/video/admin/pix.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="pix"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

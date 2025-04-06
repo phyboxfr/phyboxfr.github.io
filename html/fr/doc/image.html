@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Image</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://photoswipe.com/" target="_blank">PhotoSwipe</a>
+          </p>
+          <img src="/image/app/PhotoSwipe.png"  class="right shadow" style="width:90px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">Tous les formats d'image s'ouvrent avec Photoswipe, afin de retrouver dans le navigateur la fluidité qu'offrent les galeries d'images sur les écrans tactiles. On passe d'une image à l'autre en les faisant glisser et on zoome dessus avec le geste de pinch usuel.</p>
+
+       <p class="text">Dans le coin supérieur droit se trouve une petite barre d'outils pour lui ajouter quelques fonctionnalités :</p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/folder.svg" class="button icon invert"></span><span> &nbsp&nbsp </span><span> Retourne dans l'explorateur, au dossier d'où sont issus les images.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/speech.svg" class="button icon invert"></span><span> &nbsp&nbsp </span><span><u>Adaptation</u> pour les élèves rencontrant des soucis de lecture, en utilisant <u>la synthèse vocale</u> pour énoncer un texte contenu dans une image. Un cadre bleu permet de sélectionner une partie de l'image où se trouve le texte et en double cliquant dessus, un outil de reconnaissance de caractère lit le texte avec la synthèse vocale.</p>
+
+          <div class="linklogo list">
+             <p class="text">Moteur de reconnaissance de caractère ocr :
+                <a class="space" href="https://tesseract.projectnaptha.com/" target="_blank">Tesseract.js</a>
+             </p>
+             <img src="/image/app/tesseractocr.png"  class="right glow" style="width:90px; right:70px; top: -90px;">
+          </div>
+
+       <BR><BR>
+       <p class="text video"><u>Le Lecteur d'Images :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/doc/image.mp4" controls preload="none" poster="/video/doc/image.jpg"></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="image"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

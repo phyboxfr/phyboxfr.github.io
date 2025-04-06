@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .note.arrow { top: -12%; right: -23%; }
+    .note.arrow:before { color: #ffed5a; }
+    .note.label { top: 11%; right: -109%; width: 90%; color: #ffed5a; }
+    .qr {
+       width: 40vh;
+       height: 140px;
+       object-fit: cover;
+       object-position: 100% 0px;
+    }
+  </style>
+
+  <body onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Tablette</p>
+       <BR>
+
+       <p class="text">Après avoir lancé la PhYBoX sur l'ordinateur, vous pouvez maintenant connecter les Tablettes.</p>
+
+       <p class="text">Il faut tout d'abord connecter vos appareils sur le Wifi du Routeur, puis aller dans le navigateur en recopiant l'adresse affichée par la console de la PhYBoX.</p>
+
+       <p class="text">Pour aller plus vite, la PhYBoX peut générer un QR Code, qui permet à la fois de créer la connexion Wifi et de lancer le navigateur pour aller sur l'Adresse de la PhYBoX, si la version Android de la Tablette l'autorise :</p>
+
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/view-slide.png" class="center qr">
+          <div class="note label">Générez un QR Code pour les élèves</div>
+          <div class="note arrow left"></div>
+       </div>
+
+          <BR><BR>
+          <img src="/image/box/qr.png" class="center" style="width:60%">
+
+       <BR><BR>
+       <table style="line-height:35px;">   
+          <tr><td>  Wifi  :</td><td>  Le Nom du Réseau Wifi           </td></tr>
+          <tr><td>  Clé   :</td><td>  Le Mot de Passe du Réseau Wifi  </td></tr>
+          <tr><td>  Lien  :</td><td>  L'Adresse de la PhYBoX          </td></tr>
+       </table>
+       <BR>
+
+       <p class="text">Par la suite, afin d'éviter que les élèves doivent également taper l'adresse à chaque fois, vous pouvez mettre un raccourci sur le bureau de chaque tablette. Vous trouverez cette fonctionnalité nommée "Ajouter à l'écran d'accueil" dans le menu du navigateur.</p>
+
+       <p class="text">Cependant, cela suppose que l'adresse IP de votre ordinateur reste fixe, il faut donc également faire une <u>réservation d'adresse</u> dans l'application qui permet de gérer votre Routeur. Il n'est pas possible de donner une directive générale à ce sujet, puisque chaque modèle de Routeur est différent, il faudra donc vous reporter à son manuel.</p>
+
+       <BR>
+       <p class="text"><u>Remarque :</u></p>
+
+        <p class="text">Si vous souhaitez que les élèves puissent également se connecter avec leur smartphone (par exemple pour utliiser un casque VR), il vaut mieux créer un deuxième accès indépendant, les Routeurs proposant souvent la possibilité de lancer un réseau pour les Invités.</p>
+
+       <p class="text">Sur ce dernier, vous pourrez choisir un Mot de Passe simple (123..) à communiquer aux élèves et que vous pourrez changer facilement si besoin est, sans avoir à changer le mot de passe du Réseau pour les Tablettes.</p>
+
+       <BR>
+       <p class="text video"><u>Connexion des Tablettes :</u></p>
+       
+       <!--
+       <div class="video">    
+          <video src="/video/admin/qrcode.mp4" controls preload="none" poster="/video/admin/qrcode.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="qrcode"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    span { white-space: nowrap; }
+    .listfirst { color: yellow !important; } 
+    table.list { border-collapse: collapse; }
+    table.list td { vertical-align: top; line-height:35px; }
+    table.list td:nth-child(2) p.text { padding-left:30px; } 
+    table.list p.text, table.list p.list { margin-top: 0; }
+    table.bullet { padding-left: 150px !important; } 
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article">
+       <p class="title">Applications</p>
+       <BR>
+
+       <p class="text">
+La PhYBoX intègre diverses applications proposant des aides, des activités et des outils de production pour l'enseignement.</p> 
+
+       <p class="text">Les applications qui permettent de produire des documents (texte, dessin, schéma, photo, audio..) enregistrent automatiquement les travaux réalisés par les élèves sur l'ordinateur de l'enseignant (plutôt que sur la tablette), dans un dossier à leur nom.</p>
+
+       <p class="text">Tous les documents élèves sont placés dans le dossier <span class="yellow">[Classes]</span>, le nom du fichier incluant le nom de l'élève et un horodatage. Il n'y a donc plus à se soucier de savoir où les élèves ont enregistré leurs travaux.</p>
+
+       <BR>
+       <p class="text">Les appplications intégrées à la PhYBoX sont regoupées en plusieurs catégories : </p>
+      
+       <BR>
+       <table class="list">  
+
+          <tr><td><p class="list"><span class="listfirst">Librairie :</span></p></td><td><p class="text"> contient notamment des encyclopédies et des dictionnaires libres, stockés sur l'ordinateur de l'enseignant.</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Info :</span></p></td><td><p class="text"> renvoie vers des vidéos présentant le travail à faire ou des extraits d'actualités en rapport avec les activités proposées, que l'on peut mettre à jour régulièrement. En début de séquence, les élèves prennent l'habitude d'aller regarder ces actualités choisies par l'enseignant.</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Activité :</span></p></td><td><p class="text"> contient pour le moment une seule application de Quiz.</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Science :</span></p></td><td><p class="text"> propose quelques applications dédiées aux Sciences.</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Production :</span></p></td><td><p class="text"> applications permettant aux élèves de produire leurs propres documents (texte, dessin, schéma, tableur, photo).</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Média :</span></p></td><td><p class="text"> lecteurs spécifiques pour les médias en Réalité Virtuelle ou Augmentée (images et vidéos).</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Admin :</span></p></td><td><p class="text"> outils disponibles uniquement sur un compte administrateur pour l'aider dans sa tâche.</p></td></tr>
+      
+       </table>
+       <BR>
+
+       <p class="text"><u>Ajout ou suppression :</u></p>
+
+       <p class="text">Les applications se trouvent dans le dossier :</p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [app]</p>
+
+       <p class="text">Au démarrage de la PhYBoX, toutes les applications présentes dans ce dossier sont ajoutées automatiquement dans le panneau des applications. Si vous souhaitez en enlever certaines pour adapter ce dispositif à votre usage pédagogique, il suffit donc de supprimer son dossier ou de la cacher dans un sous-dossier pour qu'elle ne soit plus détectée.</p>
+
+       <p class="text">Inversement, vous pouvez également ajouter vos propres applications en créant un dossier au nom de votre application et y ajouter une image du même nom, accompagnée d'un fichier texte (.txt) de description (prenez exemple sur les applications déjà existantes).</p>
+
+       <p class="text"><u>Autorisation :</u></p>
+
+       <p class="text">Dans le panneau de configuration, l'usage d'une appplication peut être bloqué tant qu'elle n'est pas nécessaire pour réaliser l'activité proposée :</p>
+
+       <div class="img flex">
+          <figure class="two">
+             <img src="/image/box/opt-app-gif-app-100cs.gif"  class="" style="width:100%; height: 200px; object-fit: cover; object-position: top;">
+             <figcaption>Panneau de Configuration</figcaption>
+          </figure>
+          <figure>
+             <img src="/image/box/opt-app-gif-quiz-100cs.gif"  class="" style="height:200px;">
+             <figcaption>Galerie des Applications</figcaption>
+          </figure>
+       </div>
+       <BR>
+
+       <BR>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

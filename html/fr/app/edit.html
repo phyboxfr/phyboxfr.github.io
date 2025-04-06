@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Éditeur &nbsp;&nbsp; de &nbsp;&nbsp; Texte</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://summernote.org/" target="_blank">Summernote</a>
+          </p>
+          <img src="/image/app/edit.png"  class="right" style="width:170px; right:70px; top: 100px;">
+       </div>
+
+       <p class="text">Les documents texte (odt, docx) s'ouvrent dans ce traitement de texte simplifié, dans lequel ont été ajoutés des outils spécifiques pour l'enseignement.</p>
+
+       <p class="text">Par défaut, ce type de documents s'ouvre en lecture seule dans le lecteur de documents et ne peut donc être modifié. Pour ouvrir le document en édition, dans le lecteur du même nom, il faut utiliser le bouton <span class="yellow">édite</span> situé en bout de ligne. Une copie de ce fichier est alors créé dans le dossier de l'élève, qu'il pourra ainsi compléter comme il le souhaite, sans modifier le document original de l'enseignant :</p>
+
+             <img src="/image/box/app.edit.action.png"  class="center" style="height:40px;">
+
+       <BR><BR>
+       <p class="text">Si l'éditeur est lancé depuis la Galerie d'applications, un nouveau document est ouvert en édtion et enregistré dans le dossier de l'élève, avec son nom et un horodatage au moment du dernier enregistrement :</p>
+
+             <img src="/image/box/app.edit.file.png"  class="center" style="height:40px;">
+
+       <BR><BR><BR>
+       <p class="text"><u>Fonctionnalités :</u> &nbsp;&nbsp;&nbsp;&nbsp;Sur la barre d'outils se trouvent quelques fonctionnalités additionnelles.</p>
+           
+          <p class="list flex"><span class="butWrap"><img src="/icon/print.svg" class="button icon print"></span><span> :&nbsp;&nbsp; </span><span>Impression du document sur l'imprimante reliée à l'ordinateur de l'enseignant. Pour activer cette fonction, il faut l'autoriser dans le panneau de configuration et activer une fonctionnalité sur votre ordianteur, qui sera détaillée sur le Forum à la demande.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/image.svg" class="button icon invert"></span><span> :&nbsp;&nbsp; </span><span> Permet de coller dans le document une image créée dans une autre application de la BoX (dessin, schéma, photo, tracker) pour en faire un compte-rendu.</span></p>
+        
+          <p class="list flex"><span class="butWrap"><span class="button icon dys"></span></span><span>:&nbsp;&nbsp;</span><span> Changement de la police de caractère pour la police Dyslexie.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/speech.svg" class="button icon invert"></span><span> :&nbsp;&nbsp; </span><span> Lecture du texte saisi avec la synthèse vocale, pour les élèves rencontrant des soucis de lecture.</span></p>
+         
+          <p class="list flex"><span class="butWrap"><img src="/icon/micro.svg" class="button icon invert"></span><span>:&nbsp;&nbsp;</span><span> Saisie vocale avec le moteur de reconnaissance de Chromium pour taper du texte en le dictant. Le clavier de Chrome le propose déjà, mais dans cette version adaptée, des commandes vocales supplémentaires ont été ajoutées pour simplifier la saisie :</span></p>
+          
+
+             <table >   
+                <tr><td>  stop            :</td><td>  arrête la reconnaissance vocale  </td></tr>
+                <tr><td>  annuler         :</td><td>  annule la dernière saisie        </td></tr>
+                <tr><td>  recommencer     :</td><td>  refait une saisie                </td></tr>
+                <tr><td>  effacer         :</td><td>  efface le dernier mot            </td></tr>
+                <tr><td>  effacer ligne   :</td><td>  efface la dernière ligne         </td></tr>
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  ligne           :</td><td>  passe à la ligne                 </td></tr>
+                <tr><td>  paragraphe      :</td><td>  crée un nouveau paragraphe       </td></tr>
+                <tr><td>  avant           :</td><td>  avance d'un mot                  </td></tr>
+                <tr><td>  après           :</td><td>  recule d'un mot                  </td></tr>
+                <tr><td>  début de ligne  :</td><td>  va au début de la ligne          </td></tr>
+                <tr><td>  fin de ligne    :</td><td>  va à la fin de la ligne          </td></tr>
+                <tr><td>  monter          :</td><td>  monte d'une ligne                </td></tr>
+                <tr><td>  descendre       :</td><td>  descend d'une ligne              </td></tr>	
+                <tr><td>  début de texte  :</td><td>  va au début du texte             </td></tr>
+                <tr><td>  fin de texte    :</td><td>  va à la fin du texte             </td></tr>
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  grossir         :</td><td>  met le texte en gras             </td></tr>
+                <tr><td>  souligner       :</td><td>  souligne le texte                </td></tr>
+                <tr><td>  italique        :</td><td>  met le texte en italique         </td></tr>	
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  augmenter       :</td><td>  zoom sur l'écran                 </td></tr>
+                <tr><td>  diminuer        :</td><td>  dézoom sur l'écran               </td></tr>
+                <tr><td>  écran           :</td><td>  plein écran                      </td></tr>
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  lire            :</td><td>  Lire le texte                    </td></tr>
+                <tr><td>  lire ligne      :</td><td>  Lire la ligne en cours           </td></tr>
+                <tr><td>  lire tout       :</td><td>  Lire tout le texte               </td></tr>
+                <tr><td>  lire stop       :</td><td>  Arrête la synthèse vocale        </td></tr>
+             </table>
+
+       <BR><BR>
+       <p class="text"><u>Options :</u> &nbsp;&nbsp;&nbsp;&nbsp; Le panneau de configuration propose deux paramètres pour l'Éditeur</p>
+
+             <img src="/image/box/opt-cfg-edit.png"  class="center" style="width:50%;">
+
+       <p class="list"> Impression : autorise les élèves à imprimer le document directement depuis leur tablette (fonction non active au départ, qui nécessite une manipulation de votre part qui sera précisée sur le Forum, celle-ci nécessitant quelques précautions).</p>
+
+       <p class="list"> Format : Permet de choisir le format d'enrigstrement des documents en odt ou docx, selon le traitement de texte utilisé préférentiellement.</p>
+
+       <BR><BR>
+       <p class="text"><u>Remarques :</u></p>
+
+       <p class="list">Soulignement :</p>
+
+          <p class="list nobullet">Le soulignage d'une partie du texte fonctionne dans l'éditeur, mais ne peut pas être enregistré ou relu depuis le Serveur, n'étant pas pris en charge par la conversion odt/docx &#8660; Html. Cette fonction n'est donc pas utilisable pour le moment.</p>
+
+       <p class="list">Insérer une image :</p>
+
+          <p class="list nobullet">Pour insérer dans le document une image copiée depuis une autre application, il ne faut pas utiliser le bouton copier/coller qui va seulement restituer l'encodage de l'image, mais le bouton <span class="yellow">image</span> -> <span class="yellow">copier une image</span> :</p>
+
+             <img src="/image/box/edit.image.import.png"  class="center" style="width:40%;">
+
+       <BR><BR><BR>
+       <p class="text video"><u>L'Éditeur de Texte :</u> &nbsp;&nbsp;&nbsp; Utilisation et Fonctionnalités</p>
+
+       <!--
+       <div class="video">    
+          <video src="../video/app/edit.mp4" controls  preload="none" poster="/video/app/edit.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="edit"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

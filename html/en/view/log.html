@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 40px !important; height: 40px !important; padding-right: 15px !important; padding-bottom: 0; }
+     #Article p.list.flex.left { align-items: end; padding-left:0 !important; }
+     #Article p.list:before { content: ""; }
+     .butWrap { align-self: start; }
+    .top { padding-top: 0 !important; margin-block-start: 0; } 
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; }
+    .note.label.digit.red { color: red!important; font-weight: bold; }
+    .note.label.digit { 
+       width: fit-content; 
+       color: #ffed5a !important; 
+       font-size: 20px!important; 
+       font-weight: normal; 
+       text-shadow: none!important;
+     }
+     .test: {}
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Connexion</p>
+       <BR>
+
+       <p class="list flex left"><span class="butWrap"><span><img src="/icon/status-log.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> &nbsp; The Connections Reader allows the Administrator to have an overview of the use of BoX, by recording student connections on each mobile classroom device (PC, tablets, smartphones) for a week :</span></p>
+
+       <BR>
+       <table style="line-height:35px;text-wrap:nowrap;">   
+          <tr><td>  Screen:  </td><td>  Total number of devices that have already connected at least once.</td></tr>
+          <tr><td>  Connected :  </td><td>  Number of devices currently connected.</td></tr>
+          <tr><td>  Disconnected :  </td><td>  Number of unused devices.</td></tr>
+       </table>
+       <BR>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/view-log.en.png" class="center" style="width: 600px;">
+           <div class="note label digit red" style="top:32px;left:38px;">➀</div>
+         <div class="note label digit red" style="top:32px;right:16px;">➁</div>
+          <div class="note label digit red" style="top:111px;right:16px;">➂</div> 
+       </div>
+
+       <BR>
+       <div class="indent">
+
+          <p class="text"><span>➀</span> &nbsp; By default, the list is put in the order of Screen numbers. But by clicking on one of the other headers (Screens, Names, Class, etc.), the list is put in the order of the chosen element. For example, if you are looking for a particular student, click on the column <span class="yellow">Names</span> to put the list in alphabetical order of Names and find it more quickly.</p>
+
+          <p class="text"><span>➁</span> &nbsp; The Connections Viewer opens showing only the devices that have students in the class you are currently working with connected to. This button allows you to change class in order to see the use of devices with another class, or even all.</p>
+
+          <p class="text break"><span>➂</span> &nbsp; The box turns green when the student logs in and orange when they log out. In the history only these two moments are recorded.</p>
+
+       </div>
+
+       <BR>
+       <p class="text top">This Viewer's page is refreshed regularly to update the list of connections. If you just want to view the list without it constantly being re-initialized, use the switch at the top right to stop updating.</p>
+
+       <BR>
+       <p class="text"><u>Note :</u></p>
+
+       <p class="text">Devices (Screens) are identified by their MAC address, which is recorded in the Server database when it connects to it for the first time. It is therefore important when you configure the device's WiFi connection to select the option allowing you to keep the <u>Real</u> MAC address of the Tablet rather than a <u>Random</u> value. >, who would have no interest in this situation :</p>
+
+          <img src="/image/android/mac.en.png" class="center" style="width:300px;">
+
+       <BR><BR><BR><BR>
+ 
+       <p class="text video"><u>The Connexions Panel :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/view/log.mp4" controls preload="none" poster="/video/view/log.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="log"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

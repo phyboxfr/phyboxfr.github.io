@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Menu</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+  <body onload="onLoad();"> 
+    <div id="Menu">
+      <ul class="menu">
+        <li class="lang">
+            <a href="menu.html"                       onclick="set(this);return false;">Français</a></li>
+        <li><a href="home.html"                       onclick="set(this);return false;">Home</a></li>
+        <li class="main a"><a href="#"                onclick="set(this);return false;">Presentation</a></li>
+        <li class="fold a"><a href="history.html"     onclick="set(this);return false;">Principle</a></li>
+        <li class="fold a"><a href="gdpr.html"        onclick="set(this);return false;">GDPR</a></li>
+        <li class="fold a"><a href="device.html"      onclick="set(this);return false;">Equipment</a></li>
+        <li class="fold a"><a href="use.html"         onclick="set(this);return false;">Use</a></li>
+        <li class="fold a"><a href="feature.html"     onclick="set(this);return false;">Features</a></li>
+        <li class="main b"><a href="#"                onclick="set(this);return false;">Tutorials</a></li>
+        <li class="fold b"><a href="sub.html?n=admin" onclick="set(this);return false;">Admin</a></li>
+        <li class="fold b"><a href="sub.html?n=view"  onclick="set(this);return false;">Viewers</a></li>
+        <li class="fold b"><a href="sub.html?n=doc"   onclick="set(this);return false;">Document</a></li>
+        <li class="fold b"><a href="sub.html?n=app"   onclick="set(this);return false;">Apps</a></li>
+        <li class="fold b"><a href="sub.html?n=fx"    onclick="set(this);return false;">Science</a></li>
+        <li><a href="forum.html"                      onclick="set(this);return false;">Forum</a></li>
+        <li><a href="download.html"                   onclick="set(this);return false;">Download</a></li>
+      </ul>
+    </div>
+    <script>
+       function set(e){ 
+          let li = e.parentElement, ul = li.parentElement;
+          let lic = li.className,   ulc = ul.className;
+          let isLang = lic.includes('lang');
+          let isMain = lic.includes('main');
+          let isFold = lic.includes('fold');
+          if (isLang) parent.toggle(e);
+          else {
+              if(isMain) { 
+                  let uln = ulc.replace(/menu|fold/gi,'').trim();
+                  let lin = lic.replace(/main|active|fold/gi,'').trim(); 
+                      ul.className = 'menu'; 
+                      if(lin != uln) {
+                         ul.classList.add('fold',lin);
+                         e = e.parentElement.nextElementSibling.firstElementChild;  //active first submenu
+                      }
+              }
+              parent.isToggle = false; 
+              if(!e.href.includes('#')) parent.set('html',e.href); 
+              if(!isMain && !isFold) ul.className = 'menu'; 
+          }
+          active(e);
+          return false;
+       }
+       function get(){
+          let active = document.querySelector('ul li.active');
+          return active ? [ ...active.parentElement.children].indexOf(active) : 0;
+       }
+       function active(e){ 
+          let active = document.querySelector('li.active');
+          if(active) active.classList.remove('active');
+          //if( typeof e == 'number' ) { ul = document.querySelector('ul'); if( e < ul.childElementCount ) e = .children[e].firstElementChild; else return; }
+          if( typeof e == 'number' ) e = document.querySelector('ul').children[e].firstElementChild;
+          e.parentElement.classList.add('active');
+       } 
+       function getArg(s){ const q = new URLSearchParams(location.search); return q.get(s); }
+       function onLoad(){
+          let nFold = getArg('fold');
+          if(nFold!='') document.querySelector('#Menu ul.menu').classList.add('fold',nFold);
+       }
+    </script>
+  </body>
+</html>

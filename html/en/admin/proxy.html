@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    img.proxy { width: 500px; height: 240px; object-fit: cover; object-position: 100% 0%; }
+    span.small { font-size: 18px; font-weight: bold; }
+    .nowrap { white-space: nowrap; }
+    .note.arrow { top: -27%; right: 11%; }
+    .note.arrow:before { color: yellow; } 
+    .note.label { top: 14%; right: -7%; width: 22%; color: #ffed5a !important; }
+  </style>
+
+  <body class="h" onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Internet &nbsp; & &nbsp; Proxy</p>
+       <BR>
+
+       <p class="text"></p>
+
+       <p class="text">1) <u>What is a PROXY ? :</u></p>
+
+       <p class="text">In educational establishments, all Internet connections are sent to a central server called <span class="yellow">Proxy</span>. It is used in particular to filter connection requests, only authorizing access to sites of educational interest, then it is the proxy which makes the requests for you to the requested sites and sends them back to you.</p>
+
+       <p class="text">To make this possible, the computer in your room (just like the mobile classes) has certainly been configured by the IT department on which you depend to send its requests to this agent, identified by its address which is usually:   IP = 172.16. 0.1 and port = 3128.</p>
+
+       <p class="text">If you look in the Windows or Browser settings, by searching with the <span class="yellow">proxy</span> keyword, you should find the address of your school's Proxy :</p>
+
+       <p class="text center code">Click on Start &nbsp -> &nbsp Parameters &nbsp -> &nbsp Network and Internet &nbsp -> &nbsp Proxy</p>
+
+       <BR>
+       <p class="text">2) <u>The PhYBoX &nbsp; PROXY :</u></p>
+
+       <p class="text">One of the guiding principles of this type of BoX is to have students work in a local network, with the security of knowing that students only have access to documents and applications selected by the teacher. </p>
+
+       <p class="text">In order to avoid the inevitable distractions that could arise by letting students browse freely, the use of websites must therefore be limited to a few essential educational sites, for which it would not have been possible to find equivalent content while functioning locally.</p>
+
+       <p class="text">To enable this mode of operation, the BoX has its own Proxy which filters connections through a list of authorized sites, which you can choose in its configuration panel.</p>
+
+       <p class="text">When activated, this filtering is added to that of the school, so that only the sites that you have whitelisted are authorized and all others blocked :</p>
+
+          <img src="/image/box/opt-proxy.png" class="center proxy">
+
+       <BR><BR>
+       <p class="text">3) <u>Configuring the WIFI Connection :</u></p>
+
+       <p class="text">To be able to use the BoX Proxy, when you connect a Tablet to the Router's Wifi, you must redirect the connection to the BoX Proxy rather than that of the school. It is the BoX which will subsequently be responsible for sending this connection to the Proxy of your school.</p>
+
+       <p class="text">For example, for Android tablets, in the WiFi connection settings, you must choose the Proxy settings as follows :</p>
+
+       <BR>
+       <img src="/image/android/wifi.en.jpg" class="center" style="width:70%;">
+
+       <BR>
+       <p class="text">Wifi connection settings &nbsp; --> &nbsp; Advanced settings :</p>
+       
+       <p class="list flex"><span class="nowrap">Proxy :</span>&nbsp;&nbsp;&nbsp;<span>manual</span></p>
+
+       <p class="list flex"><span class="nowrap">Proxy host name :</span>&nbsp;&nbsp;&nbsp;<span>the IP address of the Phybox (which is marked on the startup console, for example:  192.168.0.100)</span></p>
+
+       <p class="list flex"><span class="nowrap">Proxy port :</span>&nbsp;&nbsp;&nbsp;<span>3128</span></p>
+
+       <p class="list flex"><span class="nowrap">Bypass the proxy for :</span>&nbsp;&nbsp;&nbsp;<span>the IP address of the PhYBoX, to prevent the connection to the PhYBoX from also being redirected to the Proxy</span></p>
+
+       <p class="list flex"><span class="nowrap">Type of MAC address :&nbsp;&nbsp;&nbsp;</span><span>address of the tablet (rather than "random" which does not identify which tablet is connecting to the BoX)</span></p>
+
+       <BR>
+       <p class="text">Leave other settings at their default value.</p>
+
+       <BR>
+       <p class="text">4) <u>Configuration of the BoX &nbsp; PROXY :</u></p>
+
+       <p class="text">In the third column of the control panel, you can now activate Internet protection, i.e. only allow the sites indicated in the list :</p>
+
+
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/opt-proxy-enable.en.png" class="center" style="width:60%;">
+          <div class="note arrow left"></div>
+          <div class="note label"> &nbsp; &nbsp; Add a new Site</div>
+       </div>
+
+       <BR>
+       <p class="text">When protection is enabled, all sites are blocked, even your browser's default search engine.  But you can authorize new sites with the <span class="yellow small">㊉</span> button, by indicating a <span class="yellow">keyword</span> found in the site address :</p>
+
+       <p class="list flex"><span class="nowrap">Authorize the use of the Google search engine :</span>&nbsp;&nbsp;&nbsp;</p>
+
+       <p class="text center code"> https://www.google.fr/webhp &nbsp;&nbsp; -> &nbsp;&nbsp; mot clé : google </p>
+
+       <p class="list flex"><span class="nowrap">Authorize the Wikipedia site :</span>&nbsp;&nbsp;&nbsp;</p>
+
+       <p class="text center code"> https://fr.wikipedia.org &nbsp;&nbsp; -> &nbsp;&nbsp; mot clé :  &nbsp; wikipedia</p>
+    
+       <p class="text">To delete a site, simply double-click on it.</p>
+
+       <BR>
+       <p class="text">5) <u>Configuration of the PROXY of the School :</u></p>
+
+       <p class="text">The BoX Proxy only adds additional filtering and sends requests to your school's Proxy. The BoX therefore needs to know the address of this Proxy, just as it is already configured on the computer equipment available to you in your room.</p>
+
+       <p class="text">In PhYBoX, this address has been set by default to the usual value <span class="yellow">172.16.0.1 : 3128</span>, but if it is not that of your school, you will need to indicate it in the first column of the configuration panel, with the parameter <span class="yellow">PROXY</span> :</p>
+
+       <img src="/image/box/opt-cfg-proxy.png" class="center" style="width:50%;">
+     
+       <BR>
+       <p class="text"><u>Note :</u></p>
+
+       <p class="text">The Proxy is not activated by default to allow you to try the Phybox at home where there is none. On the other hand, for use in class, you will need to remember to activate it if you want to benefit from Internet access on the Tablets.</p>
+
+       <BR>
+       <p class="text video"><u>The Proxy of the BoX:</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/admin/proxy.mp4" controls preload="none" poster="/video/admin/proxy.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="proxy"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

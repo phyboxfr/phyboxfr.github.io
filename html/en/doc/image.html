@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Image</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://photoswipe.com/" target="_blank">PhotoSwipe</a>
+          </p>
+          <img src="/image/app/PhotoSwipe.png"  class="right shadow" style="width:90px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">All image formats open with Photoswipe, in order to find in the browser the fluidity offered by image galleries on touch screens. We move from one image to another by dragging them and zooming in on them with the usual pinch gesture.</p>
+
+       <p class="text">In the upper right corner is a small toolbar to add some functionality to it :</p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/folder.svg" class="button icon invert"></span><span> &nbsp&nbsp </span><span> Return to the explorer, to the folder where the images came from.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/speech.svg" class="button icon invert"></span><span> &nbsp&nbsp </span><span><u>Adaptation</u> for students experiencing reading problems, using voice synthesis to speak text contained in an image. A blue frame allows you to select a part of the image where the text is located and by double clicking on it, a character recognition tool reads the text with speech synthesis.</p>
+
+          <div class="linklogo list">
+             <p class="text">OCR character recognition engine :
+                <a class="space" href="https://tesseract.projectnaptha.com/" target="_blank">Tesseract.js</a>
+             </p>
+             <img src="/image/app/tesseractocr.png"  class="right glow" style="width:90px; right:70px; top: -90px;">
+          </div>
+
+       <BR><BR>
+       <p class="text video"><u>The Image Viewer :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/doc/image.mp4" controls preload="none" poster="/video/doc/image.jpg"></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="image"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

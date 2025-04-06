@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .break { margin: 40px 0; }
+    .nobottom { margin-bottom: 0; }
+    .note.arrow { top: 73%; right: 2%; }
+    .note.arrow:before { color: #ff4df2; } 
+    .note.label.digit { top: 73%; right: -95%; width: 90%; color: #ffed5a !important; font-weight: bold; }
+    .note.label.login { top: 76%; left: 19px; width: 90%; color: #ef4bfd; font-size: 16px !important; font-weight:bold; text-shadow: none; }
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; }
+     span { font-size: 35px; }
+     table.key td { vertical-align: top; white-space: nowrap; }
+  </style>
+
+  <body class="h" onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Classes</p>
+       <BR>
+
+       <p class="text">La génération des Comptes Élèves et leur Mot de Passe se fait dans la 1ère colonne du panneau de configuration. Ils sont enregistrés dans le fichier <span class="yellow">classes.txt</span> qui se trouve dans le dossier :</p>
+
+       <p class="text center code"> [phybox] &nbsp;->&nbsp; [classes] &nbsp;->&nbsp; classes.txt </p>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/opt-cfg-pw.jpg" class="center" style="width:600px;">
+          <div class="note label digit" style="top:11.5%;right:-50%;">➀</div> 
+          <div class="note label digit" style="top:27.5%;right:-50%;">➁</div>
+          <div class="note label digit" style="top:35.5%;right:-50%;">➂</div>
+          <div class="note label digit" style="top:65.5%;right:-50%;">➃</div>
+          <div class="note label digit" style="top:73.5%;right:-50%;">➄</div>
+          <div class="note label digit" style="top:81.5%;right:-50%;">➅</div>
+          <div class="note label digit" style="top:89.5%;right:-50%;">➆</div>
+       </div>
+
+       <BR>
+       <div class="indent">
+          <p class="text break"><span>➀</span>  &nbsp; Change le Mot de Passe Administrateur et Invité. Le mot de passe Invité permet au professeur de donner un accès provisoire à un élève qui rencontrerait un problème d'identification momentané.</p>
+
+          <p class="text break"><span>➁</span>  &nbsp; Importe la liste des classes à partir d'un classeur (ods, xlsx). Voir l'exemple dans le dossier suivant, en plaçant toujours les colonnes dans cet ordre : Niveau, Classe, Nom, Prénom.</p>
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [classes] &nbsp;->&nbsp; classes.ods </p>
+
+          <p class="text"><span>➂</span>  &nbsp; <u>Méthode 1 :</u> &nbsp; Génére les Mots de Passe selon 4 Possibilités</p>
+
+          <table class="key">   
+             <tr><td>  Efface        :</td><td>  efface les mots de passe. </td></tr>
+             <tr><td>  Choix         :</td><td>  donne le même mot de passe à tout le monde (pour un usage rapide). </td></tr>
+             <tr><td>  Aléatoire     :</td><td>  suite alphanumérique aléatoire (longueur : nombre de caractères). </td></tr>
+             <tr><td>  Dictionnaire  :</td><td>  tiré d'une liste de mots simples à retenir, qui se trouve dans le dossier : 
+                 <p class="text center code nobottom"> [phybox] &nbsp;->&nbsp; [web] &nbsp;->&nbsp; [login] &nbsp;->&nbsp; [dictionary] </p>
+             </td></tr>
+          </table>
+
+          <p class="text indent-first">Après avoir généré les mots de passe, vous pouvez en exporter la liste au format pdf avec ➆ pour les imprimer et les distribuer à chaque élève.</p>
+
+          <BR>
+          <p class="text"><span>➃</span>  &nbsp; <u>Méthode 2 :</u> &nbsp; Génère les Mots de Passe lors de la 1ère Connexion 
+
+          <BR>
+          <p class="text indent-first">Dans ce mode plus simple à gérer, il n'y a pas besoin d'imprimer et de distribuer les mots de passe. Lorsque les élèves se connectent la 1ère fois sur leur compte, leur mot de passe leur est directement affiché.</p>
+
+          <p class="text indent-first">Cependant, afin d'éviter qu'un élève ne s'amuse à se connecter sur plusieurs comptes pour obtenir le mot de passe d'un camarade lors de la 1ère séance, une tablette ne peut se connecter que sur un seul compte (le sien), à partir du 2ème essai toute connexion sera bloquée pendant 1h.</p>
+
+          <p class="text indent-first">Deux choix sont possibles pour générer le mot de passe :</p>
+
+          <table class="key">   
+             <tr><td>  Dictionnaire  :</td><td>  choisi dans une liste de mots prédéfinis.</td></tr>
+             <tr><td>  Aléatoire     :</td><td>  suite alphanumérique aléatoire (longueur : nombre de caractères). </td></tr>
+          </table>
+          <BR>
+
+          <p class="text indent-first">Au moment de la 1ère connexion, dites aux élèves de laisser la case du mot de passe vide, puis de suivre les consignes pour obtenir leur mot de passe et (surtout) de le noter dans leur carnet, sinon vous serez bon pour tout recommencer à la séance suivante :</p>
+
+          <div style="display:flex;justify-content:center;align-items:center;width:100%;margin:auto;">
+             <div style="position:relative;width:fit-content;">
+                <img src="/image/box/login-1.png" class="center" style="width:200px;height:100%;margin:0 10px;">
+                <div class="note label login">Ne rien mettre</div>       
+             </div>
+             <img src="/image/box/login-2.png" class="center" style="width:400px;height:100%;margin:0 10px;">
+          </div>
+
+          <BR>
+          <p class="text break"><span>➄ </span> &nbsp; Ajoute un nouvel élève qui vient d'arriver dans l'établissement. Son mot de passe sera généré suivant les choix du ➂.</p>
+
+          <p class="text break"><span>➅</span>  &nbsp; Change ou récupère le mot de passe d'un élève qui l'aurait oublié. Le nouveau mot de passe est généré suivant les choix du ➂.</p>
+
+          <p class="text break"><span>➆</span>  &nbsp; Imprime la liste des mots de passe à distribuer aux élèves,  si on a fait le choix de les générer soi-même.</p>
+
+       </div>
+
+       <BR>
+       <p class="text video"><u>Importer la Liste des Classes :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/admin/import.mp4" controls preload="none" poster="/video/admin/import.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="import"></iframe>
+
+       <BR><BR><BR>
+       <p class="text video"><u>Générer les Mots de Passe :</u></p>
+       
+       <!--
+       <div class="video">    
+          <video src="/video/admin/password.mp4" controls preload="none" poster="/video/admin/password.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="password"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

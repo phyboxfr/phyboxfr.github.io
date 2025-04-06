@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Phybox</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+  <body> 
+    <div id="Main">
+       <div id="Menu" class="h left"> <iframe src="" onload="if(typeof load === 'function')load(this);"> </iframe> </div>
+       <div id="Html" class="h">      <iframe>                     </iframe> </div>
+    </div>
+    <script>
+      document.querySelector('#Menu iframe').src = path() + '/menu.html';
+      document.querySelector('#Html iframe').src = parent.isToggle ? parent.HtmlUrl : path() + '/home.html';
+      function load(e){ e.contentWindow.active( parent.isToggle ? parent.HtmlMenuIndex : 0 ); parent.isToggle = false; }
+      function path(){ const q = new URLSearchParams(location.search); return q.get('n'); }
+      function set(e){ document.querySelector('#Html iframe').src = e; }
+      function getActive(e){ return document.querySelector('#Menu iframe').contentWindow.get(); }
+      function getPath(e){ let src = document.querySelector('#Html iframe').src; return pathlast2(src); }  
+      function pathlast2(s){ return s.split('/').slice(-2).join('/'); }  //keep 2 last path segments (doc/home.html)
+    </script>
+  </body>
+</html>

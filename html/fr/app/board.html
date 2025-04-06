@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; } 
+    .note.arrow { top: 18%; right: 10%; }
+    .note.arrow:before { color: #ff4df2; } 
+    .note.label { top: 26%; right: -55%; width: 55%; color: #ffed5a !important; }
+     td.nw { vertical-align:top; white-space: nowrap; }
+    .board {
+       position: absolute;
+       top: 49%;
+       width: 70%;
+       margin: 0 13%;
+       color: #eeaf00 !important;
+       font-size: 30px;
+       text-align: center;
+       text-shadow: 0 0 #000;
+    }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Tableau &nbsp; &nbsp; Collaboratif</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PhYBoX intègre l'application :
+             <a class="space" href="https://etherpad.org/" target="_blank">Etherpad</a>
+          </p>
+          <img src="/image/app/etherpad.png"  class="right" style="width:100px; right:70px; top: -90px;">
+       </div>
+
+       <p class="text">Ce Tableau propose un espace d'échanges interractifs avec un tchat pour s'entraider. Plutôt que de s'interpeller à travers la classe, les élèves peuvent se poser des questions, partager leurs idées, faire découvrir des documents, pour avancer ensemble dans les apprentissages.</p>
+
+       <BR>
+       <p class="text">La Console de Gestion, qui s'ouvre au moment du lancement de la BoX, donne un accès direct au contenu des messages du Tableau :</p>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/console.png" class="center" style="width:90%;">
+          <div class="board">J'écris un message pour le Tableau Collaboratif</div>
+       </div>
+
+       <BR><BR>
+
+       <table style="line-height:35px;">
+          <tr><td class="nw">  Envoie :</td><td>  Remplace le message affiché par celui de la Console.</td></tr>
+          <tr><td class="nw">  Ajoute :</td><td>  Ajoute le message de la Console à la suite des autres messages.</td></tr>
+          <tr><td class="nw">  Enlève :</td><td>  Supprime le dernier message du Tableau.</td></tr>
+          <tr><td class="nw">  Efface :</td><td>  Efface tout le Tableau (sauf le Tchat).</td></tr>
+       </table>
+       <BR>
+
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Le Tchat ne peut pas être effacé, mais en cas de messages inadaptés, vous pouvez réinitialiser le Tableau pour effacer tout son contenu (messages et Tchat) en cliquant sur le bouton <span class="yellow">Pad</span> de la Console, pour arrêter le Serveur du Tableau, puis le redémarrer. Par contre, si vous redémarrez la Box, sans éteindre le serveur du Tableau, il conservera tout son contenu d'une séance à l'autre.</p>
+
+       <BR>
+       <p class="text"><u>Options :</u></p>
+
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/opt-cfg-board.png" class="center" style="width:70%;">
+       </div>
+       
+       <BR>
+       <div class="indent">
+
+          <p class="text"><span>➀</span> &nbsp; Si le Tableau ne s'ouvre pas quand il est inclu dans la fenêtre de la BoX, ouvrez le dans un nouvel onglet et validez le mode https (comme à l'ouverture de la BoX).</p>
+
+          <p class="text"><span>➁</span>  &nbsp; Autorise l'utilisation du Tchat sur le Tableau.</p>
+
+       </div>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

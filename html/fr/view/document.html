@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     p.text.space { padding-top: 20px; }
+     img.icon.big { margin-top: -8px; width: 40px !important; height: 40px !important; }
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Activité</p>
+       <BR>
+
+       <p class="text">La BoX dispose de plusieurs Lecteurs indépendants pour visualiser les différents types de médias numériques (image, vidéo, audio) et éditer les textes au format <span class="yellow">odt et docx</span>. Mais  pour afficher les autres types de documents (pdf, html, classeur, diaporama), elle dispose de 2 Lecteurs spécifiques :</p>
+
+       <p class="text space"><img src="/icon/status-pdf.svg" class="button icon back white big"> <u>La Fiche d'Activité :</u></p>
+
+       <p class="text">L'un des principes directeurs de cette BoX est d'organiser le travail des élèves en mettant à leur disposition une fiche d'Activité au format pdf. Celle-ci présente les consignes, accompagnées de liens (texte ou image) qui renvoient directement vers les documents d'accompagnements déposés dans le dossier <span class="yellow">[doc]</span>.</p>
+
+       <p class="text">Vous trouverez des explications détaillées sur la façon de faire ce genre de documents et des liens sous la forme de raccourcis dans la section de ce site <span class="yellow">Documents -> Pdf</span>, ainsi que des exemples d'usage dans le dossier de la BoX :
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [6ème] &nbsp;->&nbsp;  Example of links.pdf</p>
+
+       <p class="text">Cette fiche d'Activité devant rester ouverte durant toute la séquence pour guider les élèves au cours de leur travail, un Lecteur lui est uniquement dédié :</p>
+
+       <img src="/image/box/view-document.2.png" class="center" style="width: 70%;">
+ 
+       <BR>
+       <p class="text space"><img src="/icon/status-frame.svg" class="button icon back white big"> <u>Le Lecteur de documents :</u></p>
+
+       <p class="text">Tous les autres types de documents s'ouvriront dans ce second Lecteur, au fur et à mesure des choix des élèves. Cependant, comme des documents d'accompagnement peuvent également être au format pdf, il a fallu trouver un moyen de les distinguer de la fiche d'Activité, qui doit rester ouverte en permanence.</p>
+
+       <p class="text">Ainsi, un document <u>pdf</u> dont le nom commence par une <u>majuscule</u> sera considéré par la BoX comme une fiche d'Activité et ouverte dans le Lecteur précédent. Tous les autres iront dans ce second lecteur, plus adapté pour afficher les documents d'accompagnement divers (pdf, html, classeur, diaporama) :</p>
+
+       <table style="line-height:35px;">   
+          <tr><td>  <u>A</u>ctivité sur le cycle de l'eau.pdf &nbsp; (les consignes)</td><td>➟</td><td>s'ouvre dans &nbsp; <img src="/icon/status-pdf.svg" class="button icon back white"> </td></tr>
+          <tr><td>  <u>l</u>e cycle de l'eau.pdf &nbsp; (un document d'accompagnement)</td><td>➟</td><td>s'ouvre dans &nbsp; <img src="/icon/status-frame.svg" class="button icon back white"> </td></tr>
+       </table>
+
+       <BR><BR><BR>
+       <p class="text video"><u>Les 2 Lecteurs de Document :</u></p>
+
+       <!--       
+       <div class="video">    
+          <video src="/video/view/doc.mp4" controls preload="none" poster="/video/view/doc.jpg"></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="doc"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

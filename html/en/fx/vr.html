@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+
+       <p class="title">VR</p>
+       <BR>
+
+       <p class="text">The PhYBoX integrates applications for viewing images and videos in <u>Virtual Reality</u>. These technologies allow better immersion in documents, which makes them more attractive :</p>
+
+       <BR>
+       <!-- PHOTOSPHERE -->
+
+       <p class="list" style="margin-bottom:0;"><u>360° PANORAMA :</u></p>
+
+       <div class="linklogo" style="margin-bottom:-20px;">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://photo-sphere-viewer.js.org/" target="_blank">Photo Sphere Viewer</a>
+          </p>
+          <img src="/image/app/photosphere-loader.gif"  class="right shadow" style="width:110px; right:70px; top: -130px;">
+       </div>
+       <BR>
+
+       <div id="photosphere-viewer" style="width: 60vw; height: 60vh; margin: auto;"></div>
+
+   <!-- 
+       <link rel="stylesheet" href="/app/photosphere/photo-sphere-viewer.css">
+       <script src="/app/photosphere/three.min.js"></script>
+       <script src="/app/photosphere/browser.js"></script>
+       <script src="/app/photosphere/photo-sphere-viewer.js"></script>
+        
+       <script>
+          const url = '/image/app/';
+          const viewer = new PhotoSphereViewer.Viewer({
+             container: 'photosphere-viewer',
+             panorama: url + 'photosphere-exemple.jpg',
+             caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+             loadingImg: url + 'photosphere-loader.gif',
+             autorotateDelay: 1000,
+             autorotateSpeed: '0.5rpm',
+             autorotateIdle:   true,   
+             touchmoveTwoFingers: true,
+          });
+       </script>
+   -->
+
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+
+       <script type="importmap">
+         {
+            "imports": {
+               "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+               "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js",
+               "@photo-sphere-viewer/autorotate-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/autorotate-plugin/index.module.js"
+            }
+         }
+       </script>
+
+       <!-- External Load --> 
+
+       <script type="module">
+          import { Viewer } from '@photo-sphere-viewer/core';
+          import { AutorotatePlugin } from '@photo-sphere-viewer/autorotate-plugin';
+
+          const url = 'https://photo-sphere-viewer-data.netlify.app/assets/';
+          const viewer = new Viewer({
+             container: 'photosphere-viewer',
+             panorama: url + 'sphere.jpg',
+             caption: 'Parc national du Mercantour <b>&copy; Damien Sorel</b>',
+             loadingImg: url + 'loader.gif',
+             touchmoveTwoFingers: true,
+             mousewheelCtrlKey: true,
+             plugins: [
+               [ AutorotatePlugin, {
+                  autostartDelay: 1000,
+                  autorotateSpeed: '0.5rpm',
+                  autostartOnIdle:   true,   
+               }],
+             ],
+         });
+       </script>
+
+       <BR>
+
+       <p class="text"><u>Use :</u> For an image taken in 360° to be presented in this panoramic player, simply place it anywhere in the student documents like any other image, but in a folder named <span class="yellow">[VR]</span>. You will find an example in the <span class="yellow">[exemples]</span> folder : </p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [exemples] &nbsp;->&nbsp; [VR]</p>
+
+       <BR>
+       <!-- VIDEOJS VR -->
+
+       <p class="list" style="margin-bottom:0;"><u>VIDÉO VR 360° :</u></p>
+
+       <div class="linklogo" style="margin-bottom:-40px;">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://yanwsh.github.io/videojs-panorama/" target="_blank">Videojs-Panorama</a>
+          </p>
+          <img src="/image/app/videojs.png"  class="right shadow" style="width:110px; right:70px; top: -130px;">
+       </div>
+       <BR>
+
+      <!-- Html Style -->
+      <link  href="/app/videojs/css/stylesheet.css" rel="stylesheet">  
+      <!-- Hotspot -->        
+      <link  href="/app/videojs/css/hotspot.css" rel="stylesheet">
+      <!-- jQuery -->
+      <script src="/app/videojs/js/jQuery.3.4.0.js"></script>
+      <!-- Three -->    
+      <script src="/app/videojs/js/three.76.min.js"></script>
+      <!-- Videojs -->
+      <link  href="/app/videojs/css/video-js.min.css" rel="stylesheet">
+      <link  href="/app/videojs/css/video-js.mod.css" rel="stylesheet">         
+      <script src="/app/videojs/js/videojs.5.8.7.min.js"></script>
+      <!--<script src="/app/videojs/js/video.5.20.1.min.js"></script>-->
+      <!-- Videojs-Panorama -->
+      <link  href="/app/videojs/css/videojs-panorama.1beta.css" rel="stylesheet">
+      <script src="/app/videojs/js/videojs-panorama.1beta.mod.js"></script>
+      <!-- Videojs-Mod -->        
+      <link  href="/app/videojs/css/videojs-icons.css" rel="stylesheet">  
+      <link  href="/app/videojs/css/mod.css" rel="stylesheet">
+      <script src="/app/videojs/js/mod.js"></script> 
+
+      <section class="VR-Content" style="width: 60%;">
+         <div class="VR-Container" align="center">
+             <video id="VR-Player" data-setup='{"fluid": true}' class="video-js vjs-default-skin vjs-big-play-centered" crossorigin="anonymous" controls >
+               <!--  <source src="/video/vr/vr.mp4" type='video/mp4' preload="none" > -->  
+              <!--  <source src="https://yanwsh.github.io/videojs-panorama/assets/shark.mp4" type='video/mp4' >  -->   
+
+            </video>
+         </div>
+      </section>
+
+      <script>
+
+        var url = 'https://yanwsh.github.io/videojs-panorama/assets/shark.mp4';
+        //var Videos = [{name:'vr', ext:'mp4', path:url}];
+        var Videos = [{name:'vr', ext:'mp4', path:'/video/vr/vr.ori.mp4'}];
+
+        var isGyro   = false;          //Flag: true if a gyro send event.rotationRate data. 
+        var panorama = {};             //panorama object made global, needed to acess it anywhere
+        var VRStart  = true;           //flag first start of vidojs-panorama
+        var isVRMode = false;          //flag to know if VR is on, to reload it when changing src videos by nextTrack
+        var drag     = false;          //remenber if mouse is drag after mousedown to avoid change track if only move video
+
+       (function(window, videojs ) {
+          
+          var player = window.player = videojs('VR-Player', PlayerOptions, function () {
+                window.addEventListener("resize", function () {
+                       var canvas = player.getChild('Canvas');
+                       if (canvas) canvas.handleResize();
+          });   });
+          
+          var videoEl = document.getElementById('VR-Player');
+          var width  = videoEl.offsetWidth;
+          var height = videoEl.offsetHeight;
+  
+              player.width(width), player.height(height);
+              // player.on('VRModeOn', function(){ if(!player.isFullscreen()) player.requestFullscreen(); });
+              
+              mod(player, Videos);
+              panorama = player.panorama(Options);
+        } (window, window.videojs));
+
+       </script>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">If you have a VR headset, you can connect your mobile phone to the PhYBoX to watch the video by activating VR mode <img src="/icon/vr.svg" class="icon invert" style="width:30px;padding:3px;vertical-align:middle;"> for complete immersion.</p>
+          <img src="/image/site/vr.png"  class="right shadow" style="width:110px; right:70px; top: -130px;">
+       </div>
+
+       <p class="text">The screen displays 3 head-up reading commands, which can be validated by keeping your gaze positioned on them for 3 seconds.  This allows you to browse videos without having to remove the headset.</p>
+
+       <p class="text"><u>Use :</u> As with images, VR videos are sent to the VR player rather than the classic video player, simply by dropping them into a folder named <span class="yellow">[VR]</span>. So you don't have to do anything, PhYBoX takes care of everything. You will find an example in the <span class="yellow">[exemples]</span> folder : </p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [doc] &nbsp;->&nbsp; [exemples] &nbsp;->&nbsp; [VR]</p>
+       <BR>
+
+       <p class="text"><u>Technical aspect :</u> &nbsp;&nbsp;&nbsp; Optional addition, for those who would like to go further in the use of VR in class.</p>
+
+       <p class="text">By default, this player plays 2D VR videos encoded in the most common projection called equirectangular (this is the one used for planispheres in geography).</p>
+
+       <p class="text">However, the PhYBoX VR player also plays other VR formats (180° and 360°) in 2D and equirectangular 3D. To do this, simply add an identifier recognized by the reader to its name :</p>
+
+             <table>   
+                <tr><td>  2D                     </td><td>  nom            </td></tr>
+                <tr><td>  3D 360° Haut/Bas       </td><td>  nom + 3D360    </td></tr>
+                <tr><td>  3D 360° Gauche/Droite  </td><td>  nom + 3D360LR  </td></tr>
+                <tr><td>  3D 180° Gauche/Droite  </td><td>  nom + 3D180    </td></tr>
+             </table>
+
+       <p class="code"> video.mp4 &nbsp; ->  &nbsp; video3D360LR.mp4</p>
+
+       <p class="text"><u>Note on the EAC Projection :</u></p>
+
+       <p class="text">Some VR videos on Youtube do not use the equirectangular projection, but a projection created by Google called Equi-Angular Cubemap (EAC). This is to correct the major defect of the equirectangular projection which gives more resolution at the ends than at the center of the image, where most of the action is often found.</p>
+
+       <p class="text">This projection makes it possible to better distribute the resolution of the image (and therefore the sharpness) over all areas. This results in the addition of a 2nd video strip which is centered on the middle of the image in order to give it more definition.</p>
+
+       <p class="text">When we watch this type of video in the Youtube player which knows how to manage this projection, we do not see it since it is integrated into the view presented by the player. On the other hand, if you download it to watch it on your computer with a player like VLC, the video appears cut into two different horizontal bands (see 4 for 3D). The PhYBox reader does not support EAC.</p>
+
+       <div class="linklogo">
+          <p class="text">Free software that reads all VR formats (including EAC) :
+             <a class="space" href="https://potplayer.daum.net/" target="_blank">PotPlayer</a>
+          </p>
+       </div>
+       
+    <p class="text"></p>
+    </div>
+
+  </body>
+</html>

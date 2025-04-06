@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 40px !important; height: 40px !important; padding-right: 15px !important; }
+     #Article p.list.flex.left { align-items: end; padding-left:0 !important; }
+     #Article p.list.nobullet:before { content: ""; }
+     .butWrap { align-self: start; }
+     .crop.right { clip-path: inset(0 20% 0 0); }
+    .top { padding-top: 0 !important; } 
+    table td:first-child { vertical-align: top; white-space:nowrap; }
+    table td { padding-bottom: 30px; }
+    figure.center { display: grid; }
+    figcaption    { padding-top: 20px !important; }
+    div.img.center { display:flex; justify-content:normal; align-items:end; }
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; }
+    .note.label.digit.red { color: red!important; font-weight: bold; }
+    .note.label.digit { 
+       width: fit-content; 
+       color: #ffed5a !important; 
+       font-size: 20px!important; 
+       font-weight: normal; 
+       text-shadow: none!important;
+     }
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Explorer</p>
+       <BR>
+
+       <p class="list nobullet flex left"><span class="butWrap"><span><img src="/icon/status-explorer.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> &nbsp; The Explorer is the main Viewer of the PhYBoX, so it opens on him at the start. It allows students to access the documents proposed, using its 3 components: the Search Engine, the Folder Tree and the List of documents present in the selected folder panel.</span></p>
+
+       <BR>
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/menu.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Opens or closes the folder tree panel.</span></p>
+
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/fullscreen.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> Displays Explorer in full screen.</span></p>
+
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/user.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span> File containing class and student productions.</span></p>
+
+       <p class="list nobullet flex"><span class="butWrap"><img src="/icon/star.svg" class="button icon fullwhite"></span><span> &nbsp&nbsp </span><span>File presenting the documents set as Favorites by the student.</p>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/view-explorer.png" class="center" style="width: 650px;">
+          <div class="note label digit" style="top:1px;right:70px;">➀</div>
+          <div class="note label digit" style="top:35px;left:323px;">➁</div>
+          <div class="note label digit" style="top:41px;left:165px;">➂</div> 
+          <div class="note label digit" style="top:77px;left:165px;">➃</div>
+          <div class="note label digit red" style="top:217px;right:55px;">➃</div>
+          <div class="note label digit" style="bottom:217px;left:165px;">➄</div>
+       </div>
+
+       <BR>
+       <div class="indent">
+
+          <p class="text"><span>➀</span> &nbsp; The Search Engine does not take into account accents and capital letters to simplify its use and accepts several keywords simultaneously, in order to clarify its request. The results returned are limited to those at the student's level. For example, a CE1 student cannot see documents intended for CM2 students. In the selector on the left, you can choose the type of document you want (text, image, video, etc.).</p>
+
+          <p class="text"><span>➁</span> &nbsp; Shows the path of the folder in which Explorer is currently located. This allows you to quickly move up the tree by clicking on one of the previous elements..</p>
+
+          <p class="text break"><span>➂</span> &nbsp; In this folder, students can access the productions they have made with the different applications. The folder contains elements common to the class that they can share and a folder in their name to which each student has only access. On disk it is located in the folder :</p>
+
+          <p class="text center code"> [phybox] &nbsp;->&nbsp; [classes] &nbsp;->&nbsp; [niveau] &nbsp;->&nbsp; [nom de la classe] &nbsp;->&nbsp; [nom de l'élève]</p>
+
+          <p class="text break"><span>➃</span> &nbsp; Folder containing the items that students have set as Favorites to access them more quickly. Any folder or document can be placed in Favorites, simply by clicking at the end of its line. A star will then appear to indicate it and simply click on it again to delete it.</p>
+
+          <p class="text break"><span>➄</span> &nbsp; The purple separator bar can be moved to give more or less space to the Folder Tree panel as needed.</p>
+
+       </div>
+
+       <BR>
+       <p class="text"><u>Notes :</u></p>
+
+       <p class="list">Read Only :</p>
+
+          <p class="list nobullet">All documents placed by the teacher in the file <span class="yellow">[doc]</span> are read-only and therefore cannot be modified by students. This is the reason why the students' productions go into the <span class="yellow">[classes]</span> folder, in which they can freely modify them.</p>
+
+       <p class="list">Hidden Folder :</p> 
+   
+          <p class="list nobullet">If you name a folder <span class="yellow">[coffre]</span> in french or <span class="yellow">[safe]</span> in english, it will not be displayed in the BoX Explorer. You can therefore store files there temporarily so that they are not visible to students (a quiz for example) and remove them when necessary.</p>
+
+          <div class="img center">
+             <figure class="center">
+                <img src="/image/box/view.explorer.coffre.1.png"  class="" style="height:200px;margin:auto;">
+                <figcaption>The <span class="yellow">[coffre]</span> folder in Windows explorer..</figcaption>
+             </figure>
+             <figure class="center">
+                <img src="/image/box/view.explorer.coffre.2.png"  class="" style="height:200px;margin:auto;">
+                <figcaption>is not visible in the Box explorer</figcaption>
+             </figure>
+          </div>
+          <BR>
+
+       <BR>
+       <p class="text"><u>The Actions :</u></p>
+
+       <p class="text">Some file types may have additional buttons at the end of the line to perform specific actions : </p>
+
+          <img src="/image/box/view-action-odt.png"  class="center crop right" style="width: 60%;">
+          <img src="/image/box/view-action-quiz.png" class="center crop right" style="width: 60%;">
+
+       <BR><BR>
+       <table style="line-height:35px;">   
+          <tr><td>  Text :  </td><td>  Pressing the <u>Edit</u> button allows you to make a copy in the student's file of the file (odt, docx) which serves as a writing model (e.g. a Practical Work sheet to guide the student's procedure), then opens it in the Editor so that he can complete it. The student therefore only modifies his version of the document in his file and not the teacher's document, which remains read-only.</td></tr>
+
+          <tr><td>  Image :  </td><td>  <u>Copy</u> the image to the clipboard (to paste it into the text editor).</td></tr>
+
+          <tr><td>  Video :  </td><td>  Specific use for Sciences, the <u>Edit</u> button opens the video of a moving object in the Tracker application, in order to highlight its trajectory (the button appears if the video has been put in a folder whose name begins with the symbol <span class="yellow">@</span>).</td></tr>
+
+          <tr><td>  Quiz :  </td><td>  <u>Edit</u> the quiz to modify it, <u>Play</u> to launch the server which allows students to play together (otherwise everyone plays individually), <u>Stat</u> displays the statistics of each student who has already played individually.</td></tr>
+
+       </table>
+
+       <BR><BR>
+       <p class="text video"><u>The Explorer :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/view/explorer.mp4" controls preload="none" poster="/video/view/explorer.jpg"></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="explorer"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    .note.arrow { top: 52%; left: -9%; }
+    .note.arrow:before { color: #ffed5a; } 
+    .note.label { top: 65%; left: -80%; width: 70%; color: #ffed5a; }
+    .qr {
+       width: 40vh;
+       height: 140px;
+       object-fit: cover;
+       object-position: 100% 0px;
+    }
+  </style>
+
+  <body class="h" onload="init()">
+
+    <div id="Article">
+
+       <p class="title">Sécurité</p>
+       <BR>
+
+       <p class="text">Au démarrage du Navigateur, vous verrez apparaitre le message suivant sur Chrome, ou un  message équivalent sur d'autres navigateurs :</p>
+
+          <BR>
+          <img src="/image/chrome/https-1.png" class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">Aucune inquiétude à avoir, c'est le comportement attendu du Navigateur.</p>
+
+       <p class="text">En effet, le site de la PhYBoX fonctionne en mode sécurisé https (normalement indiqué par un petit cadenas dans la barre d'adresse). Cependant, pour que cela soit possible sur un site local qui n'est pas connu du Navigateur, il faut générer une exception qui autorise ce site a être consulté en mode https (plutôt qu'en http).</p>
+
+       <p class="text">Le Navigateur informe donc l'utilisateur en lui demandant son autorisation, afin de vérifier qu'il souhaite bien consulter ce site en toute connaissance de cause.</p>
+
+       <p class="text">La PhYBoX tournant dans un réseau local (elle n'est pas sur internet), cette situation ne présente aucun problème de sécurité et vous pouvez donc valider l'exception en cliquant sur « <span class="yellow">Paramètres Avancés</span> » puis « <span class="yellow">Continuer vers le site</span> » :</p>
+
+          <BR>
+          <img src="/image/chrome/https-2.png" class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">Ce message reviendra périodiquement puisque l'autorisation accordée par l'utilisateur sera renouvelée régulièrement par le Navigateur.</p>
+
+       <BR>
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Dès le début de l'usage de la PhYBoX avec vos élèves, il est donc important de leur expliquer ce qu'ils doivent faire quand ils verront ce message.</p>
+          
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    figure.center { display: grid; }
+    figcaption    { padding-top: 20px !important; }
+    div.img.center { display:flex; justify-content:normal; align-items:end; }
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .nopad { padding-left: 100px !important; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">TRACKER</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La PHYBoX intègre l'application :
+             <a class="space" href="https://github.com/lucademian/JsTrack" target="_blank" style="padding:0 25px;">JsTrack</a>
+          </p>
+          <img src="/image/app/tracker.jpg"  class="right shadow" style="width:200px; right:0px; top: -120px;">
+       </div>
+
+       <p class="text">Adaptée pour l'usage sur écran tactile, cette application permet de décomposer le mouvement d'un objet dans une vidéo, afin d'identifier sa trajectoire.</p>
+   
+       <p class="text">Avec la tablette ou le smartphone, les élèves peuvent filmer un objet en mouvement ou utiliser une vidéo déjà faite pour l'importer dans l'application. On peut alors placer un marqueur sur le centre de l'objet, que l'on peut suivre image par image, afin de caractériser sa trajectoire.</p>
+
+       <BR>
+       <p class="text"><u>Fonctionnalités Principales :</u>
+          <a href="/pdf/JsTrack.pdf" target="_blank" class="nopad">Manuel</a>
+       </p>
+
+       <p class="list">Enregistrement automatique de la vidéo et de la trajectoire dans la mémoire du navigateur. On peut reprendre son travail sur une autre séance, en retrouvant ce qui a déjà été fait.</p>
+
+       <p class="list">Conversion du format de la vidéo : JsTrack n'accepte que les vidéos en mp4, mais si elle a été tournée dans un autre format comme le 3gp, elle propose de la convertir en mp4.</p>
+
+       <p class="list">Enregistrement de l'image de la trajectoire dans le dossier de l'élève et dans le presse-papier, afin de pouvoir l'importer dans l'éditeur de texte de la BoX pour l'analyser.</p>
+
+       <p class="list">Export des positions de l'objet au cours du temps dans un classeur Excel.</p>
+
+       <BR>
+       <p class="text"><u>Édition depuis l'explorateur :</u></p>
+
+       <p class="text">Dans l'explorateur de la BoX, on peut ouvrir des vidéos déjà faites directement dans JsTrack en cliquant sur le bouton <span class="yellow">edite</span> situé en bout de ligne. Ce bouton est affiché uniquement si le nom du dossier contenant les vidéos commence par le symbole <span class="yellow">@</span> :</p>
+
+          <div class="img center">
+             <figure class="center">
+                <img src="/image/box/tracker-folder.png"  class="" style="width:125px;margin:auto;">
+                <figcaption>Si le nom du dossier commence par un <span class="yellow">@</span>..</figcaption>
+             </figure>
+             <figure class="center">
+                <img src="/image/box/tracker-action.png"  class="" style="height:40px;margin:auto;">
+                <figcaption>La vidéo est affichée avec un bouton <span class="yellow">edite</span></figcaption>
+             </figure>
+          </div>
+
+       <BR>
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Dans le cas où les élèves font eux-mêmes les vidéos, il faut régler au préalable le mode d'enregistrement de la caméra au format <span class="yellow">mp4</span> dans la <u>résolution la plus basse</u> (pas plus de <span class="yellow">1280x720</span>) et limiter la durée des vidéos à <u>quelques secondes</u>, afin de minimiser les ressources nécessaires pour traiter la vidéo dans l'application. Sinon elle pourra demander davantage de temps pour charger la vidéo, selon la puissance et la quantité de mémoire de la tablette.</p>
+
+       <BR><BR>
+       <p class="text video"><u>Fonctionnalités et usage :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="../video/fx/tracker.mp4" controls  preload="none" poster="/video/fx/tracker.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="tracker"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

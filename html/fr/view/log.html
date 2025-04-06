@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     img.icon.big { width: 40px !important; height: 40px !important; padding-right: 15px !important; padding-bottom: 0; }
+     #Article p.list.flex.left { align-items: end; padding-left:0 !important; }
+     #Article p.list:before { content: ""; }
+     .butWrap { align-self: start; }
+    .top { padding-top: 0 !important; margin-block-start: 0; } 
+    .indent-first { text-align: left; text-indent: 0px; padding-left: 50px; }
+    .indent { text-align: left; text-indent: -50px; padding-left: 50px; }
+    .note.label.digit.red { color: red!important; font-weight: bold; }
+    .note.label.digit { 
+       width: fit-content; 
+       color: #ffed5a !important; 
+       font-size: 20px!important; 
+       font-weight: normal; 
+       text-shadow: none!important;
+     }
+     .test: {}
+  </style>
+
+  <body class="h" onload="init()"> 
+
+    <div id="Article" onload="init()">
+       <p class="title">Connexion</p>
+       <BR>
+
+       <p class="list flex left"><span class="butWrap"><span><img src="/icon/status-log.svg" class="button icon back white big"></span></span><span> &nbsp&nbsp </span><span> &nbsp; Le Lecteur des connexions permet à l'Administrateur d'avoir une vue d'ensemble sur l'utilisation de la PhYBoX, en enregistrant les connexions des élèves sur chaque appareil de la classe mobile (pc, tablettes, smartphones) pendant une semaine :</span></p>
+
+       <BR>
+       <table style="line-height:35px;text-wrap:nowrap;">   
+          <tr><td>  Écrans :  </td><td>  Nombre total d'appareils qui se sont déjà connectés au moins une fois.</td></tr>
+          <tr><td>  Connectés :  </td><td>  Nombre d'appareils connectés actuellement.</td></tr>
+          <tr><td>  Déconnectés :  </td><td>  Nombre d'appareils non utilisés.</td></tr>
+       </table>
+       <BR>
+
+       <BR>
+       <div style="position:relative;width:fit-content;margin:auto;">
+          <img src="/image/box/view-log.png" class="center" style="width: 600px;">
+           <div class="note label digit red" style="top:32px;left:38px;">➀</div>
+         <div class="note label digit red" style="top:32px;right:16px;">➁</div>
+          <div class="note label digit red" style="top:111px;right:16px;">➂</div> 
+       </div>
+
+       <BR>
+       <div class="indent">
+
+          <p class="text"><span>➀</span> &nbsp; Par défault, la liste est mise dans l'ordre des numéros d'Écrans. Mais en cliquant sur l'une des autres entêtes (Écrans, Noms, Classe..), la liste se met dans l'ordre de l'élément choisi. Par exemple, si l'on cherche un élève en particulier, cliquez sur la colonne <span class="yellow">Noms</span> pour mettre la liste dans l'ordre alphabétique des Noms et le retrouver plus rapidement.</p>
+
+          <p class="text"><span>➁</span> &nbsp; Le Lecteur des connexions s'ouvre en affichant uniquement les appareils sur lesquels sont connectés des élèves de la classe avec laquelle vous travaillez en ce moment. Ce bouton permet de changer de classe afin de voir l'utilisation des appareils avec une autre classe, voire toutes.</p>
+
+          <p class="text break"><span>➂</span> &nbsp; La case passe en vert lorsque l'élève se connecte et en orange lorsqu'il se déconnecte. Dans l'historique seuls sont enregistrés ces deux instants.</p>
+
+       </div>
+
+       <BR>
+       <p class="text top">La page de ce Lecteur est actualisée régulièrement pour mettre à jour la liste des connexions. Si vous souhaitez seulement consulter la liste sans qu'elle ne soit constamment ré-intialisée, utilisez l'interrupteur situé en haut à droite pour arrêter la mise à jour.</p>
+
+       <BR>
+       <p class="text"><u>Remarque :</u></p>
+
+       <p class="text">Les Appareils (Écrans) sont identifiés par leur adresse MAC, qui est enregistrée dans la base de données du Serveur quand il s'y connecte la 1ère fois. Il est donc important lorsque vous paramètrez la connexion Wifi de l'appareil, de sélectionner l'option permettant de garder l'adresse MAC <u>Réelle</u> de la Tablette plutôt qu'une valeur <u>Aléatoire</u>, qui n'aurait pas d'intérêt dans cette siutation :</p>
+
+          <img src="/image/android/mac.png" class="center" style="width:300px;">
+
+       <BR><BR><BR><BR>
+ 
+       <p class="text video"><u>Le Lecteur des Connexions :</u></p>
+ 
+       <!--
+       <div class="video">    
+          <video src="/video/view/log.mp4" controls preload="none" poster="/video/view/log.jpg" ></video> 
+       </div>
+        -->
+
+       <iframe class="video" data-id="log"></iframe>
+
+       <p class="text"></p>
+    </div>
+  </body>
+</html>

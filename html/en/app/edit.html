@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">Word &nbsp;&nbsp; Processor</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">The PhYBoX integrates the application :
+             <a class="space" href="https://summernote.org/" target="_blank">Summernote</a>
+          </p>
+          <img src="/image/app/edit.png"  class="right" style="width:170px; right:70px; top: 100px;">
+       </div>
+
+       <p class="text">Text documents (odt, docx) are opened with this simplified word processor, to which tools specific to teaching have been added.</p>
+
+       <p class="text">By default, this type of document opens as read-only in the document reader and therefore cannot be modified. To open the document for editing, in the reader of the same name, you must use the <span class="yellow">edit</span> button located at the end of the line. A copy of this file is then created in the student's file, which they can complete as they wish, without modifying the teacher's original document :</p>
+
+             <img src="/image/box/app.edit.action.png"  class="center" style="height:40px;">
+
+       <BR><BR>
+       <p class="text">If the editor is launched from the Application Gallery, a new document is opened for editing and saved in the student's folder, with its name and a timestamp at the time of the last save :</p>
+
+             <img src="/image/box/app.edit.file.png" class="center" style="height:40px;">
+
+       <BR><BR><BR>
+       <p class="text"><u>Features :</u> &nbsp;&nbsp;&nbsp;&nbsp;On the toolbar are some additional features.</p>
+           
+          <p class="list flex"><span class="butWrap"><img src="/icon/print.svg" class="button icon print"></span><span> :&nbsp;&nbsp; </span><span>Printing of the document on the printer connected to the teacher's computer. To activate this function, you must authorize it in the control panel and activate a functionality on your computer, which will be detailed on the Forum on demand.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/image.svg" class="button icon invert"></span><span> :&nbsp;&nbsp; </span><span> Allows you to paste an image created in another BoX application (drawing, diagram, photo, tracker) into the document to create a report.</span></p>
+        
+          <p class="list flex"><span class="butWrap"><span class="button icon dys"></span></span><span>:&nbsp;&nbsp;</span><span> Changed the font to the Dyslexie font.</span></p>
+
+          <p class="list flex"><span class="butWrap"><img src="/icon/speech.svg" class="button icon invert"></span><span> :&nbsp;&nbsp; </span><span> Reading text entered with speech synthesis, for students experiencing reading problems.</span></p>
+         
+          <p class="list flex"><span class="butWrap"><img src="/icon/micro.svg" class="button icon invert"></span><span>:&nbsp;&nbsp;</span><span> Voice typing with Chromium's recognition engine to type text while dictating it. The Chrome keyboard already offers this, but in this adapted version, additional voice commands have been added to simplify typing :</span></p>
+          
+       <p class="text center">(For the moment, works only in french)</p>
+
+             <table >   
+                <tr><td>  stop            :</td><td>  stops voice recognition  </td></tr>
+                <tr><td>  annuler         :</td><td>  cancels the last entry        </td></tr>
+                <tr><td>  recommencer     :</td><td>  re-enter                </td></tr>
+                <tr><td>  effacer         :</td><td>  delete the last word            </td></tr>
+                <tr><td>  effacer ligne   :</td><td>  deletes the last line         </td></tr>
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  ligne           :</td><td>  jump to line                 </td></tr>
+                <tr><td>  paragraphe      :</td><td>  ccreates a new paragraph       </td></tr>
+                <tr><td>  avant           :</td><td>  advance one word                  </td></tr>
+                <tr><td>  après           :</td><td>  go back one word                  </td></tr>
+                <tr><td>  début de ligne  :</td><td>  goes to start of line          </td></tr>
+                <tr><td>  fin de ligne    :</td><td>  goes to end of line          </td></tr>
+                <tr><td>  monter          :</td><td>  go up one line                </td></tr>
+                <tr><td>  descendre       :</td><td>  go down one line              </td></tr>	
+                <tr><td>  début de texte  :</td><td>  goes to start of text             </td></tr>
+                <tr><td>  fin de texte    :</td><td>  goes to the end of the text             </td></tr>
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  grossir         :</td><td>  makes the text bold             </td></tr>
+                <tr><td>  souligner       :</td><td>  underlines the text                </td></tr>
+                <tr><td>  italique        :</td><td>  italics the text         </td></tr>	
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  augmenter       :</td><td>  zoom on the screen                 </td></tr>
+                <tr><td>  diminuer        :</td><td>  zoom out on the screen               </td></tr>
+                <tr><td>  écran           :</td><td>  full screen                      </td></tr>
+                <tr><td>&nbsp</td><td>&nbsp</td></tr>
+                <tr><td>  lire            :</td><td>  Read the text                    </td></tr>
+                <tr><td>  lire ligne      :</td><td>  Read the current line           </td></tr>
+                <tr><td>  lire tout       :</td><td>  Read all text               </td></tr>
+                <tr><td>  lire stop       :</td><td>  Stops speech synthesis        </td></tr>
+             </table>
+
+       <BR><BR>
+       <p class="text"><u>Options :</u> &nbsp;&nbsp;&nbsp;&nbsp; The control panel offers two settings for the Editor</p>
+
+             <img src="/image/box/opt-cfg-edit.png"  class="center" style="width:50%;">
+
+       <p class="list"> Printing : allows students to print the document directly from their tablet (function not active initially, which requires manipulation on your part which will be specified on the Forum, this requiring some precautions).</p>
+
+       <p class="list"> Format : Allows you to choose the document storage format in odt or docx, depending on the word processor preferentially used.</p>
+
+       <BR><BR>
+       <p class="text"><u>Notes :</u></p>
+
+       <p class="list">Underlining :</p>
+
+          <p class="list nobullet">Underlining part of the text works in the editor, but cannot be saved or replayed from the Server, not being supported by odt/docx conversion &#8660; Html. This function is therefore not usable at the moment.</p>
+
+       <p class="list">Insert an image :</p>
+
+          <p class="list nobullet">To insert an image copied from another application into the document, you should not use the copy/paste button which will only restore the encoding of the image, but the <span class="yellow">image</span button > -> <span class="yellow">copy an image</span> :</p>
+
+             <img src="/image/box/edit.image.import.png"  class="center" style="width:40%;">
+
+       <BR><BR><BR>
+       <p class="text video"><u>Word Processor :</u> &nbsp;&nbsp;&nbsp; Use and Features</p>
+
+       <!--
+       <div class="video">    
+          <video src="../video/app/edit.mp4" controls  preload="none" poster="/video/app/edit.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="edit"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

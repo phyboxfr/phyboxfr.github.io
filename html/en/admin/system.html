@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    span { white-space: nowrap; }
+    .listfirst { color: yellow !important; } 
+    table.list { border-collapse: collapse; }
+    table.list td { vertical-align: top; line-height:35px; }
+    table.list td:nth-child(2) p.text { padding-left:30px; } 
+    table.list p.text, table.list p.list { margin-top: 0; }
+    table.bullet { padding-left: 150px !important; }
+  </style>
+
+  <body onload="init()">
+
+    <div id="Article">
+       <p class="title">System</p>
+       <BR>
+
+       <p class="text">The PhYBoX is structured into different modules which ensure each of its functionalities. In the main folder are the 5 folders at the base of this System :</p>
+
+       <BR>
+       <table class="list">  
+ 
+          <tr><td><p class="list"><span class="listfirst">Server :</span></p></td><td><p class="text">main folder which contains the components of the BoX, Library and Collaborative Board servers
+</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Web :</span></p></td><td><p class="text">BoX interface and its applications, made up of the following components :</p></td></tr>
+
+       </table>
+       <BR>
+
+              <table class="bullet">
+                 <tr><td>  Login    : </td><td>  portal and student identification panel by password </td></tr>
+          
+                 <tr><td>  Explorer : </td><td>  Files <u>explorer</u> </td></tr>
+
+                 <tr><td>  Index    : </td><td>  <u>indexing</u> engine for student documents</td></tr>
+
+                 <tr><td>  Ext      : </td><td>  applications necessary to read the different document formats depending on their extension</u> </td></tr>
+
+                 <tr><td>  App      : </td><td>  <u>applications</u> appearing in the app gallery  </td></tr>
+         
+                 <tr><td>  Proxy    : </td><td>  manages the BoX <u>proxy</u>, in order to limit Internet access only to sites authorized by the teacher  </td></tr>
+          
+                 <tr><td>  Tools    : </td><td>  tools ensuring various general functionalities used by applications (message, format conversion, printing, PDF, OCR, QR code etc.)</td></tr>
+          
+              </table>
+
+       <BR><BR>
+       <table class="list"> 
+  
+          <tr><td><p class="list"><span class="listfirst">Doc :</span></p></td><td><p class="text">it is in this folder that you can put the documents intended for students which will be visible in the explorer.  It is necessary to create a folder for each level (Year 7,8,9 etc.)</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Classes :</span></p></td><td><p class="text">folder where everything relating to classes is located, in particular the list of students with their password and where all their productions are recorded</p></td></tr>
+
+          <tr><td><p class="list"><span class="listfirst">Asset :</span></p></td><td><p class="text">offers some resources for the Administrator</p></td></tr>
+
+       </table>
+
+       <BR>
+       <p class="text video"><u>Structure of the BoX :</u></p>
+
+       <!--
+       <div class="video">    
+          <video src="/video/admin/system.mp4" controls preload="none" poster="/video/admin/system.jpg" ></video> 
+       </div>
+       -->
+
+       <iframe class="video" data-id="system"></iframe>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>
