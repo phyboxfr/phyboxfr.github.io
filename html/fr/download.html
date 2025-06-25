@@ -12,8 +12,13 @@
     #Article p.text a.space { padding:0px; }
     #Article p.text.link { padding: 0px 100px; }
     #Article p.text.link.md5 { font-size: 22px; }
-    p.list { margin-bottom: 0; }
+    #Article p.text.version { margin-bottom: 20px; cursor: pointer; }
     p.bullet { margin-top: 0; padding-left: 150px !important; text-indent: -24px; font-size: 24px; }
+    p.list { margin-bottom: 0; }
+    div.fold { padding-right: 20px; max-height: 0px; overflow-y: scroll; overflow-x: hidden; transition: max-height 0.4s ease-in-out; }
+    div.fold::-webkit-scrollbar { width: 3px; }
+    div.fold::-webkit-scrollbar-thumb { background-color: #f5b504; border-radius: 3px; }
+    div.fold.show { max-height: 500px; }
   </style>
 
   <body onload="init()">
@@ -34,24 +39,37 @@
        <p class="text link download"><a href="" target="_blank">Phybox version</a>&nbsp;&nbsp;(size Mo)</p>
        
        <p class="text link md5">MD5 : &nbsp;&nbsp;<span class="yellow">md5</span></p>
-
+       
        <BR>
-       <p class="text"><u>Notes de Version :</u></p>
+       <p class="text version" onclick="FOLD()" title=""><u>Notes de Version :</u></p>
 
-       <p class="list">1.0.1 :</p>
-
-              <p class="bullet">_ Ajout d'une option pour fusionner dans un seul fichier tous les Quiz produits par les élèves dans le dossier <span class="yellow">[Quiz]</span> de la classe.</p>
-
-              <p class="bullet">_ Mise à jour de Ruffle v25.06.22.</p>
-
-              <p class="bullet">_ Correction de bugs (Editeur & Quiz).</p>
-
-       <p class="list">1.0 :</p>
-
-              <p class="bullet">_ 1ère version stable.</p>
+          <div class="fold"></div>
 
        <p class="text"></p>
+
     </div>
+
+    <script>
+
+       var note = '';
+
+       function FOLD(){ if(note==''); NOTE(); document.querySelector('.fold').classList.toggle('show'); }
+       function NOTE(){ let s = '/';
+          let lang = document.documentElement.lang; 
+          let url = s + 'html' + s + lang + s + 'version.txt';
+              fetch(url).then(e=>e.text()).then(e=>NOTECB(e));
+       }
+       function NOTECB(e){ 
+          let version = '<p class="list">@</p>';
+          let item    = '<p class="bullet">@</p>';
+          let y1      = '<span class="yellow">', y2 = '</span>';
+              lines = e.split(/[\r\n]+/); lines.shift(); //remove title
+              html  = lines.reduce( (html,line) => html + (line.includes('_') ? item : version ).replace('@',line),'');
+              html  = html.replace('[',y1+'[').replace(']',']'+y2);
+              document.querySelector('.fold').innerHTML = html; 
+       }
+
+    </script>
 
   </body>
 </html>
