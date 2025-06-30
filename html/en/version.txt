@@ -4,9 +4,9 @@ Release Notes :
 
 _ Quiz : in the [Quiz] class folder, added an option to merge into a single file all the Quizzes produced by the students
 
-_ Update Ruffle v25.06.22
-
 _ Improvements & fixes (Explorer, Editor, Quiz)
+
+_ Update Ruffle v25.06.22
 
 1.0 :
 

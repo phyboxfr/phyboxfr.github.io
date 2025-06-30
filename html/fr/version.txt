@@ -4,10 +4,10 @@ Notes de version :
 
 _ Quiz : Dans le dossier [Quiz] de la classe, ajout d'une option pour fusionner dans un seul fichier tous les Quiz produits par les élèves
 
-_ Mise à jour de Ruffle v25.06.22
-
 _ Améliorations & Correctifs (Explorateur, Editeur, Quiz)
 
+_ Mise à jour de Ruffle v25.06.22
+    
 1.0 :
 
 _ 1ère version stable
