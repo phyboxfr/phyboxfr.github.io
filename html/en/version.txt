@@ -1,5 +1,13 @@
 Release Notes :
 
+1.1 :
+
+_ Generalization of Speech Synthesis for Kiwix Libraries and documents in text, odt, pdf, html format, with a switch in the identification panel to deactivate it
+
+_ Added an application to download a website for local reading
+
+_ Explorer: Reading unindexed files
+
 1.0.1 :
 
 _ Quiz : in the [Quiz] class folder, added an option to merge into a single file all the Quizzes produced by the students

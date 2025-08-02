@@ -9,6 +9,12 @@
   </head>
 
   <style>
+      span.title { display: block; }
+      .cd:before, .cd:after { content: '\1F4F1'; padding: 0 5px; text-shadow: none; }
+      .cdi { padding-bottom: 10px; word-spacing: 7px; font-weight: bold; font-size: 35px; color: #bd7edd;
+             text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+                          1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+      } 
       .subtitle { margin-top: -20px; }
      a.center { display: block; width: 50px; margin: auto; }
       .git { margin-top:-30px; width: 50px; }
@@ -19,7 +25,12 @@
     <div id="Article">
  
        <p class="title">Phybox</p>
-       <p class="text center subtitle">Une Application pour Simplifier<br>l'usage des Tablettes en Classe</p>
+       <p class="text center subtitle">
+          <span class="title cdi">MON CDI NUMÉRIQUE</span>
+          <span class="title">Une Application pour Simplifier
+                         <br>l'usage des Tablettes en Classe
+          </span>
+       </p>
        
        <a href="https://phyboxfr.github.io/" class="center" title="Phybox sur Github" target="_blank"><img src="/image/app/github.svg" class="git"></a>
 

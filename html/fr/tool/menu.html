@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-
   <head>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Menu</title>
-    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <link type="text/css"  rel="stylesheet" href="/phybox.css">
     <script type="application/x-javascript" src="/phybox.js"></script>
   </head>
 
-  <body> 
+  <body class="h">
 
     <div id="Menu" class="h">
+
       <ul class="menu">
-        <li><a href="home.html"   onclick="set(this);return false;" id="Home"></a></li>
-        <li><a href="text.html"   onclick="set(this);return false;">Texte</a></li>
-        <li><a href="pdf.html"    onclick="set(this);return false;">Pdf</a></li>
-        <li><a href="table.html"  onclick="set(this);return false;">Tableur</a></li>
-        <li><a href="slide.html"  onclick="set(this);return false;">Diaporama</a></li>
-        <li><a href="image.html"  onclick="set(this);return false;">Image</a></li>
-        <li><a href="audio.html"  onclick="set(this);return false;">Audio</a></li>
-        <li><a href="flash.html"  onclick="set(this);return false;">Flash</a></li>
-        <li><a href="h5p.html"  onclick="set(this);return false;">H5P</a></li>
+        <li><a href="home.html"     onclick="set(this);return false;" id="Home"></a></li>
+        <li><a href="speech.html"   onclick="set(this);return false;">Adaptation</a></li>
+        <li><a href="vocal.html"    onclick="set(this);return false;">Vocal</a></li>
+        <li><a href="crawl.html"    onclick="set(this);return false;">Capture</a></li>
+        <li><a href="send.html"     onclick="set(this);return false;">Envoi</a></li>
       </ul>
     </div>
 
@@ -39,7 +36,7 @@
        function get(){
           let active = document.querySelector('ul li.active');
           return active ? [ ...active.parentElement.children].indexOf(active) : 0;
-       }
+       } 
     </script>
 
   </body>

@@ -1,5 +1,13 @@
 Notes de version :
 
+1.1 :
+
+_ Généralisation de la Synthèse Vocale pour les  Librairies Kiwix et les documents au format text, odt, pdf, html, avec un interrupteur dans le panneau d'identification pour la désactiver
+
+_ Ajout d'une application de téléchargement d'un site internet pour lecture en local
+
+_ Explorateur : Lecture des fichiers non indexés
+
 1.0.1 :
 
 _ Quiz : Dans le dossier [Quiz] de la classe, ajout d'une option pour fusionner dans un seul fichier tous les Quiz produits par les élèves
@@ -7,7 +15,7 @@ _ Quiz : Dans le dossier [Quiz] de la classe, ajout d'une option pour fusionner 
 _ Améliorations & Correctifs (Explorateur, Editeur, Quiz)
 
 _ Mise à jour de Ruffle v25.06.22
-    
+
 1.0 :
 
 _ 1ère version stable
