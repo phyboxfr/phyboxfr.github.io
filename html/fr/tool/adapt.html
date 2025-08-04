@@ -14,8 +14,11 @@
                        // animation: 1s focus ease-in-out alternate infinite; }
                        // @keyframes focus { 0% { background:transparent; } 100% { background:#e39a01; } }
 
-    img.wave { position: absolute; width:120px; top: -5px; padding-right: 20px;
-               filter: sepia(100%) hue-rotate(337deg) saturate(10); }
+    img.dys { width:100px; top: -5px; padding-right: 40px; 
+              filter: sepia(100%) hue-rotate(337deg) saturate(10) drop-shadow(2px 2px 4px #666); }
+
+    img.wave { position: absolute; width:100px; top: -5px; padding-right: 40px;
+               filter: sepia(100%) hue-rotate(337deg) saturate(10) drop-shadow(2px 2px 4px #666); }
     img.wave.ghost { position: relative; opacity: 0.3; filter: drop-shadow(2px 2px 6px black);}
     img.wave.low { animation: 2s ease blink infinite; }
     img.wave.mid { animation: 2s ease blink infinite; animation-delay: 0.4s;}
@@ -33,6 +36,17 @@
        <p class="title">Adaptation</p>
        <BR>
 
+       <p class="text">La PhYBoX propose deux outils afin d'aider les élèves qui rencontrent certaines difficultés de lecture :</p>
+       <BR>
+
+       <div class="linklogo">
+          <div class="dys">
+             <img src="/icon/dys.svg" class="dys left">
+          </div>
+          <p class="text">Usage de la police de caractères <span class="yellow">OpenDyslexic</span> dans l'Explorateur, les Librairies Kiwix et les documents au format txt, html.</p>
+       </div>
+       <BR><BR>
+
        <div class="linklogo">
           <div class="wave">
              <img src="/icon/speech.svg" class="wave ghost left">
@@ -41,27 +55,27 @@
              <img src="/icon/speech.wave.2.svg" class="wave mid left">
              <img src="/icon/speech.wave.3.svg" class="wave high left">
           </div>
-          <p class="text">The PhYBoX offers the use of Speech Synthesis to help students who may encounter some reading difficulties :
+          <p class="text">Usage de la Synthèse Vocale pour lire les documents proposés aux élèves :
           </p>
        </div>
 
-       <p class="text">On documents in txt, odt, html, pdf format and all Kiwix Libraries, simply touch one of the texts on the page for the entire paragraph to be read by the tablet.</p>
+       <p class="text">Sur les documents au format txt, odt, html, pdf et toutes les Librairies Kiwix, il suffit de toucher l'un des textes présents sur la page pour que l'ensemble du paragraphe soit lu par la tablette.</p>
 
-       <p class="text">An icon on the login panel allows you to disable this feature for students for whom it is not required, in order to prevent it from being triggered unnecessarily.</p>
+       <p class="text">Une icône sur le panneau d'identification permet de désactiver cette fonctionnalité pour les élèves pour lesquels elle ne serait pas nécessaire, afin d'éviter qu'elle ne se déclenche inutilement.</p>
 
-       <p class="text focus">On compatible browsers such as Firefox, reading can also be accompanied by highlighting of the word being read.</p>
+       <p class="text focus">Sur les navigateurs compatibles tel que Firefox, la lecture peut également être accompagnée d'une mise en surbrillance du mot lu au fur et à mesure.</p>
 
-       <p class="text">For Android tablets, this feature is not available with browsers based on the Chromium project (Chrome, Brave, Opera, etc.) which do not currently allow it.</p>
+       <p class="text">Pour les tablettes sous Android, cette fonctionnalité n'est pas disponible avec les navigateurs basés sur le projet Chromium (Chrome, Brave, Opera..) qui ne le permet pas actuellement.</p>
 
        <div class="linklogo">
-          <p class="text">If this feature can be useful to your students, then it is recommended to use the Firefox browser for Android which offers it :
+          <p class="text">Si cette fonctionnalité peut être utile à vos élèves, il est alors recommandé d'utiliser le navigateur Firefox pour Android qui la propose :
              <a class="space" href="https://www.firefox.com/fr/browsers/mobile/android/" target="_blank">Firefox Android</a>
           </p>
           <img src="/image/app/firefox.svg" class="firefox right">
        </div>
 
        <BR>
-       <p class="text video"><u>Example of use of Voice Synthesis :</u></p>
+       <p class="text video"><u>Exemple d'usage :</u></p>
 
        <!--
        <div class="video">    
