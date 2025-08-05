@@ -9,6 +9,15 @@
   </head>
 
   <style>
+
+    @font-face {
+      font-family: 'dyslexic';
+      font-style: normal;
+      font-weight: normal;
+      font-display: swap;
+      src: url(/font/dyslexic.woff2) format('woff2');
+    }
+
     p.text a.space { display: inline !important; }
     p.text span.focus { background:#e39a01; padding: 0 5px; padding-top: 5px; margin: 0 -5px;
                        // animation: 1s focus ease-in-out alternate infinite; }
@@ -16,6 +25,42 @@
 
     img.dys { width:100px; top: -5px; padding-right: 40px; 
               filter: sepia(100%) hue-rotate(337deg) saturate(10) drop-shadow(2px 2px 4px #666); }
+    img.dys { display: none; }
+
+    div.linklogo.dis p.text { margin-left: 140px !important; } 
+    div.dys { position: absolute; display: flex; margin-top: -10px; padding-right: 82px; min-width: 50px;}
+    div.dys span {
+       margin-top: -10px;
+       margin-right: -10px;
+       color: transparent;
+       font-family: dyslexic;
+       font-size: 45px;
+       text-shadow: 0 0 0px #ffed5a;
+       animation: blur 8s ease-in-out infinite;
+    }
+    div.dys span:nth-child(1) { animation-delay: 0.1s;  }
+    div.dys span:nth-child(3) { animation-delay: 0.25s; }
+    div.dys span:nth-child(2) { animation-delay: 0.4s;  }
+
+    @keyframes blur {
+	0%	{ text-shadow:  0 0 90px #ffed5a;}
+	5%	{ text-shadow:  0 0 100px #ffed5a; opacity:0; }
+	6%	{ text-shadow:  0 0 100px #ffed5a; opacity:0.9; font-family: text; font-size: 51px; margin-right:-1px; }
+	7%	{ text-shadow:  0 0 90px #ffed5a; }
+	10%	{ text-shadow:  0 0 0px #ffed5a;  transform: translate(-1px,1px)  rotate(1deg); opacity:1; }
+	12%	{ text-shadow:  0 0 0px #ffed5a;  transform: translate(2px,1px)   rotate(-1deg); }
+        15%     { text-shadow:  0 0 4px #ffed5a;  transform: translate(1px,-1px)  rotate(1deg); }
+	17%	{ text-shadow:  0 0 0px #ffed5a;  transform: translate(-1px,-1px) rotate(-1deg); }
+        22%     { text-shadow:  0 0 0px #ffed5a;  transform: translate(-3px,1px)  rotate(2deg); }
+        25%     { text-shadow:  0 0 7px #ffed5a;  transform: translate(1px,1px)  rotate(-1deg); }
+        27%     { text-shadow:  0 0 0px #ffed5a;  transform: translate(1px,-1px)  rotate(1deg); }
+	30%	{ text-shadow:  0 0 0px #ffed5a;  transform: translate(-1px,2px)  rotate(-1deg); }
+	38%	{ text-shadow:  0 0 0px #ffed5a;  transform: translate(0px,0px)   rotate(0deg); }
+	42.5%	{ text-shadow:  0 0 5px #ffed5a;  font-family: text;     font-size: 55px; margin-right:-10px; }
+	45%	{ text-shadow:  0 0 5px #ffed5a;  font-family: dyslexic; font-size: 45px; margin-right:-10px; }
+	52%	{ text-shadow:  0 0 0px #ffed5a; }
+	100%	{ text-shadow:  0 0 0px #ffed5a; }
+    }
 
     img.wave { position: absolute; width:100px; top: -5px; padding-right: 40px;
                filter: sepia(100%) hue-rotate(337deg) saturate(10) drop-shadow(2px 2px 4px #666); }
@@ -39,11 +84,12 @@
        <p class="text">La PhYBoX propose deux outils afin d'aider les élèves qui rencontrent certaines difficultés de lecture :</p>
        <BR>
 
-       <div class="linklogo">
+       <div class="linklogo dis">
           <div class="dys">
              <img src="/icon/dys.svg" class="dys left">
+             <span>D</span><span>y</span><span>s</span>
           </div>
-          <p class="text">Usage de la police de caractères <span class="yellow">OpenDyslexic</span> dans l'Explorateur, les Librairies Kiwix et les documents au format txt, html.</p>
+          <p class="text">Usage de la police de caractères <span class="yellow">OpenDyslexic</span> pour une meilleure lisibilité dans l'Explorateur, les Librairies Kiwix et les documents au format txt, html.</p>
        </div>
        <BR><BR>
 
