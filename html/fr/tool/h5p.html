@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+    img.h5p { position: relative; width:200px; right:70px; top: -20px; }
+    img.lumi { position: relative; width:150px; right:70px; top: -15px; }
+    p.text a.space { padding: 0 40px !important; }
+    p.text.anim:before { position: relative; content: '\1F4A1'; top: 9px; margin: -16px; padding-right: 20px; font-size: 40px; }
+    #h5p { width: 810px; position: relative; left: 50%; transform: translateX(-50%);  }
+    iframe { border: 0; }
+  </style>
+
+  <body class="h" onload="Init()"> 
+
+    <div id="Article">
+       <p class="title">H5P</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">La structure de la PhYBoX lui permet d'héberger naturellement des activités H5P  :
+             <a class="space" href="https://h5p.org/" target="_blank">H5P</a>
+          </p>
+          <img src="/image/app/h5p.svg" class="h5p right glow">
+       </div>
+
+       <p class="text">H5P est une plateforme en ligne de création de contenu interactif et ludique pour l'éducation. Très simple d'usage et ne nécessitant aucune connaissance technique, elle permet de rendre plus dynamiques les activités proposées aux élèves, avec plus de <a class="" href="https://h5p.org/content-types-and-applications" target="_blank">50 modèles</a> d'animation qui s'adaptent à toutes les situations pédagogiques.</p>
+
+       <div class="linklogo">
+          <p class="text">H5P est également disponible sous la forme d'une application pour ordinateur grâce à la version proposée par :
+             <a class="space" href="https://lumi.education/fr/editeur-de-bureau-hors-ligne-lumi-h5p/" target="_blank">Lumi H5P</a>
+          </p>
+          <img src="/image/app/lumi.svg" class="lumi right shadow">
+       </div>
+
+       <p class="text">Après avoir réalisé votre activité H5P avec l'application Lumi, de la même façon que vous le feriez sur le site de H5P, il est possible de l'exporter dans un <u>seul fichier</u> HTML contenant toutes les ressources nécessaires à son fonctionnement, y compris les images :</p>
+
+       <p class="text">
+          <img src="/image/app/lumi.export.fr.png" class="center shadow" style="width:400px;margin-top:20px;">
+       </p>
+
+       <p class="text"></p>
+
+       <p class="text">Ce fichier HTML peut alors simplement être déposé dans la BoX avec les autres documents destinés à la classe. Quand l'élève clique desssus, l'activité s'ouvre dans le lecteur de document, en bénéficiant en plus de la Synthèse Vocale de la BoX pour oraliser les questions si nécessaire.</p>
+       <BR>
+
+       <!- IFRAME H5P Activity ->
+       <p class="text anim"><u>Exemple d'activité H5P :</u></p>
+
+       <div id="h5p"style=""> 
+          <iframe width="100%" height="850" src="/media/H5P.fr.html"></iframe> 
+       </div> 
+
+       <p class="text"></p>
+
+    </div>
+
+    <script>    
+      function Init(){
+         //Iframe steal focus at load, so page opens at bottom
+         init(0); window.scrollTo(0,0);
+      }
+    </script>
+
+  </body>
+</html>
