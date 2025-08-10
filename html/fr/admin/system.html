@@ -16,6 +16,11 @@
     table.list td:nth-child(2) p.text { padding-left:30px; } 
     table.list p.text, table.list p.list { margin-top: 0; }
     table.bullet { padding-left: 150px !important; }
+    table.dir { margin-top: -10px !important; }
+    table.dir p.text { margin: 0; padding-bottom: 10px; text-align: left !important; }
+    table.dir span { margin: 0 ; padding: 0; }
+    span.green { color: #b7f706; }
+    span.red   { color: #ff76a4; }
   </style>
 
   <body onload="init()">
@@ -65,6 +70,18 @@
        -->
 
        </table>
+       <BR>
+
+       <p class="text"><u>Remarque Importante:</u></p>
+
+       <p class="text">La BoX est une application portable, son dossier peut donc être décompressé n'importe où, <u>mais</u> le nom des dossiers qui la contiennent ne doit pas comporter d'<u>accent</u>, sinon le serveur ne pourra pas démarrer :</p>
+
+       <table class="dir"> 
+          <tr><td> <p class="text code"> [ C:\Mon dossier\Phybox ]</p>      </td>
+              <td> <p class="text code"> <span class="green">&#x2714;</span> </p>                    </td></tr>
+          <tr><td> <p class="text center code"> [ C:\Mon <u>é</u>cole\Phybox ]</p>  </td>
+          <td>     <p class="text code"> <span class="red">&#x2716;</span> </p>                      </td></tr>
+       </table>
 
        <BR>
        <p class="text video"><u>Structure de la BoX :</u></p>
@@ -78,6 +95,7 @@
        <iframe class="video" data-id="system"></iframe>
 
        <p class="text"></p>
+
     </div>
 
   </body>
