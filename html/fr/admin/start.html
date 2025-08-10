@@ -10,20 +10,15 @@
 
   <style>
      #wifi { animation: shake 1.5s ease infinite; }
-    .note.arrow { top: 18%; right: 10%; }
-    .note.arrow:before { color: #ff4df2; } 
-    .note.label { top: 26%; right: -55%; width: 55%; color: #ffed5a !important; }
-     td.nw { vertical-align:top; white-space: nowrap; }
-    .board {
-       position: absolute;
-       top: 49%;
-       width: 70%;
-       margin: 0 13%;
-       color: #eeaf00 !important;
-       font-size: 30px;
-       text-align: center;
-       text-shadow: 0 0 #000;
-    }
+     #Article p.text a.link { padding-left: 40px; }
+     p.text { position: relative; }
+     img.arrow { 
+       position: absolute; 
+       top: -137px; 
+       right: 109px; 
+       height: 136px; 
+       transform: rotate(193deg) scale(-1, 1); 
+     }
   </style>
 
   <body onload="init()">
@@ -33,61 +28,26 @@
        <p class="title">Démarrer</p>
        <BR>
 
-       <p class="text">Pour démarrer la PhYBoX, allez dans son dossier principal et double cliquez sur l'application <span class="yellow">phybox.exe</span>.</p>
+       <p class="text">Pour démarrer la PhYBoX, allez dans son dossier principal et cliquez sur l'application <span class="yellow">phybox.exe</span>.
+       <img src="/icon/arrow2.svg" class="arrow"></p>
 
-       <p class="text">Au lancement de la PhYBoX, la console de gestion s'ouvre. Elle permet de contrôler les serveurs de la BoX, de la Librairie et du Tableau Collaboratif, ainsi que l'Indexation des Documents :</p>
+       <p class="text">Windows peut alors afficher un message d'avertissement provenant de sa fonctionnalité de protection « <span class="yellow">Microsoft Defender SmartScreen</span> » :</p>
 
-       <div style="position:relative;width:fit-content;margin:auto;">
-          <img src="/image/box/console.png" class="center" style="width:90%;">
-          <div class="note arrow left"></div>
-          <div class="note label">Cliquez sur l'adresse pour aller sur la Phybox</div>
-          <div class="board">J'écris un message pour le Tableau Collaboratif</div>
-       </div>
+          <img src="/image/windows/smartscreen.1.png" class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">Cette protection peut se déclencher au moment du lancement d'une application téléchargée qui est peu connue ou ne dispose pas d'une signature numérique permettant d'en identifier l'éditeur, ce qui est le cas de la PhYBoX.</p> 
+
+       <p class="text">Quelques informations sur la protection SmartScreen :
+
+       <a class="link" href="https://www.01net.com/astuces/windows-10-comment-autoriser-l-execution-de-programmes-bloques-par-windows-defender-1363447.html" target="_blank">01net</a>
+
+       <a class="link" href="https://www.malekal.com/supprimer-windows-a-protege-votre-pc/" target="_blank">Malekal</a>
 
        <BR><BR>
-       <table style="line-height:35px;">
-          <tr><td colspan="2" align="center"><u>Gestion des Serveurs :</u></td></tr>
-          <tr height="20px"></tr>
-          <tr><td class="nw">  Box    :</td><td>  Lance le serveur de la Box                     </td></tr>
-          <tr><td class="nw">  Wiki   :</td><td>  Lance le serveur de la Librairie                </td></tr>
-          <tr><td class="nw">  Pad    :</td><td>  Lance le serveur du Tableau Collaboratif ou l'arrête, en effaçant tout son contenu (messages et tchat) </td></tr>
-          <tr height="20px"></tr>
-          <tr><td class="nw">  Reset  :</td><td>  Efface puis refait l'indexation des documents  </td></tr>
-          <tr><td class="nw">  Update :</td><td>  Met à jour l'indexation des documents          </td></tr>
-          <tr><td colspan="2" align="center"><BR><u>Tableau Collaboratif :</u></td></tr>
-          <tr height="20px"></tr>
-          <tr><td class="nw">  Envoie :</td><td>  Remplace le message affiché</td></tr>
-          <tr><td class="nw">  Ajoute :</td><td>  Ajoute le message</td></tr>
-          <tr><td class="nw">  Enlève :</td><td>  Supprime le dernier message</td></tr>
-          <tr><td class="nw">  Efface :</td><td>  Efface tout le Tableau</td></tr>
-       </table>
-       <BR>
+       <p class="text">Pour passer cet avertissement, cliquer sur le lien  « <span class="yellow">Informations Complémentaires</span> » puis sur « <span class="yellow">Exécuter quand même</span> » :</p>
 
-       <p class="text"><u>Remarques :</u></p>
-
-       <p class="text">Les boutons des serveurs passent en gras quand ils sont démarrés. Au prochain démarrage de la BoX, les serveurs se lanceront automatiquement si vous fermez la fenêtre sans les arrêter au préalable.</p>
-
-       <p class="text">Si vous ajoutez une nouvelle librairie (archive zim), il faut redémarrer le serveur de la Librairie pour qu'elle soit prise en compte, en cliquant deux fois sur le bouton <span class="yellow">Wiki</span>.</p>
-
-       <BR>
-       <p class="text video"><u>Démarrer la Box :</u></p>
-
-       <!--
-       <div class="video">
-          <video src="/video/admin/start.mp4" controls preload="none" poster="/video/admin/start.jpg"></video> 
-       </div>
-       -->
-
-       <iframe class="video" data-id="start"></iframe>
-
-       <BR><BR><BR>
-       <p class="text video"><u>Si le Serveur ne démarre pas :</u></p>
-
-       <p class="text">Dans le cas où la console de démarrage se lance bien, mais lorsque vous allez sur le navigateur il affiche un message d'erreur qui indique qu'il ne peut pas se connecter à la BoX, il se peut qu'il manque une composante de Windows sur votre ordinateur qui est nécessaire pour faire fonctionner le serveur.</p>
-
-       <p class="text">Vous pouvez la télécharger (gratuitement) sur le site de Microsoft :</p>
-
-       <p class="text center code"><a class="space" href="https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist" target="_blank">Microsoft Visual C++ Redistributable 2015-2022 x64</a></p>
+          <img src="/image/windows/smartscreen.2.png" class="center" style="width:60%;">
 
        <p class="text"></p>
     </div>

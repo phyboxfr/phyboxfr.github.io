@@ -10,84 +10,43 @@
 
   <style>
      #wifi { animation: shake 1.5s ease infinite; }
-    .note.arrow { top: 18%; right: 10%; }
-    .note.arrow:before { color: #ff4df2; } 
-    .note.label { top: 26%; right: -55%; width: 55%; color: #ffed5a !important; }
-     td.nw { vertical-align:top; white-space: nowrap; }
-    .board {
-       position: absolute;
-       top: 49%;
-       width: 70%;
-       margin: 0 13%;
-       color: #eeaf00 !important;
-       font-size: 30px;
-       text-align: center;
-       text-shadow: 0 0 #000;
-    }
+     #Article p.text a.link { padding-left: 40px; }
+     p.text { position: relative; }
+     img.arrow { 
+       position: absolute; 
+       top: -137px; 
+       right: 109px; 
+       height: 136px; 
+       transform: rotate(193deg) scale(-1, 1); 
+     }
   </style>
 
   <body onload="init()">
 
     <div id="Article">
 
-       <p class="title">Start-up</p>
+       <p class="title">Start</p>
        <BR>
 
-       <p class="text">To start PhYBoX, go to its main folder and double click on the <span class="yellow">phybox.exe</span> application.</p>
+       <p class="text">To start the PhYBoX, go to its main folder and click on the application <span class="yellow">phybox.exe</span>.
+       <img src="/icon/arrow2.svg" class="arrow"></p>
 
-       <p class="text">When PhYBoX is launched, the management console opens. It allows you to control the servers of the BoX, the Bookstore and the Collaborative Table, as well as the Indexing of Documents :</p>
+       <p class="text">Windows may then display a warning message from its "<span class="yellow">Microsoft Defender SmartScreen</span>" protection feature :</p>
 
-       <div style="position:relative;width:fit-content;margin:auto;">
-          <img src="/image/box/console.en.png" class="center" style="width:90%;">
-          <div class="note arrow left"></div>
-          <div class="note label">Click on the address to go to the PhYBoX</div>
-          <div class="board">I'm writing a message for the Collaborative Board</div>
-       </div>
-
-       <BR><BR>
-       <table style="line-height:35px;">
-          <tr><td colspan="2" align="center"><u>Server Management :</u></td></tr>
-          <tr height="20px"></tr>
-          <tr><td class="nw">  Box  :</td><td>  Launches the Box server                    </td></tr>
-          <tr><td class="nw">  Wiki :</td><td>  Launches the Library server                </td></tr>
-          <tr><td class="nw">  Pad :</td><td> Starts the Collaborative Board server or stops it, deleting all its content (messages and chat) </td></tr>
-          <tr height="20px"></tr>
-          <tr><td class="nw">  Reset  :</td><td>  Erase then redo the indexing of documents  </td></tr>
-          <tr><td class="nw">  Update :</td><td>  Updates document indexing                  </td></tr>
-          <tr><td colspan="2" align="center"><BR><u>Collaborative Board :</u></td></tr>
-          <tr height="20px"></tr>
-          <tr><td class="nw">  Send   :</td><td>  Replaces the displayed message</td></tr>
-          <tr><td class="nw">  Add    :</td><td>  Add the message</td></tr>
-          <tr><td class="nw">  Delete :</td><td>  Delete the last message</td></tr>
-          <tr><td class="nw">  Clear  :</td><td>  Clear the entire Board</td></tr>
-       </table>
-       <BR>
-
-       <p class="text"><u>Note :</u></p>
-
-       <p class="text">Server buttons change to bold when they are started. The next time BoX starts, the servers will launch automatically if you close the window without stopping them first.</p>
-
-       <p class="text">If you add a new library (zim archive), you must restart the Library server for it to be taken into account, by clicking twice on the <span class="yellow">Wiki</span> button.</p>
+          <img src="/image/windows/smartscreen.1.en.png" class="center" style="width:60%;">
 
        <BR>
-       <p class="text video"><u>Start-up the Box :</u></p>
+       <p class="text">This protection can be triggered when launching a downloaded application that is little known or does not have a digital signature allowing the publisher to be identified, which is the case with PhYBoX.</p> 
 
-       <!--
-       <div class="video">
-          <video src="/video/admin/start.mp4" controls preload="none" poster="/video/admin/start.jpg"></video> 
-       </div>
-       -->
+       <p class="text">Some information about protection SmartScreen :
 
-       <iframe class="video" data-id="start"></iframe>
+       <a class="link" href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/" target="_blank">Microsoft</a>
 
-       <BR><BR><BR>
-       <p class="text video"><u>If the Server don't start :</u></p>
+       <BR>
+       <p class="text">To bypass this warning, click on « <span class="yellow">More info</span> » and then on « <span class="yellow">Run Anyway</span> »:</p>
 
-       <p class="text">In case the boot console launches fine, but when you go to the browser it displays an error message stating that it can't connect to the BoX, it may be that a component of Windows is missing on your computer that is necessary to run the server.</p>
+          <img src="/image/windows/smartscreen.2.en.png" class="center" style="width:60%;">
 
-       <p class="text">You can download it (for free) from the Microsoft website :</p>
-
-       <p class="text center code"><a class="space" href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist" target="_blank">Microsoft Visual C++ Redistributable 2015-2022 x64</a></p>
        <p class="text"></p>
     </div>
 
