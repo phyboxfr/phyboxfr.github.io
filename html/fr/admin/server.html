@@ -9,7 +9,8 @@
   </head>
 
   <style>
-     p.text.trick:before { position: relative; content: '\1F4A1'; top: 9px; margin: -16px; padding-right: 20px; font-size: 40px; }
+     p.text.trick:before { position: relative; content: '\1F4A1'; top: 9px; margin: -16px; padding-right: 20px; font-size: 40px; animation: light 1s ease-in-out alternate infinite }
+     @keyframes light { 0% { filter: grayscale(1); } 60% { filter: grayscale(0); } 100% { filter: grayscale(0); }}
     .note.arrow { top: 18%; right: 10%; }
     .note.arrow:before { color: #ff4df2; } 
     .note.label { top: 26%; right: -55%; width: 55%; color: #ffed5a !important; }

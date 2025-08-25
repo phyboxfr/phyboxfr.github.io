@@ -9,8 +9,8 @@
   </head>
 
   <style>
-     p.text.trick:before { position: relative; content: '\1F4A1'; top: 9px; margin: -16px; padding-right: 20px; font-size: 40px; }
-  </style>
+    p.text.trick:before { position: relative; content: '\1F4A1'; top: 9px; margin: -16px; padding-right: 20px; font-size: 40px; animation: light 1s ease-in-out alternate infinite }
+    @keyframes light { 0% { filter: grayscale(1); } 60% { filter: grayscale(0); } 100% { filter: grayscale(0); }}  </style>
 
   <body class="h" onload="init(0)"> 
 
