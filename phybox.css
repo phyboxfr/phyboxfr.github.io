@@ -324,6 +324,22 @@ p.title {
   color: yellow;
 }
 
+/* Trick Anim */
+#Article p.text.trick:before { 
+  content: '\1F4A1'; 
+  position: relative; 
+  top: 9px; 
+  margin: -16px; 
+  padding-right: 20px; 
+  font-size: 40px; 
+  animation: trick 1s ease-in-out alternate infinite;
+}
+  @keyframes trick { 
+    0%   { filter: grayscale(1); } 
+    50%  { filter: grayscale(0); } 
+    100% { filter: grayscale(0); }
+}
+
 
 /* Video */
 
