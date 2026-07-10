@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+ 
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     #Article p.list.flex span:first-child { white-space: nowrap; }
+     #Article p.list.text:before { content: ""; }
+     #Article p.list .butWrap.light { flex: 0 0 30px; margin-left: -10px; }
+     #Article p.list.flex .butWrap.light .button { border: none; }
+     #Article p.list.flex span.back { padding: 5px; height: 25px; color: white; }
+     #Article p.list.flex span.q { background: #ff9800; }
+     #Article p.list.flex span.a { background: #4caf50; }
+     #Article div.linklogo p.text.link { flex: none; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">PHYBOT</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">Cette application est un agent conversationnel généraliste que les élèves peuvent questionner à tout moment pour les aider dans leur travail :</p>
+          <img src="/image/app/ai.svg"  class="right shadow" style="width:120px;">
+       </div>
+
+       <BR>
+       <img src="/image/box/app-bot.fr.png"  class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">Elle a été conçue afin de permettre l'usage le plus simple possible de l'IA, sans connaissance préalable pour l'enseignant et les élèves.</p>
+
+       <p class="text">Suivant le principe de cette BoX, il n'y a donc aucune application tierce à installer, l'IA est incluse dans la Box dès le départ. Il faut juste télécharger un modèle de langage (Mistral, Llama etc.) lors du premier usage, en suivant les instructions indiquées ci-dessous.</p>
+
+       <BR>
+       <p class="text"><u>Fonctionnalités :</u></p>
+
+          <p class="list flex"><span class="butWrap light"><img src="/icon/light.svg" class="button icon"></span><span>: &nbsp;&nbsp;&nbsp; </span><span>Cette icône active le mode en réponse courte qui demande à l'IA de faire un résumé sans rentrer dans les détails, afin d'éviter qu'elle ne parte dans un long développement.</p>
+
+          <p class="list flex"><span class="butWrap back q">Question</span><span> &nbsp;:&nbsp;&nbsp;&nbsp; </span><span>En cliquant sur une question, son intitulé est recopié dans la boite de dialogue, ce qui permet de relancer la question en la reformulant si la première réponse n'était pas satisfaisante.</p>
+
+          <p class="list flex"><span class="butWrap back a">Réponse</span><span> &nbsp;:&nbsp;&nbsp;&nbsp; </span><span>En cliquant sur une réponse, elle est lue par la synthèse vocale si cette option a été activée et copiée dans le presse-papier, afin de la mettre dans un autre document.</p>
+
+
+       <BR>
+       <p class="text"><u>Remarques :</u></p>
+
+       <p class="list">RGPD :</p>
+
+          <p class="list text">Dans un cadre scolaire, l'usage d'une IA en ligne pose la question de sa conformité avec la législation française sur le traitement des données personnelles qui lui sont confiées au cours de cette activité.</p>
+
+          <p class="list text">Cette application tourne uniquement dans le réseau local de la BoX, sur l'ordinateur de l'enseignant et n'a pas besoin d'internet pour fonctionner. Aucune donnée n'est transmise à des serveurs externes et n'est archivée. Son usage en classe respecte donc pleinement le RGPD.</p>
+
+          <p class="list">CPU plutôt que GPU :</p>
+
+          <p class="list text">Afin que cette application puisse être utilisée sur la majorité des ordinateurs, même s'ils sont peu puissants et ne disposent pas de carte graphique dédiée, l'IA se sert uniquement du processeur (pas de gestion des unités de calcul de la carte graphique type CUDA).</p>
+
+          <p class="list text">Cette application n'est donc pas conçue pour la performance, mais la plus grande versatilité, afin de s'adapter à toutes les configurations matérielles rencontrées dans les établissements scolaires.</p>
+
+          <p class="list text">Les délais de réponse de l'IA peuvent donc être de quelques secondes avec des machines disposant de peu de ressources. Il faudra ainsi demander un peu de patience aux élèves qui sont habitués à l'instantanéité des réponses sur des outils comme chatGPT.</p>
+
+       <BR>
+       <p class="text"><u>Choix du Modèle :</u></p>
+
+          <p class="list text">Le générateur d'IA de la PHYBOT (moteur d'inférence) est une application qui va lire les données présentes dans un fichier contenant un Modèle de langage étendu (LLM) afin de prédire la réponse la plus probable à la question posée par l'utilisateur. Ces données sont issues de la compilation d'un grand nombre de sources diverses sur une thématique donnée (livres, presse, articles web etc.) au cours d'un long entrainement.</p>
+
+          <p class="list text">En raison de la taille de ces fichiers (plusieurs Go), la BoX ne contient pas de Modèle initialement, il faut donc en télécharger un avant de pouvoir utiliser l'IA.</p>
+
+          <p class="list text">Il existe différents formats de fichier Modèle, mais le moteur d'IA qu'utilise la BoX travaille uniquement avec le format GGUF qui a été optimisé pour augmenter significativement le traitement des données qui s'y trouvent.</p>
+
+          <p class="list text">Le choix du modèle est très large, dépendant de l'usage souhaité et des ressources matérielles présentes sur l'ordinateur (puissance du processeur, quantité de mémoire vive etc.).</p>
+
+       <p class="list text">Le modèle doit en effet être entièrement chargé dans la mémoire vive de l'ordinateur (RAM) pour en avoir un accès rapide. Le type de modèle pouvant être utilisé dépend donc notamment de la quantité de mémoire disponible sur votre ordinateur. Les modèles les plus légers (moins performants) font autour de 2Go, les suivants demandent au moins 4Go.</p>
+
+          <p class="list text">La BoX est initialement configurée pour l'usage de deux modèles généralistes légers :</p>
+
+          <p class="list text">Le Modèle Mistral 7B Instruct est ainsi recommandé pour générer des contenus généralistes en français. Mais pour les petites configurations informatiques vous pouvez utiliser le Modèle Llama 3.2 3B de META.</p>           
+
+<p class="list text">En gardant en tête qu'ils ne pourront pas être aussi précis que des outils très performants comme chatGPT, puisqu'il y a un équilibre à trouver entre la puissance de la machine sur laquelle tourne l'IA et la qualité de ses réponses.</p>
+
+          <p class="list text">On trouve des Modèles utilisables gratuitement par exemple sur le site spécialisé Huggingface (site reconnu et légitime) :</p>  
+
+       <div class="linklogo"><p class="list text link">MISTRAL :</p>
+          <p class="text link"> <a class="space" href="https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF" target="_blank">Mistral 7B Instruct</a> </p>
+       </div>
+
+<p class="list text">La version Q4_K_M a 4Go est recommandée, mais si la génération est trop lente sur votre ordinateur, vous pouvez utiliser la version Q2_K qui fait seulement 2,5 Go.</p>
+
+       <div class="linklogo"><p class="list text link">LLAMA :</p>
+          <p class="text link"> <a class="space" href="https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF" target="_blank">Llama 3.2 3B Instruct</a> </p>
+       </div>
+
+       <p class="text">Une fois téléchargé, le Modèle choisi doit être placé dans le dossier suivant :</p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [server] &nbsp;->&nbsp; [ai] &nbsp;->&nbsp; [model]</p>
+
+       <BR>
+       <p class="text"><u>Démarrage du serveur d'IA :</u></p>
+
+       <p class="text">Sur la console, un bouton permet de démarrer ou d'éteindre le serveur d'IA :</p>
+
+       <img src="/image/box/app-bot.console.png" class="center" style="width:30%;">
+
+       <p class="text">L'IA mobilisant beaucoup de ressources, il est alors recommandé de fermer les autres programmes déjà ouverts sur l'ordinateur, en particulier le navigateur.</p>
+
+       <BR>
+       <p class="text trick"><u>Si le Serveur ne démarre pas :</u></p>
+
+       <p class="text">Dans le cas où le bouton IA est bien activé, mais lorsque vous utilisez l'application elle affiche un message d'erreur qui indique que le Serveur n'est pas démarré, il se peut qu'il y ait une mise à jour à faire sur l'une des composantes de Windows de votre ordinateur qui est nécessaire pour faire fonctionner le serveur.</p>
+
+       <p class="text">Vous pouvez la télécharger (gratuitement) sur le site de Microsoft :</p>
+
+       <p class="text center code"><a class="space" href="https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist" target="_blank">Microsoft Visual C++ Redistributable x64 &nbsp; (vc_redist.x64.exe)</a></p>
+
+       <BR><BR>
+       <div class="linklogo">
+          <p class="text">L'IA est générée par le moteur d'inférence :
+             <a class="space" href="https://github.com/ggml-org/llama.cpp
+" target="_blank">llama.cpp</a>
+          </p>
+          <img src="/image/app/llama.png" class="right glow" style="width:30%; right:70px; top: -90px;">
+       </div>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>

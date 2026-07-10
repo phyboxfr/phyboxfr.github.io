@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+ 
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Accueil</title>
+    <link type="text/css" rel="stylesheet" href="/phybox.css">
+    <script type="application/x-javascript" src="/phybox.js"></script>
+  </head>
+
+  <style>
+     #Article p.list.flex span:first-child { white-space: nowrap; }
+     #Article p.list.text:before { content: ""; }
+     #Article p.list .butWrap.light { flex: 0 0 30px; margin-left: -10px; }
+     #Article p.list.flex .butWrap.light .button { border: none; }
+     #Article p.list.flex span.back { padding: 5px; height: 25px; color: white; }
+     #Article p.list.flex span.q { background: #ff9800; }
+     #Article p.list.flex span.a { background: #4caf50; }
+     #Article div.linklogo p.text.link { flex: none; }
+  </style>
+
+  <body class="h" onload="init(0)"> 
+
+    <div id="Article">
+       <p class="title">PHYBOT</p>
+       <BR>
+
+       <div class="linklogo">
+          <p class="text">This application is a general-purpose conversational agent that students can question at any time to help them with their work :</p>
+          <img src="/image/app/ai.svg"  class="right shadow" style="width:120px;">
+       </div>
+
+       <BR>
+       <img src="/image/box/app-bot.en.png" class="center" style="width:60%;">
+
+       <BR>
+       <p class="text">It was designed to enable the simplest possible use of AI, requiring no prior knowledge from the teacher or students.</p>
+
+       <p class="text">In keeping with the design of this Box, there are no third-party applications to install, the AI ​​is built right in from the start. You simply need to download a language model (Mistral, Llama, etc.) during initial setup by following the instructions below.</p>
+
+       <BR>
+       <p class="text"><u>Features :</u></p>
+
+          <p class="list flex"><span class="butWrap light"><img src="/icon/light.svg" class="button icon"></span><span>: &nbsp;&nbsp;&nbsp; </span><span>This icon activates short-response mode, which asks the AI ​​to provide a summary without going into detail, preventing it from launching into a lengthy explanation.</p>
+
+          <p class="list flex"><span class="butWrap back q">Question</span><span> &nbsp;:&nbsp;&nbsp;&nbsp; </span><span>Clicking on a question copies its text into the dialog box, allowing you to resubmit the question rephrased, if the initial answer was unsatisfactory.</p>
+
+          <p class="list flex"><span class="butWrap back a">Answer</span><span> &nbsp;:&nbsp;&nbsp;&nbsp; </span><span>When you click on an answer, it is read aloud by the text-to-speech function (if enabled) and copied to the clipboard so it can be pasted into another document.</p>
+
+
+       <BR>
+       <p class="text"><u>Notes :</u></p>
+
+       <p class="list">GDPR :</p>
+
+          <p class="list text">In a school setting, the use of an online AI raises the question of its compliance with legislation regarding the processing of personal data entrusted to it during this activity.</p>
+
+          <p class="list text">This application runs solely on the BoX's local network, on the teacher's computer and does not require an internet connection to function. No data is transmitted to external servers or archived. Consequently, its use in the classroom fully complies with GDPR.</p>
+
+          <p class="list">CPU instead of GPU :</p>
+
+          <p class="list text">To ensure this application can run on the majority of computers, even those with low processing power and no dedicated graphics card, the AI ​​relies solely on the CPU (without utilizing GPU-based compute units like CUDA).</p>
+
+          <p class="list text">This application is therefore not designed for performance, but for maximum versatility, in order to adapt to all hardware configurations found in schools.</p>
+
+          <p class="list text">AI response times can therefore take a few seconds on machines with limited resources. Students accustomed to the instant responses provided by tools like ChatGPT will thus need to exercise a little patience.</p>
+
+       <BR>
+       <p class="text"><u>Model Selection :</u></p>
+
+          <p class="list text">The PHYBOT AI generator (inference engine) is an application that reads data contained in a file containing a Large Language Model (LLM) to predict the most likely response to a user's question. This data is derived from compiling a vast array of diverse sources on a specific topic (books, the press, web articles etc.) during an extensive training process.</p>
+
+          <p class="list text">Due to the size of these files (several GB), the BoX does not come with a model pre-installed. You must therefore download one before you can use the AI.</p>
+
+          <p class="list text">There are various model file formats, but the AI ​​engine used by the BoX works exclusively with the GGUF format, which has been optimized to significantly enhance the processing of the data contained within it.</p>
+
+          <p class="list text">There is a wide range of models to choose from, depending on the intended use and the computer's hardware resources (processor power, amount of RAM, etc.).</p>
+
+       <p class="list text">The model must be fully loaded into the computer's RAM to ensure rapid access. Consequently, the type of model that can be used depends largely on the amount of memory available on your computer. The lightest models (which offer lower performance) are around 2 GB in size, while the next tier requires at least 4 GB.</p>
+
+          <p class="list text">The BoX is initially configured for use with two lightweight, general-purpose models. :</p>
+
+          <p class="list text">The Mistral 7B Instruct model is therefore recommended for generating general-purpose content. However, for smaller computing setups, you can use Meta's Llama 3.2 3B model.</p>           
+
+<p class="list text">Bearing in mind that they cannot be as precise as high performance tools like ChatGPT, since a balance must be struck between the processing power of the machine running the AI ​​and the quality of its responses.</p>
+
+          <p class="list text">You can find models available for free use on the specialized site Hugging Face, for example (a recognized and legitimate website). :</p>  
+
+       <div class="linklogo"><p class="list text link">MISTRAL :</p>
+          <p class="text link"> <a class="space" href="https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF" target="_blank">Mistral 7B Instruct</a> </p>
+       </div>
+
+<p class="list text">The 4 GB Q4_K_M version is recommended, but if generation is too slow on your computer, you can use the Q2_K version, which is only 2.5 GB.</p>
+
+       <div class="linklogo"><p class="list text link">LLAMA :</p>
+          <p class="text link"> <a class="space" href="https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF" target="_blank">Llama 3.2 3B Instruct</a> </p>
+       </div>
+
+       <p class="text">Once downloaded, the selected Model must be placed in the following folder :</p>
+
+       <p class="text center code"  > [phybox] &nbsp;->&nbsp; [server] &nbsp;->&nbsp; [ai] &nbsp;->&nbsp; [model]</p>
+
+       <BR>
+       <p class="text"><u>Starting the AI ​​server :</u></p>
+
+       <p class="text">On the console, a button allows you to start or shut down the AI ​​server :</p>
+
+       <img src="/image/box/app-bot.console.png" class="center" style="width:30%;">
+
+       <p class="text">Since AI is resource-intensive, it is recommended to close other programs already open on the computer, particularly the web browser.</p>
+
+       <BR>
+       <p class="text trick"><u>If the server does not start :</u></p>
+
+       <p class="text">If the AI ​​button is enabled but the application displays an error message stating that the server has not started, a Windows component required for the server to run may need to be updated.</p>
+
+       <p class="text">You can download it (for free) from the Microsoft website :</p>
+
+       <p class="text center code"><a class="space" href="https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist" target="_blank">Microsoft Visual C++ Redistributable x64 &nbsp; (vc_redist.x64.exe)</a></p>
+
+       <BR><BR>
+       <div class="linklogo">
+          <p class="text">The AI ​​is generated by the inference engine :
+             <a class="space" href="https://github.com/ggml-org/llama.cpp
+" target="_blank">llama.cpp</a>
+          </p>
+          <img src="/image/app/llama.png" class="right glow" style="width:30%; right:70px; top: -90px;">
+       </div>
+
+       <p class="text"></p>
+    </div>
+
+  </body>
+</html>
